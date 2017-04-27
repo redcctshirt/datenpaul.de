@@ -155,6 +155,11 @@ angegeben, stehen unter der Creative Commons by 4.0 (by:datenpaul.de) Lizenz [CC
 
 Für das Logo wurde genutzt: [http://openclipart.org/detail/132031/toucan-by-gnokii](http://openclipart.org/detail/132031/toucan-by-gnokii)
 
+Theme der Webseite: <https://github.com/giulivo/pelican-svbhack> Released under MIT License, 
+pelican-svbhack is authored by [Giulio Fidente](https://github.com/gfidente).    
+Software der Webseite: http://blog.getpelican.com/ [github](https://github.com/getpelican/pelican) [Lizenz](https://github.com/getpelican/pelican/blob/master/LICENSE), http://fontawesome.io/ [github](https://github.com/FortAwesome/Font-Awesome) by [Dave Gandy](https://twitter.com/davegandy) [Lizenz](http://fontawesome.io/license/), http://lesscss.org/ [github](https://github.com/less/less.js) by [Alexis Sellier](http://cloudhead.io/)  [Lizenz](https://github.com/less/less.js/blob/3.x/LICENSE)    
+Plugins: [Pelican Comment System](https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system) by [Bernhard Scheirle](https://bernhard.scheirle.de/) ([github](https://github.com/Scheirle)) 
+
   [Creative Commons]: http://creativecommons.org
   [text2383]: http://www.datenpaul.de/archive/text2383.png
   [CC by]: http://creativecommons.org/licenses/by/4.0/
