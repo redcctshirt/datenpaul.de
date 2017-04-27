@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/datenjournalismus.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-06-28T03:28:00+02:00</updated><entry><title>Tutorial: LibreOffice Writer - Erste Schritte mit regulären Ausdrücken</title><link href="https://www.datenpaul.de/tutorial-libreoffice-writer-erste-schritte-mit-regularen-ausdrucken.html" rel="alternate"></link><published>2013-06-28T03:28:00+02:00</published><author><name>admin</name></author><id>tag:www.datenpaul.de,2013-06-28:tutorial-libreoffice-writer-erste-schritte-mit-regularen-ausdrucken.html</id><summary type="html">&lt;p&gt;Reguläre Ausdrücke  (regular expressions, RegExp, RegEx, Grep, …)&lt;/p&gt;
+&lt;p&gt;Viele Aufgaben eines/r Datenjournalist/in kann man mit "Suchen und
+Ersetzen" lösen, z.B. in LibreOffice Writer. Für komplexere "Suchen und
+Ersetzen" gibt es die sogenannten "regulären Ausdrücke". Diese werden
+von vielen einfachen Texteditoren unterstützt. Wie man mit "Suchen und
+Ersetzen" einen Text bereinigen kann, werde ich nun an einem Beispiel
+demonstrieren. Dafür habe ich eine Liste gewählt, in der alle
+Leerzeichen fehlen. Dieses Phänomen tritt in der Arbeit öfters auf, z.B.
+weil der Text mit einer OCR-Software (Bild-zu-Text-Erkennung) erstellt
+oder aus einem PDF-Dokument kopiert wurde. Hier ein Beispiel: die Liste
+der ehemaligen Bundespräsidenten der BRD kopiert von der &lt;a href="http://de.wikipedia.org/wiki/Bundespr%C3%A4sident_(Deutschland)#Die_bisherigen_Bundespr.C3.A4sidenten_der_Bundesrepublik_Deutschland" title="WP:Bundespräsidenten"&gt;entsprechenden
+Wikipedia Seite&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;TheodorHeuss(1884–1963)&lt;br /&gt;
+HeinrichLübke(1894–1972)&lt;br /&gt;
+GustavHeinemann(1899–1976)&lt;br /&gt;
+WalterScheel(*1919)&lt;br /&gt;
+KarlCarstens(1914–1992)&lt;br /&gt;
+RichardvonWeizsäcker(*1920)&lt;br /&gt;
+RomanHerzog(*1934)&lt;br /&gt;
+JohannesRau(1931–2006)&lt;br /&gt;
+HorstKöhler(*1943)&lt;br /&gt;
+ChristianWulff(*1959)&lt;br /&gt;
+JoachimGauck(*1940)&lt;/p&gt;
+&lt;p&gt;Als erstes kann man alle "(" ersetzen durch ein Tab, dass von
+LibreOffice Calc als Spaltenwechsel interpretiert wird.&lt;/p&gt;
+&lt;p&gt;In Writer: ersetze "\(" durch "\t" (Unter Bearbeiten - Suchen und
+Ersetzen - Suchen nach "\(" - Ersetzen durch "\t" - Unter Mehr
+Optionen - Regulärer Ausdruck anklicken)&lt;/p&gt;
+&lt;p&gt;TheodorHeuss 1884–1963)&lt;br /&gt;
+HeinrichLübke 1894–1972)&lt;br /&gt;
+GustavHeinemann 1899–1976)&lt;br /&gt;
+WalterScheel *1919)&lt;br /&gt;
+KarlCarstens 1914–1992)&lt;br /&gt;
+RichardvonWeizsäcker *1920)&lt;br /&gt;
+RomanHerzog *1934)&lt;br /&gt;
+JohannesRau 1931–2006)&lt;br /&gt;
+HorstKöhler *1943)&lt;br /&gt;
+ChristianWulff *1959)&lt;br /&gt;
+JoachimGauck *1940&lt;/p&gt;
+&lt;p&gt;Nun die schließenden Klammern entfernen.&lt;/p&gt;
+&lt;p&gt;In Writer: ersetze ")" durch "" (Unter Bearbeiten - Suchen und Ersetzen
+- Suchen nach "\)" - Ersetzen durch "" - Unter Mehr Optionen -
+Regulärer Ausdruck anklicken)&lt;/p&gt;
+&lt;p&gt;TheodorHeuss 1884–1963&lt;br /&gt;
+HeinrichLübke 1894–1972&lt;br /&gt;
+GustavHeinemann 1899–1976&lt;br /&gt;
+WalterScheel *1919&lt;br /&gt;
+KarlCarstens 1914–1992&lt;br /&gt;
+RichardvonWeizsäcker *1920&lt;br /&gt;
+RomanHerzog *1934&lt;br /&gt;
+JohannesRau 1931–2006&lt;br /&gt;
+HorstKöhler *1943&lt;br /&gt;
+ChristianWulff *1959&lt;br /&gt;
+JoachimGauck *1940&lt;/p&gt;
+&lt;p&gt;Nun die Minuszeichen durch einen Tab ersetzen.&lt;/p&gt;
+&lt;p&gt;In Writer: ersetze "–" durch "\t" (Unter Bearbeiten - Suchen und
+Ersetzen - Suchen nach "–" - Ersetzen durch "\t" - Unter Mehr Optionen
+- Regulärer Ausdruck anklicken)&lt;/p&gt;
+&lt;p&gt;TheodorHeuss 1884 1963&lt;br /&gt;
+HeinrichLübke 1894 1972&lt;br /&gt;
+GustavHeinemann 1899 1976&lt;br /&gt;
+WalterScheel *1919&lt;br /&gt;
+KarlCarstens 1914 1992&lt;br /&gt;
+RichardvonWeizsäcker *1920&lt;br /&gt;
+RomanHerzog *1934&lt;br /&gt;
+JohannesRau 1931 2006&lt;br /&gt;
+HorstKöhler *1943&lt;br /&gt;
+ChristianWulff *1959&lt;br /&gt;
+JoachimGauck *1940&lt;/p&gt;
+&lt;p&gt;Nun die Mal-Zeichen entfernen.&lt;/p&gt;
+&lt;p&gt;In Writer: ersetze "*" durch "" (Unter Bearbeiten - Suchen und Ersetzen
+- Suchen nach "\*" - Ersetzen durch "" - Unter Mehr Optionen -
+Regulärer Ausdruck anklicken)&lt;/p&gt;
+&lt;p&gt;TheodorHeuss 1884 1963&lt;br /&gt;
+HeinrichLübke 1894 1972&lt;br /&gt;
+GustavHeinemann 1899 1976&lt;br /&gt;
+WalterScheel 1919&lt;br /&gt;
+KarlCarstens 1914 1992&lt;br /&gt;
+RichardvonWeizsäcker 1920&lt;br /&gt;
+RomanHerzog 1934&lt;br /&gt;
+JohannesRau 1931 2006&lt;br /&gt;
+HorstKöhler 1943&lt;br /&gt;
+ChristianWulff 1959&lt;br /&gt;
+JoachimGauck 1940&lt;/p&gt;
+&lt;p&gt;Die Daten sind nun schon sehr gut strukturiert, aber die Namen sind noch
+nicht korrekt. Vor- und Nachnamen kleben noch aneinander. Man müsste
+nach jeden Kleinbuchstaben, auf den ein Großbuchstabe folgt, ein
+Leerzeichen setzen. Solch eine Aufgabe lässt sich nicht mehr mit einem
+einfachen "Suchen und Ersetzen" lösen. Theoretisch müsste man jede
+Kombination von Klein- und Großbuchstaben suchen.&lt;/p&gt;
+&lt;p&gt;Als regulärer Ausdruck: ersetze "([a-z])([A-Z])" durch "\1 \2" (Unter
+Bearbeiten - Suchen und Ersetzen - Suchen nach "([a-z])([A-Z])" -
+Ersetzen durch "\$1 \$2" - Unter Mehr Optionen - Regulärer Ausdruck
+anklicken, Groß-/Kleinschreibung anklicken)&lt;/p&gt;
+&lt;p&gt;Theodor Heuss 1884 1963&lt;br /&gt;
+Heinrich Lübke 1894 1972&lt;br /&gt;
+Gustav Heinemann 1899 1976&lt;br /&gt;
+Walter Scheel 1919&lt;br /&gt;
+Karl Carstens 1914 1992&lt;br /&gt;
+Richardvon Weizsäcker 1920&lt;br /&gt;
+Roman Herzog 1934&lt;br /&gt;
+Johannes Rau 1931 2006&lt;br /&gt;
+Horst Köhler 1943&lt;br /&gt;
+Christian Wulff 1959&lt;br /&gt;
+Joachim Gauck 1940&lt;/p&gt;
+&lt;p&gt;Durch den oben verwendeten regulären Ausdruck werden beliebige
+Kombinationen aus Klein- und Großbuchstaben gefunden: ([a-z])([A-Z]) -
+ein beliebiger Kleinbuchstabe (1. Teil in Klammern), ein beliebiger
+Großbuchstabe (2. Teil in Klammern)&lt;/p&gt;
+&lt;p&gt;Wenn etwas gefunden wird, wird es ersetzt durch: \1 \2 (In Writer
+durch \$1 \$2)&lt;br /&gt;
+Was im 1. Teil in Klammern gefunden wurde. Leerzeichen. Was im 2. Teil
+in Klammern gefunden wurde.&lt;/p&gt;
+&lt;p&gt;Reguläre Ausdrücke sind scheinbar kompliziert, aber auch hier ist alles
+eine Frage der Übung! Wenn man einmal damit anfängt, hat man schnell die
+ersten Erfolgserlebnisse und lernt dann kontinuierlich weitere Tricks
+dazu. Aber den ersten Schritt muss man erst einmal machen, und zwar
+einfach mal nach "Regulären Ausdrücken" googeln und sich die vielen
+Einführungskurse anschauen.&lt;/p&gt;
+&lt;p&gt;(&lt;a href="http://www.opendatacity.de/tutorial-erste-schritte-mit-regularen-ausdrucken/" title="Tutorial: Erste Schritte mit regulären Ausdrücken"&gt;Quelltext&lt;/a&gt; ist von Michael Kreil und steht unter einer Creative
+Commons-Lizenz (CC BY 3.0 Michael Kreil))&lt;/p&gt;</summary><category term="Daten"></category><category term="Datenjournalismus"></category><category term="LibreOffice"></category><category term="Linux"></category><category term="RegEx"></category><category term="Regulärer Ausdruck"></category><category term="Writer"></category></entry></feed>

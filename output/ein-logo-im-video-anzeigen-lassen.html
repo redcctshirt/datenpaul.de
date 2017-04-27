@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet/less" type="text/css" href="https://www.datenpaul.de/theme/css/style.less">
+  <script src="https://www.datenpaul.de/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/style.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/pygments.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/fonts.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="heiko">
+  <meta name="description" content="Posts and writings by heiko">
+  <meta name="referrer" content="no-referrer">
+
+  <link href="https://www.datenpaul.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="datenpaul Full Atom Feed" />
+  <link href="https://www.datenpaul.de/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="datenpaul Full RSS Feed" />
+
+<meta name="keywords" content="Fedora, ffmpeg, Linux, Logo, Videobearbeitung">
+
+  <title>
+Ein Logo im Video anzeigen lassen  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="https://www.datenpaul.de">
+        <img src="https://www.datenpaul.de/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="https://www.datenpaul.de">datenpaul</a></h2>
+      <p>Creative Commons Zeug und was mit Daten</p>
+      <ul>
+        <li><a href="projekte/" target="_blank">Projekte</a></li>
+        <li><a href="http://www.flickr.com/photos/redcctshirt" target="_blank">Flickr</a></li>
+        <li><a href="http://www.openclipart.org/user-detail/redccshirt" target="_blank">openclipart</a></li>
+        <li><a href="http://redcctshirt.tumblr.com/" target="_blank">tumblr</a></li>
+        <li><a href="http://www.pixabay.com/de/users/redcctshirt" target="_blank">pixabay</a></li>
+        <li><a href="https://twitter.com/redcctshirt" target="_blank">twitter</a></li>
+        <li><a href="https://github.com/redcctshirt" target="_blank">github</a></li>
+        <li><a href="https://www.datenpaul.de/pages/impressum.html">Impressum</a></li>
+      </ul>
+      <br /><br />
+      <a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://www.datenpaul.de/archive/by.png" alt="CC by Icon" /></a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+<p>Posted on Do 25 August 2011</p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="https://www.datenpaul.de/ein-logo-im-video-anzeigen-lassen.html">Ein Logo im Video anzeigen lassen</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Mit <a href="http://de.wikipedia.org/wiki/Ffmpeg" title="WP:ffmpeg">ffmpeg</a> und dem Videofilter overlay ist man in der Lage ein Logo
+ins Video zu zaubern. Um Übersichtlichkeit zu gewährleisten lasse ich
+hier bei diesem Beispiel mit ffmpeg alle anderen Optionen die man sonst
+so benutzt wie z.B. -b für die <a href="http://de.wikipedia.org/wiki/Bitrate" title="WP:Bitrate">Bitrate</a> einfach weg.</p>
+<p>Hilfreiche Daten für das Beispiel:<br />
+Input-Videodatei: a.ogv<br />
+Output-Videodatei: b.webm<br />
+Videogröße: 1280x720 (Breite: 1280 Pixel, Höhe: 720 Pixel)<br />
+Bilddatei: logo.png<br />
+Bildgröße: 50x50 (Breite: 50 Pixel, Höhe: 50 Pixel)</p>
+<p>Mit folgendem Muster setzt man den Videofilter overlay ein:<br />
+<code>-vf "movie=bilddatei.png [logo]; [in][logo] overlay=x:y [out]"</code></p>
+<p>Die Bilddatei mit dem Logo wird durch movie=bilddatei.png [logo]
+definiert. Durch overlay=x:y kann man die Stelle angeben wo das Logo
+dann erscheinen soll. (z.B. overlay=10:10 - das Logo wird nun oben links
+in der Ecke angezeigt)</p>
+<p>Einige hilfreiche Variablen die eingesetzt werden können:<br />
+main_w oder W - für die Breite des Videos (hier 1280)<br />
+main_h, H - für die Höhe des Videos (hier 720)<br />
+overlay_w, w - für die Breite des Logos (hier 50)<br />
+overlay_h, h - für die Höhe des Logos (hier 50)</p>
+<p>Beispiele:</p>
+<p><code>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=10:10 [out]" b.webm # Logo oben links</code></p>
+<p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=main_w-overlay_w-10:10 [out]" b.webm<br />
+# Logo oben rechts, mit Zahlen: overlay=1280-50-10:10 ->
+overlay=1220:10</p>
+<p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=10:main_h-overlay_h-10 [out]" b.webm<br />
+# Logo unten links, mit Zahlen: overlay=10:720-50-10 ->
+overlay=10:660</p>
+<p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=main_w-overlay_w-10:main_h-overlay_h-10 [out]" b.webm<br />
+# Logo unten rechts, mit Zahlen: overlay=1280-50-10:720-50-10 ->
+overlay=1220:660</p>
+<p>ffmpeg -i a.ogv -vf "movie=logo.png [logo1]; movie=logo2.png [logo2];
+[in][logo1] overlay=main_w-overlay_w-10:main_h-overlay_h-10
+[in+logo1]; [in+logo1][logo2] overlay=10:10 [out]" b.webm<br />
+# 2 Logos<br />
+</code></p>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://www.datenpaul.de/category/videobearbeitung.html">Videobearbeitung</a></p>
+    <p>Tags:
+      <a href="https://www.datenpaul.de/tag/fedora.html">Fedora</a>,      <a href="https://www.datenpaul.de/tag/ffmpeg.html">ffmpeg</a>,      <a href="https://www.datenpaul.de/tag/linux.html">Linux</a>,      <a href="https://www.datenpaul.de/tag/logo.html">Logo</a>,      <a href="https://www.datenpaul.de/tag/videobearbeitung.html">Videobearbeitung</a>    </p>
+  </div>
+
+  	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+			<a href="https://www.datenpaul.de/feeds/comment.ein-logo-im-video-anzeigen-lassen.atom.xml">
+				Comment Atom Feed
+			</a>
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://www.datenpaul.de/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "info";
+			CommentSystem.email_domain = "datenpaul.de";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) { 
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("ein-logo-im-video-anzeigen-lassen"));
+				}
+			);
+		});
+	</script>
+
+
+
+</article>
+
+    <footer>
+<p><a href="https://www.datenpaul.de/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
+    </footer>
+
+    <div id="ending_message">
+      <p>&copy; heiko. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. .</p>
+    </div>
+  </main>
+</body>
+</html>

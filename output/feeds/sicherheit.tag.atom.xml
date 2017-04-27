@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/sicherheit.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2011-08-09T20:48:00+02:00</updated><entry><title>Die Firefox-Erweiterung HTTPS Everywhere</title><link href="https://www.datenpaul.de/die-firefox-erweiterung-https-everywhere.html" rel="alternate"></link><published>2011-08-09T20:48:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2011-08-09:die-firefox-erweiterung-https-everywhere.html</id><summary type="html">&lt;p&gt;&lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Https"&gt;HTTPS&lt;/a&gt; steht für verschlüsseltes Hypertext Transfer Protokoll. Sobald
+bei der Zieladresse im &lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Webbrowser"&gt;Browser&lt;/a&gt;, ganz vorne, ein https steht werden
+die Daten &lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Verschl%C3%BCsselung"&gt;verschlüsselt&lt;/a&gt; übertragen. HTTPS ist ganz wichtig bei
+öffentlichen Netzen. So werden die &lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Passwort"&gt;Passwörter&lt;/a&gt; gesichert durch das
+Netz verschickt. Die Erweiterung &lt;a href="https://www.eff.org/https-everywhere/"&gt;HTTPS Everywhere&lt;/a&gt; sorgt im
+Hintergrund, wenn möglich, für eine &lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Transport_Layer_Security"&gt;SSL-Verbindung&lt;/a&gt;. Wenn zu der
+jeweiligen Webseite eine https-Variante vorhanden ist wird diese durch
+HTTPS Everywhere automatisch aufgerufen, so dass der Datentransfer
+verschlüsselt verläuft. Die Installation wird eingeleitet sowie auf
+dieser &lt;a href="https://www.eff.org/https-everywhere/"&gt;Webseite&lt;/a&gt; der Link click here betätigt wird.
+Nun folgt man den Anweisungen bis zum Neustart von &lt;a href="https://secure.wikimedia.org/wikipedia/de/wiki/Firefox"&gt;Firefox&lt;/a&gt;. Wenn die
+Installation erfolgreich war sieht man rechts neben dem Home-Icon nun
+die Schaltfläche für HTTPS Everywhere. Ruft man nunmehr die Webseite
+de.wikipedia.org auf wird automatisch die Webseite
+https://secure.wikimedia.org/wikipedia/de/wiki/Wikipedia:Hauptseite
+geladen.&lt;/p&gt;</summary><category term="Firefox"></category><category term="https"></category><category term="https everywhere"></category><category term="Linux"></category><category term="Sicherheit"></category><category term="SSL"></category><category term="Webbrowser"></category></entry></feed>

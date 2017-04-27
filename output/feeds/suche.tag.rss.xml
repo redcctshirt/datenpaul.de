@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/suche.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 28 Sep 2012 18:18:00 +0200</lastBuildDate><item><title>Gnome3 - eine neue Suche hinzufügen</title><link>https://www.datenpaul.de/gnome3-eine-neue-suche-hinzufugen.html</link><description>&lt;p&gt;Bei der neuen Suche wird als Beispiel die Suchmaschine
+&lt;a href="http://duckduckgo.com" title="Suchmaschine duckduckgo.com"&gt;duckduckgo.com&lt;/a&gt; eingesetzt. Die Such-URL bei duckduckgo sieht wie
+folgt aus: https://duckduckgo.com/?q=Suchbegriff&lt;br /&gt;
+Sobald man den Aktivitäten-Modus (mit dem Mauspfeil links oben in die
+Ecke wandern) wählt, erscheint oben rechts eine Sucheingabe, mit dem
+Text Suchbegriff eingeben.&lt;br /&gt;
+&lt;img alt="Gnome3 Suchbox Screenshot" src="http://www.datenpaul.de/archive/gnome_suchbox.png" /&gt;&lt;br /&gt;
+Gibt man etwas ein wird in den Anwendungen, Einstellungen, bei den
+Kontakten und bei der Dokumentverwaltung danach gesucht. Ebenso
+erscheinen unten 2 Buttons (Wikipedia, Google), die es ermöglichen, dass
+nach diesem Eintrag auch in einer Suchmaschine gestöbert wird. Diese
+Suchmaschinen findet man im Verzeichnis
+&lt;code&gt;/usr/share/gnome-shell/open-search-providers/&lt;/code&gt;. Um eine neue Suche
+hinzuzufügen kopiert man einfach eine dieser xml-Dateien und modifiziert
+die neue Datei. Das Kopieren wird mittels Befehl (bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt;)
+&lt;code&gt;su -c "cp /usr/share/gnome-shell/open-search-providers/wikipedia.xml /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"&lt;/code&gt;
+bewerkstelligt. Die Modifizierung erfolgt durch einen Texteditor, z.B.
+durch
+&lt;code&gt;su -c "nano /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"&lt;/code&gt;
+(Strg+O - Speichern, Strg+X - nano Beenden). \&amp;lt;ShortName&gt;,
+\&amp;lt;Description&gt; und \&amp;lt;Url template&gt; sind die wichtigsten Anpassungen
+die durchgeführt werden müssen.&lt;br /&gt;
+Bsp: /usr/share/gnome-shell/open-search-providers/duckduckgo.xml&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;ShortName&amp;gt;&lt;/span&gt;DuckDuckGo&lt;span class="nt"&gt;&amp;lt;/ShortName&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;Description&amp;gt;&lt;/span&gt;DuckDuckGo, free Search&lt;span class="nt"&gt;&amp;lt;/Description&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;InputEncoding&amp;gt;&lt;/span&gt;UTF-8&lt;span class="nt"&gt;&amp;lt;/InputEncoding&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;Url&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GET&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;template=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://duckduckgo.com/?q={searchTerms}&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nach einem Neustart mit Alt+F2 r ist DuckDuckGo nun ebenfalls bei den
+Suchmaschinen mit dabei. Die Funktionen für die Suche, in Javascript
+geschrieben, befinden sich in den Dateien
+&lt;code&gt;/usr/share/gnome-shell/js/ui/search.js&lt;/code&gt; und
+&lt;code&gt;/usr/share/gnome-shell/js/ui/searchDisplay.js&lt;/code&gt;. Das Aussehen kann man
+in der Datei &lt;code&gt;/usr/share/gnome-shell/theme/gnome-shell.css&lt;/code&gt;
+beeinflussen. 2 Beispiele: Im Bereich Search Box unter #searchArea kann
+man z.B. die Hintergrundfarbe der Suchbox verändern. Im Teil Search
+Results unter .dash-search-button ist es machbar die Hintergrundfarbe
+der Suchbuttons zu ändern. Natürlich sind viele Änderungen mehr möglich.
+Nach einem Neustart mittels Alt+F2 r werden die Abänderungen sichtbar.
+Bsp: /usr/share/gnome-shell/theme/gnome-shell.css&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;/* Search Box */&lt;/span&gt;
+
+&lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="nn"&gt;searchArea&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c"&gt;/* Search Results */&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;dash-search-button&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;border-radius&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding-top&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding-bottom&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;green&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 28 Sep 2012 18:18:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-28:gnome3-eine-neue-suche-hinzufugen.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Suche</category></item></channel></rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/ffmpeg.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 02 Dec 2011 16:23:00 +0100</lastBuildDate><item><title>Videobilder spiegeln</title><link>https://www.datenpaul.de/videobilder-spiegeln.html</link><description>&lt;p&gt;Das Tool &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="ffmpeg"&gt;ffmpeg&lt;/a&gt; macht es möglich. Der Videofilter hflip spiegelt die
+Videobilder&lt;br /&gt;
+horizontal und der Videofilter vflip spiegelt sie vertikal. Unnötige
+Optionen&lt;br /&gt;
+und Paramenter lasse ich bei diesen Beispielen weg.&lt;/p&gt;
+&lt;p&gt;Beispiele:  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "vflip" b.webm # Den Videoinput a.ogv vertikal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "hflip" b.webm&lt;br /&gt;
+# Den Videoinput a.ogv horizontal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 02 Dec 2011 16:23:00 +0100</pubDate><guid>tag:www.datenpaul.de,2011-12-02:videobilder-spiegeln.html</guid><category>ffmpeg</category><category>hflip</category><category>Linux</category><category>vflip</category><category>Videobearbeitung</category><category>Videofilter</category></item><item><title>farbige Vierecke im Video anzeigen lassen</title><link>https://www.datenpaul.de/farbige-vierecke-im-video-anzeigen-lassen.html</link><description>&lt;p&gt;Mit &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="Link zu WP:ffmpeg"&gt;ffmpeg&lt;/a&gt;, dem Videofilter overlay und der Videoquelle color ist es
+möglich farbige Vierecke ins Video zu zaubern. Der &lt;a href="http://www.datenpaul.de/archives/121" title="Link zu overlay-Artikel"&gt;Videofilter
+overlay&lt;/a&gt; sollte inzwischen bekannt sein. Auch bei diesem Beispiel
+lasse ich alle unnötigen Optionen einfach weg.&lt;/p&gt;
+&lt;p&gt;Hilfreiche Daten für das Beispiel:&lt;br /&gt;
+Input-Videodatei: a.ogv&lt;br /&gt;
+Output-Videodatei: b.webm&lt;br /&gt;
+Videogröße: 1280×720 (Breite: 1280 Pixel, Höhe: 720 Pixel)&lt;/p&gt;
+&lt;p&gt;Mit folgendem Muster erstellt man eine Farbquelle:&lt;br /&gt;
+"color=Farbe:Framegröße:Framerate" (Farbe: 0xRRGGBB[AA] oder def.
+Farbe,&lt;br /&gt;
+z.B. "color=red@1.0:100x200:25")&lt;/p&gt;
+&lt;p&gt;Beispiele:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "color=red@0.3:100x200:25 [color]; [in][color] overlay [out]" b.webm # durchsichtiges rotes Viereck (Breite: 100 Pixel, Höhe: 200 Pixel) an der Stelle 0:0 im Video&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "color=blue@1.0:200x100:25 [color]; [in][color]
+overlay=100:100 [out]" b.webm&lt;br /&gt;
+# blaues Viereck (Breite: 200 Pixel, Höhe: 100 Pixel) an der Stelle
+100:100 im Video&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "color=blue@1.0:200x100:25 [color1];
+color=red@0.2:100x100:25 [color2] [in][color1] overlay=100:100
+[in+color1]; [in+color1][color2] overlay=500:100 [out]" b.webm&lt;br /&gt;
+# 2 Vierecke&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; color=red@0.2:100x100:25
+[color]; [in][color] overlay=10:10 [in+color]; [in+color][logo]
+overlay=10:10 [out]" b.webm&lt;br /&gt;
+# Logo + Viereck&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 27 Aug 2011 23:45:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-08-27:farbige-vierecke-im-video-anzeigen-lassen.html</guid><category>Fedora</category><category>ffmpeg</category><category>Linux</category><category>Videobearbeitung</category></item><item><title>Ein Logo im Video anzeigen lassen</title><link>https://www.datenpaul.de/ein-logo-im-video-anzeigen-lassen.html</link><description>&lt;p&gt;Mit &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="WP:ffmpeg"&gt;ffmpeg&lt;/a&gt; und dem Videofilter overlay ist man in der Lage ein Logo
+ins Video zu zaubern. Um Übersichtlichkeit zu gewährleisten lasse ich
+hier bei diesem Beispiel mit ffmpeg alle anderen Optionen die man sonst
+so benutzt wie z.B. -b für die &lt;a href="http://de.wikipedia.org/wiki/Bitrate" title="WP:Bitrate"&gt;Bitrate&lt;/a&gt; einfach weg.&lt;/p&gt;
+&lt;p&gt;Hilfreiche Daten für das Beispiel:&lt;br /&gt;
+Input-Videodatei: a.ogv&lt;br /&gt;
+Output-Videodatei: b.webm&lt;br /&gt;
+Videogröße: 1280x720 (Breite: 1280 Pixel, Höhe: 720 Pixel)&lt;br /&gt;
+Bilddatei: logo.png&lt;br /&gt;
+Bildgröße: 50x50 (Breite: 50 Pixel, Höhe: 50 Pixel)&lt;/p&gt;
+&lt;p&gt;Mit folgendem Muster setzt man den Videofilter overlay ein:&lt;br /&gt;
+&lt;code&gt;-vf "movie=bilddatei.png [logo]; [in][logo] overlay=x:y [out]"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Die Bilddatei mit dem Logo wird durch movie=bilddatei.png [logo]
+definiert. Durch overlay=x:y kann man die Stelle angeben wo das Logo
+dann erscheinen soll. (z.B. overlay=10:10 - das Logo wird nun oben links
+in der Ecke angezeigt)&lt;/p&gt;
+&lt;p&gt;Einige hilfreiche Variablen die eingesetzt werden können:&lt;br /&gt;
+main_w oder W - für die Breite des Videos (hier 1280)&lt;br /&gt;
+main_h, H - für die Höhe des Videos (hier 720)&lt;br /&gt;
+overlay_w, w - für die Breite des Logos (hier 50)&lt;br /&gt;
+overlay_h, h - für die Höhe des Logos (hier 50)&lt;/p&gt;
+&lt;p&gt;Beispiele:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=10:10 [out]" b.webm # Logo oben links&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=main_w-overlay_w-10:10 [out]" b.webm&lt;br /&gt;
+# Logo oben rechts, mit Zahlen: overlay=1280-50-10:10 -&gt;
+overlay=1220:10&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=10:main_h-overlay_h-10 [out]" b.webm&lt;br /&gt;
+# Logo unten links, mit Zahlen: overlay=10:720-50-10 -&gt;
+overlay=10:660&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
+overlay=main_w-overlay_w-10:main_h-overlay_h-10 [out]" b.webm&lt;br /&gt;
+# Logo unten rechts, mit Zahlen: overlay=1280-50-10:720-50-10 -&gt;
+overlay=1220:660&lt;/p&gt;
+&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo1]; movie=logo2.png [logo2];
+[in][logo1] overlay=main_w-overlay_w-10:main_h-overlay_h-10
+[in+logo1]; [in+logo1][logo2] overlay=10:10 [out]" b.webm&lt;br /&gt;
+# 2 Logos&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 25 Aug 2011 21:54:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-08-25:ein-logo-im-video-anzeigen-lassen.html</guid><category>Fedora</category><category>ffmpeg</category><category>Linux</category><category>Logo</category><category>Videobearbeitung</category></item></channel></rss>

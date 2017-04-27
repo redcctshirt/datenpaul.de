@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/couchdb.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 30 Jun 2012 23:40:00 +0200</lastBuildDate><item><title>CouchDB - Dokumente erstellen und löschen</title><link>https://www.datenpaul.de/couchdb-dokumente-erstellen-und-loschen.html</link><description>&lt;p&gt;Jedes Dokument besitzt mindestens die beiden Felder _id für die
+einmalige Identifikationsnummer und _rev für die Versionsnummer.
+Betätigt man in einer Datenbank, mittels Webinterface Futon, den Button
+New Document um ein neues Dokument zu erstellen wird ein Hash-Wert als
+_id-Wert vorgeschlagen. Die Versionsnummer wird automatisch
+gespeichert. Ebenso ist es machbar einen eigenen _id-Wert zu bestimmen.
+Am Anfang darf es keinen Unterstrich geben und auf Sonderzeichen sollte
+man verzichten. Bei jeder Änderung in einem Dokument gibt es, wie bei
+Wikis, eine neue Version. Die Versionsnummer _rev wird geändert. Um
+sich Hash-Werte im Terminal für die _id anzeigen zu lassen muss
+folgender Befehl eingegeben werden:
+&lt;code&gt;curl -X GET http://localhost:5984/_uuids&lt;/code&gt;&lt;br /&gt;
+Mittels &lt;code&gt;curl -X GET http://localhost:5984/_uuids?count=10&lt;/code&gt; werden 10
+davon ausgegeben. Erstellt wird ein Dokument mittels Kommando
+&lt;code&gt;curl -X PUT http://localhost:5984/dbname/hashwert -d {}&lt;/code&gt;. Alle
+Dokumente in einer Datenbank werden nach der Eingabe
+&lt;code&gt;curl -X GET http://localhost:5984/dbname/_all_docs&lt;/code&gt; aufgelistet.
+Außerdem ist es möglich den New Document-Job durch den Befehl
+&lt;code&gt;curl -X POST http://localhost:5984/dbname/ -H "Content-Type: application/json" -d {}&lt;/code&gt;
+zu initiieren. Die _id wird diesmal automatisch vergeben. Gelöscht wird
+ein Dokument per Befehl
+&lt;code&gt;curl -X DELETE http://localhost:5984/dbname/hashwert?rev=Versionsnummer&lt;/code&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 30 Jun 2012 23:40:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-30:couchdb-dokumente-erstellen-und-loschen.html</guid><category>CouchDB</category><category>curl</category><category>Datenbank</category><category>Fedora</category><category>futon</category><category>Linux</category><category>NoSQL</category></item><item><title>CouchDB - Datenbankinformationen</title><link>https://www.datenpaul.de/couchdb-datenbankinformationen.html</link><description>&lt;p&gt;Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="Fedora"&gt;Fedora&lt;/a&gt; werden die binären Datenbankdateien im Verzeichnis
+/var/lib/couchdb gespeichert. Informationen über eine Datenbank bekommt
+man mittels Eingabe &lt;code&gt;curl -X GET http://localhost:5984/datenbankname&lt;/code&gt; in
+der Kommandozeile präsentiert. Folgende Informationen werden
+aufgelistet:  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;db_name - Name der Datenbank doc_count - Anzahl der Dokumente in der Datenbank doc_del_count - Anzahl der gelöschten Dokumente update_seq - aktuelle Anzahl der Aktualisierungen der Datenbank purge_seq - Zahl der Säuberungs-Operationen der Datenbank compact_running - Anzeige ob die compact-Funktion gerade ausgeführt wird (true, false) disk_size - wie viel Speicherplatz die Datenbank benötigt instance_start_time - wann die Datenbank erstellt wurde disk_format_version - Version des Formats für die Datenspeicherung committed_update_seq - Anzahl der committed Update&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 21 May 2012 19:12:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-21:couchdb-datenbankinformationen.html</guid><category>CouchDB</category><category>Fedora</category><category>Linux</category><category>NoSQL</category></item><item><title>CouchDB - erste Schritte</title><link>https://www.datenpaul.de/couchdb-erste-schritte.html</link><description>&lt;p&gt;Gestartet wird &lt;a href="http://de.wikipedia.org/wiki/CouchDB" title="WP:CouchDB"&gt;CouchDB&lt;/a&gt; bei Fedora per Kommando:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "systemctl start couchdb.service"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Der Test ob CouchDB läuft erfolgt mittels Eingabe&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;localhost:5984&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;beim Browser oder in der Kommandozeile per&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl http://localhost:5984&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Alle vorhandenen Datenbanken werden durch die Eingabe&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl http://localhost:5984/_all_dbs&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;gezeigt. CouchDB besitzt eine &lt;a href="https://de.wikipedia.org/wiki/RESTful" title="WP:RESTfuö"&gt;RESTful JSON API&lt;/a&gt;. Das bedeutet, die
+Aktionen auf die Ressourcen geschehen durch eine HTTP-Methode. Anhand
+der Eingabe&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl -X PUT http://localhost:5984/test&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;wird eine neue Datenbank mit dem Namen test erstellt. Mittels&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl -X DELETE http://localhost:5984/test&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;kann die Datenbank wieder gelöscht werden. Außerdem verfügt CouchDB über
+ein Webinterface namens Futon, das man mit&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;http://localhost:5984/_utils/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;erreichen kann.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Apr 2012 16:53:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-04-11:couchdb-erste-schritte.html</guid><category>CouchDB</category><category>Datenbank</category><category>Fedora</category><category>Linux</category><category>NoSQL</category></item><item><title>CouchDB - Installation</title><link>https://www.datenpaul.de/couchdb-installation.html</link><description>&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/CouchDB" title="WP:couchdb"&gt;CouchDB&lt;/a&gt; ist ein Open-Source-NoSQL-Datenbanksystem. CouchDB ist ein
+dokumentenorientiertes und schemaloses Datenbanksystem. Es ist also kein
+relationales Datenbanksystem wie z.B. &lt;a href="http://de.wikipedia.org/wiki/mysql" title="WP:MySQL"&gt;MySQL&lt;/a&gt;. Die Daten werden in
+einem Dokument im &lt;a href="http://de.wikipedia.org/wiki/JSON" title="WP:JSON"&gt;JSON-Format&lt;/a&gt; gespeichert. Mittels Paketmanager kann
+CouchDB problemlos bei jeder Linux-Distribution installiert werden. Die
+Installation in der Kommandozeile bei Fedora wird durch folgende Eingabe
+durchgeführt:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "yum install couchdb"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Gestartet wird CouchDB durch die Eingabe:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "systemctl start couchdb.service"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Durch eine einfache HTTP-Anfrage testet man ob CouchDB läuft. Den
+Browser starten und folgendes eintippen:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;http://localhost:5984&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Als Antwort bekommt man sofort ein JSON-Objekt zu Gesicht. Zum Beispiel:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{ "couchdb": "Welcome", "version": "1.0.3"}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ebenso kann man die HTTP-Anfrage auch in der Kommandozeile stellen:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl http://localhost:5984&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Beendet wird CouchDB durch die Eingabe:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "systemctl stop couchdb.service"&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 10 Apr 2012 17:19:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-04-10:couchdb-installation.html</guid><category>CouchDB</category><category>Datenbank</category><category>Fedora</category><category>Linux</category><category>NoSQL</category></item></channel></rss>

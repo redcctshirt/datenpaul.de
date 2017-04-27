@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet/less" type="text/css" href="https://www.datenpaul.de/theme/css/style.less">
+  <script src="https://www.datenpaul.de/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/style.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/pygments.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/fonts.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="heiko">
+  <meta name="description" content="Posts and writings by heiko">
+  <meta name="referrer" content="no-referrer">
+
+  <link href="https://www.datenpaul.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="datenpaul Full Atom Feed" />
+  <link href="https://www.datenpaul.de/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="datenpaul Full RSS Feed" />
+
+<meta name="keywords" content="Fedora, Gnome, Gnome3, Linux, Suche">
+
+  <title>
+Gnome3 - eine neue Suche hinzufügen  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="https://www.datenpaul.de">
+        <img src="https://www.datenpaul.de/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="https://www.datenpaul.de">datenpaul</a></h2>
+      <p>Creative Commons Zeug und was mit Daten</p>
+      <ul>
+        <li><a href="projekte/" target="_blank">Projekte</a></li>
+        <li><a href="http://www.flickr.com/photos/redcctshirt" target="_blank">Flickr</a></li>
+        <li><a href="http://www.openclipart.org/user-detail/redccshirt" target="_blank">openclipart</a></li>
+        <li><a href="http://redcctshirt.tumblr.com/" target="_blank">tumblr</a></li>
+        <li><a href="http://www.pixabay.com/de/users/redcctshirt" target="_blank">pixabay</a></li>
+        <li><a href="https://twitter.com/redcctshirt" target="_blank">twitter</a></li>
+        <li><a href="https://github.com/redcctshirt" target="_blank">github</a></li>
+        <li><a href="https://www.datenpaul.de/pages/impressum.html">Impressum</a></li>
+      </ul>
+      <br /><br />
+      <a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://www.datenpaul.de/archive/by.png" alt="CC by Icon" /></a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+<p>Posted on Fr 28 September 2012</p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="https://www.datenpaul.de/gnome3-eine-neue-suche-hinzufugen.html">Gnome3 - eine neue Suche hinzufügen</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Bei der neuen Suche wird als Beispiel die Suchmaschine
+<a href="http://duckduckgo.com" title="Suchmaschine duckduckgo.com">duckduckgo.com</a> eingesetzt. Die Such-URL bei duckduckgo sieht wie
+folgt aus: https://duckduckgo.com/?q=Suchbegriff<br />
+Sobald man den Aktivitäten-Modus (mit dem Mauspfeil links oben in die
+Ecke wandern) wählt, erscheint oben rechts eine Sucheingabe, mit dem
+Text Suchbegriff eingeben.<br />
+<img alt="Gnome3 Suchbox Screenshot" src="http://www.datenpaul.de/archive/gnome_suchbox.png" /><br />
+Gibt man etwas ein wird in den Anwendungen, Einstellungen, bei den
+Kontakten und bei der Dokumentverwaltung danach gesucht. Ebenso
+erscheinen unten 2 Buttons (Wikipedia, Google), die es ermöglichen, dass
+nach diesem Eintrag auch in einer Suchmaschine gestöbert wird. Diese
+Suchmaschinen findet man im Verzeichnis
+<code>/usr/share/gnome-shell/open-search-providers/</code>. Um eine neue Suche
+hinzuzufügen kopiert man einfach eine dieser xml-Dateien und modifiziert
+die neue Datei. Das Kopieren wird mittels Befehl (bei <a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora">Fedora</a>)
+<code>su -c "cp /usr/share/gnome-shell/open-search-providers/wikipedia.xml /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"</code>
+bewerkstelligt. Die Modifizierung erfolgt durch einen Texteditor, z.B.
+durch
+<code>su -c "nano /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"</code>
+(Strg+O - Speichern, Strg+X - nano Beenden). \&lt;ShortName>,
+\&lt;Description> und \&lt;Url template> sind die wichtigsten Anpassungen
+die durchgeführt werden müssen.<br />
+Bsp: /usr/share/gnome-shell/open-search-providers/duckduckgo.xml</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;ShortName&gt;</span>DuckDuckGo<span class="nt">&lt;/ShortName&gt;</span>
+<span class="nt">&lt;Description&gt;</span>DuckDuckGo, free Search<span class="nt">&lt;/Description&gt;</span>
+<span class="nt">&lt;InputEncoding&gt;</span>UTF-8<span class="nt">&lt;/InputEncoding&gt;</span>
+<span class="nt">&lt;Url</span> <span class="na">type=</span><span class="s">&quot;text/html&quot;</span> <span class="na">method=</span><span class="s">&quot;GET&quot;</span> <span class="na">template=</span><span class="s">&quot;https://duckduckgo.com/?q={searchTerms}&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+
+
+<p>Nach einem Neustart mit Alt+F2 r ist DuckDuckGo nun ebenfalls bei den
+Suchmaschinen mit dabei. Die Funktionen für die Suche, in Javascript
+geschrieben, befinden sich in den Dateien
+<code>/usr/share/gnome-shell/js/ui/search.js</code> und
+<code>/usr/share/gnome-shell/js/ui/searchDisplay.js</code>. Das Aussehen kann man
+in der Datei <code>/usr/share/gnome-shell/theme/gnome-shell.css</code>
+beeinflussen. 2 Beispiele: Im Bereich Search Box unter #searchArea kann
+man z.B. die Hintergrundfarbe der Suchbox verändern. Im Teil Search
+Results unter .dash-search-button ist es machbar die Hintergrundfarbe
+der Suchbuttons zu ändern. Natürlich sind viele Änderungen mehr möglich.
+Nach einem Neustart mittels Alt+F2 r werden die Abänderungen sichtbar.
+Bsp: /usr/share/gnome-shell/theme/gnome-shell.css</p>
+<div class="highlight"><pre><span></span><span class="c">/* Search Box */</span>
+
+<span class="p">#</span><span class="nn">searchArea</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Search Results */</span>
+<span class="p">.</span><span class="nc">dash-search-button</span> <span class="p">{</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://www.datenpaul.de/category/gnome.html">Gnome</a></p>
+    <p>Tags:
+      <a href="https://www.datenpaul.de/tag/fedora.html">Fedora</a>,      <a href="https://www.datenpaul.de/tag/gnome.html">Gnome</a>,      <a href="https://www.datenpaul.de/tag/gnome3.html">Gnome3</a>,      <a href="https://www.datenpaul.de/tag/linux.html">Linux</a>,      <a href="https://www.datenpaul.de/tag/suche.html">Suche</a>    </p>
+  </div>
+
+  	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+			<a href="https://www.datenpaul.de/feeds/comment.gnome3-eine-neue-suche-hinzufugen.atom.xml">
+				Comment Atom Feed
+			</a>
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://www.datenpaul.de/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "info";
+			CommentSystem.email_domain = "datenpaul.de";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) { 
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("gnome3-eine-neue-suche-hinzufugen"));
+				}
+			);
+		});
+	</script>
+
+
+
+</article>
+
+    <footer>
+<p><a href="https://www.datenpaul.de/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
+    </footer>
+
+    <div id="ending_message">
+      <p>&copy; heiko. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. .</p>
+    </div>
+  </main>
+</body>
+</html>

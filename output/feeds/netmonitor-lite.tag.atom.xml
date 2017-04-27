@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/netmonitor-lite.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-06-25T21:51:00+02:00</updated><entry><title>Gnome3 - Die Shell Extension NetMonitor Lite</title><link href="https://www.datenpaul.de/gnome3-die-shell-extension-netmonitor-lite.html" rel="alternate"></link><published>2012-06-25T21:51:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-25:gnome3-die-shell-extension-netmonitor-lite.html</id><summary type="html">&lt;p&gt;Durch sogenannte Shell Extensions ist man in der Lage die
+Gnome3-Oberfläche zu erweitern und zu ergänzen. Speziell für diese
+Erweiterungen wurde die frische Webseite &lt;a href="http://extensions.gnome.org/" title="extensions.gnome.org"&gt;extensions.gnome.org&lt;/a&gt; ins
+Leben gerufen. Hier sind die Shell Extensions verfügbar, eigene können
+hinzugefügt werden und installierte Extensions werden aufgelistet.
+&lt;a href="http://extensions.gnome.org/extension/52/netmonitor/" title="netmonitor lite"&gt;NetMonitor Lite&lt;/a&gt; ist eine von diesen vielen Erweiterungen. Sie zeigt
+die Download- und Upload-Bandbreite in der oberen Leiste an. Installiert
+wird eine Shell Extension indem man auf die Schaltfläche wo off steht
+klickt, links neben dem Namen der Erweiterung, so dass ein on erscheint.
+Anschliessend folgt man der Anweisung und klickt auf den Button
+Installieren. Willkommen Erweiterung NetMonitor Lite. Das Plugin Gnome
+Shell Integration macht diesen Vorgang realisierbar. Deinstalliert wird
+eine Erweiterung wie folgt: Man startet den Dateimanager, macht auch
+alle unsichtbaren Dateien sichtbar indem man auf Ansicht klickt und dann
+verborgene Dateien anzeigen wählt. Man wechselt ins Verzeichnis
+\~/.local/share/gnome-shell/extensions. Hier werden alle
+Erweiterungsverzeichnisse aufgelistet. Möchte man eine Erweiterung nun
+deinstallieren, löscht man einfach das Verzeichnis dazu. Abschliessend
+leitet man einen Gnome-Shell Neustart ein, mittels Alt+F2 restart. An
+dieser Stelle kann man die Erweiterungen auch modifizieren.&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="Linux"></category><category term="NetMonitor Lite"></category><category term="Shell Extension"></category></entry></feed>

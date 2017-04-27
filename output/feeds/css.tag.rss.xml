@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/css.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 05 Oct 2012 17:35:00 +0200</lastBuildDate><item><title>Gnome3 - ein eigenes user-Theme</title><link>https://www.datenpaul.de/gnome3-ein-eigenes-user-theme.html</link><description>&lt;p&gt;In vielen Artikeln der Reihe &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; wurde schon oftmals darauf
+hingewiesen, dass Erscheinungsbildveränderungen erreicht werden indem
+man mit &lt;a href="https://de.wikipedia.org/wiki/Root-Konto" title="WP:Root"&gt;Root&lt;/a&gt;rechten die Werte in der Datei gnome-shell.css im
+Verzeichnis /usr/share/gnome-shell/theme/ abändert. Es wurde beschrieben
+wie man die Hintergrundfarbe vom Dash und die Schrift im Run-Dialog nach
+seinem Geschmack verändern kann. In diesem Beitrag möchte ich nun
+erläutern wie diese gerade erwähnte Datei unangetastet bleibt und
+Aussehensabwandlungen dennoch durch die Erstellung eines eigenen
+user-Theme realisierbar sind. Vorraussetzung dafür ist die Installation
+des Pakets gnome-shell-extension-user-theme und die Aktivierung der
+Erweiterung, z.B. per gnome-tweak-tool unter Shell-Erweiterungen.
+Anschliessend erstellt man den versteckten Ordner .themes im
+Home-Verzeichnis, gibt seinem Theme einen Namen, erstellt im Verzeichnis
+\~/.themes dazu einen Ordner und legt den Ordner gnome-shell in diesem
+Ordner an. In dem Ordner gnome-shell wird die Datei gnome-shell.css
+angelegt, so dass folgende Struktur entsteht:
+\~/.themes/\&amp;lt;name&gt;/gnome-shell/gnome-shell.css. Durch diese
+&lt;a href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets" title="WP:CSS"&gt;css&lt;/a&gt;-Datei werden nun mittels Importierung alle globalen Werte
+übernommen und können einzeln editiert werden. Jenes neue user-Theme
+kann anhand des gnome-tweak-tools unter Thema ausgewählt werden.
+Werte-Änderungen werden erst nach einem Theme-Neustart (Alt+F2 drücken
+und rt eingeben) sichtbar. Beispiel um die Dash-Hintergrundfarbe zu
+ändern:&lt;/p&gt;
+&lt;p&gt;Installation der beiden erwähnten Pakete bei Fedora:
+&lt;code&gt;su -c "yum install gnome-shell-extension-user-theme gnome-tweak-tool"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;\~/.themes/james/gnome-shell/gnome-shell.css&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@import&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/share/gnome-shell/theme/gnome-shell.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;#dash {&lt;/span&gt;
+    &lt;span class="n"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Oct 2012 17:35:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-05:gnome3-ein-eigenes-user-theme.html</guid><category>CSS</category><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Linux</category><category>user-Theme</category></item></channel></rss>

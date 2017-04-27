@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/shebang.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 23 May 2012 18:57:00 +0200</lastBuildDate><item><title>Ruby - Hallo Welt</title><link>https://www.datenpaul.de/ruby-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt;-Quelltextdateien erkennt man an der Endung .rb und können mit
+einfachen Texteditoren verändert bzw. überhaupt erst erstellt werden.
+Eine .rb-Datei öffnet man mit einem Doppelklick, so wird die Datei mit
+dem Standard-Texteditor (z.B. &lt;a href="https://de.wikipedia.org/wiki/Gedit" title="WP:gedit"&gt;gedit&lt;/a&gt;) geöffnet.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;puts &amp;quot;Hallo Welt&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;sorgt für die Ausgabe Hallo Welt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;print &amp;quot;Hallo Welt&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;ist ebensfalls eine Ausgabe-Anweisung. Durch &lt;code&gt;ruby datei.rb&lt;/code&gt; werden die
+Befehle in der Datei durch den Ruby-Interpreter ausgeführt. Die
+&lt;a href="https://de.wikipedia.org/wiki/Shebang" title="WP:Shebang"&gt;Shebang&lt;/a&gt;-Zeile,&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;ganz oben, und das Zugriffsrecht "Datei als Programm ausführen"
+(&lt;code&gt;chmod +x datei.rb&lt;/code&gt;) machen die Datei ausführbar. Diese kann nun
+mittels &lt;code&gt;./datei.rb&lt;/code&gt; ausgeführt werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:ruby-hallo-welt.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Programmierung</category><category>Ruby</category><category>Shebang</category></item></channel></rss>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/www.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Oct 2013 01:28:00 +0200</lastBuildDate><item><title>bottle.py auf Uberspace installieren</title><link>https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html</link><description>&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
+Mikro-Framework für Webanwendungen, ähnlich wie &lt;a href="https://github.com/JonasGroeger/flask-uberspace-quickstart" title="Flask"&gt;Flask&lt;/a&gt; (Python) oder
+&lt;a href="http://blog.sangyye.de/2012/06/sinatra-on-uberspace/" title="Sinatra"&gt;Sinatra&lt;/a&gt; (Ruby). Freiesmagazin.de erklärt &lt;a href="http://www.freiesmagazin.de/mobil/freiesMagazin-2011-02.html#11_02_bottle" title="bottle"&gt;hier&lt;/a&gt; kurz und bündig
+wie bottle.py genutzt werden kann. In den folgenden Zeilen möchte ich
+erläutern wie man bottle.py auf &lt;a href="https://uberspace.de/" title="uberspace"&gt;Uberspace&lt;/a&gt; installieren kann.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;bottle.py installieren&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nach dem Einloggen (per ssh) wechselt man ins Verzeichnis \~/bin um dort
+ein neues Projekt-Verzeichnis zu erstellen. (z.B. bottlepy) Anschließend
+wird bottle.py mittels Kommando wget heruntergeladen und man schreibt
+sein erstes Skript, z.B. in die Datei index.py. In diesem Beispiel wird
+in der run-Zeile ein Webserver gestartet der auf Port 8787 läuft.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# ins Verzeichnis bin wechseln&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir bottlepy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# ein neues Verzeichnis mit dem Namen bottlepy erstellen&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bottlepy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# in das neue Verzeichnis bottlepy wechseln&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/defnull/bottle/raw/master/bottle.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# bottle.py herunterladen&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;__EOF__&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="c1"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo Welt!&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8787&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;__EOF__&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# Python-Skript mit bottle.py erstellen, im Verzeichnis \~/bin/bottlepy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Daemon erstellen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Was es mit dem Daemon auf sich hat und wie man einen erstellt wird im
+&lt;a href="https://uberspace.de/dokuwiki/system:daemontools" title="uberspace wiki"&gt;Wiki von Uberspace&lt;/a&gt; genaustens erklärt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test -d ~/service || uberspace-setup-svscan
+
+mkdir ~/etc/run-my-daemon
+cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/run
+#!/bin/sh
+cd ~/bin/bottlepy 
+/usr/bin/env python ~/bin/bottlepy/index.py
+__EOF__
+chmod +x ~/etc/run-my-daemon/run
+mkdir ~/etc/run-my-daemon/log
+cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/log/run
+#!/bin/sh
+exec multilog t ./main
+__EOF__
+chmod +x ~/etc/run-my-daemon/log/run
+ln -s ~/etc/run-my-daemon ~/service/my-daemon
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;.htaccess konfigurieren&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Am Ende wird die .htaccess-Datei für den Apache-Webserver im Verzeichnis
+\~/html so konfiguriert, dass die an den Webserver gerichteten Anfragen
+an den lokalen Port 8787 weitergeleitet werden, also an den laufenden
+Webserver der mit dem index.py-Skript und bottle.py gestartet wurde.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/html/.htaccess
+RewriteEngine On
+RewriteRule (.*) http://127.0.0.1:8787/$1 [P]
+__EOF__
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nun sollte alles funktionieren und bei einer Anfrage an den Webserver
+(http://www.beispieldomain.de/) wird man nun mit einem Hallo Welt!
+begrüßt.&lt;/p&gt;
+&lt;p&gt;[Artikel steht unter der Lizenz:
+&lt;a href="http://creativecommons.org/licenses/by/3.0/"&gt;http://creativecommons.org/licenses/by/3.0/&lt;/a&gt;&lt;br /&gt;
+(by datenpaul.de)]&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Sat, 19 Oct 2013 01:28:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-10-19:bottle-py-auf-uberspace-installieren.html</guid><category>bash</category><category>bottle</category><category>bottle.py</category><category>Flask</category><category>Linux</category><category>Python</category><category>Sinatra</category><category>Tutorial</category><category>Uberspace</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
+über ein Youtube-Video zu bekommen nutzt man ganz einfach die Youtube
+data API. Gibt man folgendes in den Browser ein, sendet die API
+Informationen zum angegebenen Video im JSON-Format. (Das Video wird
+mittels ID bestimmt. Die Video-ID steht in der URL eines Video-Aufrufs
+nach dem watch?v= https://www.youtube.com/watch?v=\&amp;lt;ID&gt;)&lt;/p&gt;
+&lt;p&gt;Browser-Eingabe:
+&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Für eine bessere Übersicht sorgt der URL-Anhang &lt;code&gt;&amp;amp;prettyprint=true&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Eingabe:
+&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;amp;prettyprint=true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Die Ausgabe, die von der API erzeugt wird, ist nichts weiter als ein
+String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
+aussehen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;wird&lt;/span&gt; &lt;span class="nt"&gt;durch&lt;/span&gt; &lt;span class="nt"&gt;die&lt;/span&gt; &lt;span class="nt"&gt;Youtube-Video-ID&lt;/span&gt; &lt;span class="nt"&gt;ersetzt&lt;/span&gt;
+&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Einzelne&lt;/span&gt; &lt;span class="nt"&gt;Angaben&lt;/span&gt; &lt;span class="nt"&gt;k&lt;/span&gt;&lt;span class="err"&gt;ö&lt;/span&gt;&lt;span class="nt"&gt;nnen&lt;/span&gt; &lt;span class="nt"&gt;nun&lt;/span&gt; &lt;span class="nt"&gt;mit&lt;/span&gt; &lt;span class="nt"&gt;diesem&lt;/span&gt; &lt;span class="nt"&gt;Muster&lt;/span&gt; &lt;span class="nt"&gt;ausgegeben&lt;/span&gt; &lt;span class="nt"&gt;werden&lt;/span&gt;
+&lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Video-Title: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;data-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Python könnte dies so aussehen:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
+
+&lt;span class="c1"&gt;# &amp;lt;ID&amp;gt; wird durch die Youtube-Video-ID ersetzt&lt;/span&gt;
+&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Titel: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aufrufe: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;viewCount&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:informationen-uber-ein-youtube-video-auslesen.html</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item><item><title>Webserver lighttpd bei Fedora</title><link>https://www.datenpaul.de/webserver-lighttpd-bei-fedora.html</link><description>&lt;p&gt;In diesem Beitrag soll kurz der ressourcensparende Webserver
+&lt;a href="https://de.wikipedia.org/wiki/Lighttpd" title="WP:lighttpd"&gt;lighttpd&lt;/a&gt; (ausgesprochen: lighty) vorgestellt werden. lighttpd wurde
+in der &lt;a href="https://de.wikipedia.org/wiki/C_%28Programmiersprache%29" title="WP:C"&gt;Programmiersprache C&lt;/a&gt; geschrieben, ist auf der Webseite
+&lt;a href="http://www.lighttpd.net" title="www.lighttpd.net"&gt;www.lighttpd.net&lt;/a&gt; daheim und die Funktionalität kann durch Module
+erweitert werden. Er gehört bei vielen &lt;a href="https://de.wikipedia.org/wiki/Linux" title="WP:Linux"&gt;Linux&lt;/a&gt;-Distributionen zur
+Paketsammlung und kann somit kinderleicht mittels Paketmanager
+installiert werden. Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt; lautet der Installationsbefehl
+&lt;code&gt;su -c "yum install lighttpd"&lt;/code&gt;. Bei der Installation wurde das
+Konfigurationsverzeichnis /etc durch die Einstellungsdateien von
+lighttpd erweitert. Diese befinden sich im Pfad /etc/lighttpd.
+/etc/lighttpd/lighttpd.conf ist die Einstellungsdatei von lighttpd. Die
+WorldWideWeb-Ressourcen, sprich &lt;a href="https://de.wikipedia.org/wiki/HTML" title="WP:HTML"&gt;HTML&lt;/a&gt;-Dateien, CSS-Dateien usw.,
+werden im Ordner /var/www/lighttpd abgelegt. Der Start des Webservers
+erfolgt per Anweisung &lt;code&gt;su -c "systemctl start lighttpd.service"&lt;/code&gt;. Durch
+den Webbrowser kann man nun auf die HTML-Dateien zugreifen, die Eingabe
+localhost und die Begrüßungsseite wird geladen. Ein Neustart wird
+mittels &lt;code&gt;su -c "systemctl restart lighttpd.service"&lt;/code&gt; ausgelöst. Beendet
+wird der Webserver prompt nach der Eingabe
+&lt;code&gt;su -c "sytemctl stop lighttpd.service"&lt;/code&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 22 Oct 2012 22:48:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-22:webserver-lighttpd-bei-fedora.html</guid><category>Fedora</category><category>lighttpd</category><category>Linux</category><category>web</category><category>webserver</category><category>www</category></item><item><title>woof - Webserver mit Limit</title><link>https://www.datenpaul.de/woof-webserver-mit-limit.html</link><description>&lt;p&gt;An dieser Stelle wird der kleine &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt; woof (web offer one file)
+vorgestellt. woof ist in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben. Das Besondere ist, dass
+es ein Download- und Upload-Limit gibt, sobald diese Grenze erreicht
+wird schaltet sich der Webserver von alleine aus. Das Skript findet man
+auf der Webseite &lt;a href="http://www.home.unix-ag.org/simon/woof.html"&gt;http://www.home.unix-ag.org/simon/woof.html&lt;/a&gt;. Klickt
+man das Skript im Downloadbereich an, kann man den Inhalt auf der
+Webseite sehen. Der Datei-Menüpunkt "Seite Speichern unter" im
+Webbrowser kann nun benutzt werden um woof an die gewünschte Stelle im
+Dateisystem zu kopieren. Das Zugriffsrecht "Datei als Programm
+ausführen" muss für das Skript noch markiert werden und schon steht woof
+zum Einsatz bereit. Eine Hilfestellung erscheint nach der Eingabe
+&lt;code&gt;./woof.py&lt;/code&gt;. Mit der Option -i wird die IP-Adresse, durch -c das Limit
+und mit -p wird der Port bestimmt. Ohne Angaben werden die Standardwerte
+genutzt. (Port 8080, Limit 1, IP 127.0.0.1).&lt;/p&gt;
+&lt;p&gt;Beispiel:&lt;br /&gt;
+&lt;code&gt;./woof.py dateiname&lt;/code&gt; (Jene Anweisung ermöglicht ein Download der
+Datei, durch den Zugriff auf http://127.0.0.1:8080).&lt;br /&gt;
+&lt;code&gt;./woof.py -c 2 dateiname&lt;/code&gt; (2 Downloads möglich bis der Dienst beendet
+wird)&lt;br /&gt;
+Mittels &lt;code&gt;./woof.py -U&lt;/code&gt; erlaubt man einen Upload bevor woof beendet
+wird.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 19 Oct 2012 01:07:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-19:woof-webserver-mit-limit.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Python</category><category>web</category><category>webserver</category><category>woof</category><category>www</category></item><item><title>jQuery - ready- und click-Methode</title><link>https://www.datenpaul.de/jquery-ready-und-click-methode.html</link><description>&lt;p&gt;Die ready-Methode sorgt dafür dass bei dem Ereignis (Event), wenn das
+ganze Dokument vollständig geladen wurde, die Funktion innerhalb der
+Klammern, in diesem Fall eine anonyme Funktion, ausgeführt wird. Diese
+Anweisung kann ruhig mehrmals in einer Datei stehen. Die click-Methode
+hingegen verwirklicht die angegebene Funktion bei einem Mausklick. Durch
+.hide() versteckt man die selektierten Elemente.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;cursor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;pointer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;hide&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Zeile 7 wird das jQuery-Framework geladen. Von Zeile 14 bis 20 werden
+die jQuery-Anweisungen definiert. Sobald das ganze Dokument vollständig
+geladen wurde steht die click-Methode für alle div-Container bereit.
+\$(this) bezieht sich auf das jeweile Element (hier ein div-Container)
+auf das gerade geklickt wird. Durch die hide-Methode in der 17. Zeile
+wird das Element bei einem Mausklick versteckt.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 05 Jul 2012 22:41:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-05:jquery-ready-und-click-methode.html</guid><category>HMTL5</category><category>HTML</category><category>Javascript</category><category>jQuery</category><category>web</category><category>www</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
+(Seite nicht gefunden) kann durch den error decorator erstellt werden.
+Ein Beispiel:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Seite nicht gefunden&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Fehlermeldungen (HTTP Error Pages) können ebenso mittels
+abort()-Funktion&lt;br /&gt;
+programmiert werden.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;401&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Leider kein Zugriff möglich !&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Umleitungen zu einer anderen URL werden durch redirect (HTTP Status Code
+- 303) erstellt.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo&amp;#39;&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/303&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;uml&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:bottle-fehlerseiten-umleitungen.html</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>jQuery - $()-Aufruf deaktivieren</title><link>https://www.datenpaul.de/jquery-aufruf-deaktivieren.html</link><description>&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
+jQuery("div").css("color","blue") als jQuery-Anweisung schreibt, beides
+funktioniert. Aber es ist machbar die \$()-Funktion zu deaktivieren um
+möglichen Konflikten mit anderen Javascript-Frameworks entgegenzuwirken.
+Mittels jQuery.noConflict(); wird der \$()-Aufruf unwirksam. Beispiel.
+(Die Anweisung in Zeile 3 wird somit ignoriert.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jQuery.noConflict();
+jQuery(document).ready(function() {
+$(&amp;quot;div#two&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;green&amp;quot;);
+jQuery(&amp;quot;div#one&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;blue&amp;quot;);
+});
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-aufruf-deaktivieren.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>jQuery - Hallo Welt</title><link>https://www.datenpaul.de/jquery-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
+&lt;a href="https://de.wikipedia.org/wiki/Javascript" title="WP:Javascript"&gt;Javascript&lt;/a&gt;-Framework. Dieses wundersame Rahmenwerk und Toolset
+erfreut sich großer Beliebtheit und wird in vielen bekannten
+&lt;a href="https://de.wikipedia.org/wiki/Content-Management-System" title="WP:CMS"&gt;Content-Management-Systemen&lt;/a&gt; eingesetzt. Es vereinfacht
+Javascript-Lösungswege und lässt Dynamik und Interaktivität in eine
+Website mit einfließen. Animationen können einfach erstellt, Inhalt
+hinzugefügt und Elemente verändert werden. Mittels \$-Funktion oder der
+jQuery-Funktion wird ein jQuery-Objekt erstellt. Als erstes wird
+bestimmt was manipuliert werden soll. Die selektierten Elemente können
+dann durch jQuery-Methoden verändert werden. Beispiel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;one&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;two&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;css&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;color&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Per &lt;code&gt;&amp;lt;script src="http://code.jquery.com/jquery-1.7.2.min.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
+in Zeile 7 wird jQuery in eine HTML-Seite eingebunden. Durch
+\$(document).ready(function() { }); in Zeile 15 und 17 wird das ganze
+Dokument geladen bevor die enthaltenen jQuery-Anweisungen ausgeführt
+werden. In Zeile 16 kommt es dann zur Veränderung der Textfarbe
+innerhalb aller div-Container. Anhand von \$("div") werden alle
+div-Container ausgewählt. Mittels \$("div").css("color","blue"); wird
+die Eigenschaft color (Textfarbe) mit dem Wert blue belegt. Statt rot,
+wie in Zeile 5 durch color: red; festgelegt, wird der Text in allen
+div-Containern in blau angezeigt. Eine Spezifizierung auf einen
+bestimmten div-Container ist durch die id möglich. Wird
+\$("div").css("color","blue"); durch \$("div#one").css("color","blue");
+ersetzt erscheint nur der Inhalt "Hallo Welt" vom div-Container mit der
+id one in blau.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:36:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-hallo-welt.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>SimpleHTTPServer - schnell mal Dateien über www verfügbar machen</title><link>https://www.datenpaul.de/simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</link><description>&lt;p&gt;SimpleHTTPServer ist ein &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt;, in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben und
+für den einfachen, schnellen, temporären Einsatz gedacht, um z.B.
+Dateien oder statische Webseiten per World Wide Web abrufbereit zu
+machen. SimpleHTTPServer muss bei den meisten grossen
+&lt;a href="https://de.wikipedia.org/wiki/Linux-Distribution" title="WP:Linux-Distributionen"&gt;Linux-Distribution&lt;/a&gt; nicht nachinstalliert werden, denn er ist ein
+Modul von Python. Gestartet wird der Webserver mittels Befehl
+&lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt; im jeweiligen Verzeichnis. Dieses
+Verzeichnis wird gewissermassen zum Wurzelverzeichnis des Webservers. Im
+Browser tippt man nunmehr &lt;code&gt;http://localhost:8000&lt;/code&gt; ein um auf die Dateien
+zugreifen zu können. 8000 ist die Standardportnummer. Die Portnummer
+kann man auch abändern indem man eine andere beim Start angibt. z.B.
+&lt;code&gt;python -m SimpleHTTPServer 8080&lt;/code&gt; Die dazugehörigen Python-Dateien
+findet man übrigens bei Fedora 16 (64bit) im Verzeichnis
+/usr/lib64/python2.7/.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 25 May 2012 19:27:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-25:simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</guid><category>Fedora</category><category>Linux</category><category>Python</category><category>SimpleHTTPServer</category><category>web</category><category>webserver</category><category>www</category></item></channel></rss>

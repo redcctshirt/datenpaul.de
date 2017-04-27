@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/pdfimages.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 31 May 2012 22:05:00 +0200</lastBuildDate><item><title>PDF-Seiten in Bilder umwandeln</title><link>https://www.datenpaul.de/pdf-seiten-in-bilder-umwandeln.html</link><description>&lt;p&gt;In diesem Artikel möchte ich 3 Tools vorstellen. Das Tool &lt;code&gt;pdftoppm&lt;/code&gt;
+verwandelt Seiten von einem &lt;a href="https://de.wikipedia.org/wiki/Pdf" title="WP:PDF"&gt;PDF-Dokument&lt;/a&gt; in Bilder. Mögliche
+Optionen werden nach der Eingabe &lt;code&gt;pdftoppm --help&lt;/code&gt; aufgelistet.
+&lt;code&gt;pdftoppm dateiname.pdf dateiname&lt;/code&gt; konvertiert jede Seite zu einem
+&lt;a href="https://de.wikipedia.org/wiki/Portable_Pixmap" title="WP:PPM"&gt;ppm-Bild&lt;/a&gt;. Mittels Option -png können &lt;a href="https://de.wikipedia.org/wiki/Portable_Network_Graphics" title="WP:PNG"&gt;PNG-Bilder&lt;/a&gt; erstellt werden.
+Per -jpeg kommt es zur Ausgabe von JPG-Bildern. Außerdem existiert das
+Tool &lt;code&gt;pdftocairo&lt;/code&gt;, mit ähnlichen Funktionen. Durch den Befehl
+&lt;code&gt;pdftocairo --help&lt;/code&gt; werden alle Optionen sichtbar.
+&lt;code&gt;pdftocairo dateiname.pdf -png dateiname&lt;/code&gt; generiert PNG-Bilder. Ebenso
+gibt es noch die Schaffungsoptionen -jpeg, -ps, -pdf und -svg. Durch das
+Tool &lt;code&gt;pdfimages&lt;/code&gt; können Bilder innerhalb einer PDF-Datei extrahiert
+werden. &lt;code&gt;pdfimages dateiname.pdf dateiname&lt;/code&gt; ist das Muster für die
+Ausführung des Kommandos. Anhand der Optionen -f und -l kann übrigens
+bei allen 3 Tools eine Selektion durchgeführt werden. (-f n - bestimmt
+die erste Seite für die Ausgabe, -l n - bestimmt die letzte Seite für
+die Ausgabe)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 31 May 2012 22:05:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-31:pdf-seiten-in-bilder-umwandeln.html</guid><category>Fedora</category><category>Linux</category><category>pdf</category><category>pdfimages</category><category>pdftocairo</category><category>pdftoppm</category></item></channel></rss>

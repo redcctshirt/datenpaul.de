@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os  # for PATH - PELICAN_COMMENT_SYSTEM_DIR
+PATH = os.getcwd()  # for PATH - PELICAN_COMMENT_SYSTEM_DIR
 
 AUTHOR = u'heiko'
 SITENAME = u'datenpaul'
-SITEURL = 'https://www.datenpaul.de/'
+SITEURL = 'https://www.datenpaul.de'
 
 TIMEZONE = 'Europe/Berlin'
 

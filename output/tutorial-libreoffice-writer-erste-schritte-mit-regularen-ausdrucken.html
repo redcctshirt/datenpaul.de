@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet/less" type="text/css" href="https://www.datenpaul.de/theme/css/style.less">
+  <script src="https://www.datenpaul.de/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/style.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/pygments.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/fonts.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="heiko">
+  <meta name="description" content="Posts and writings by heiko">
+  <meta name="referrer" content="no-referrer">
+
+  <link href="https://www.datenpaul.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="datenpaul Full Atom Feed" />
+  <link href="https://www.datenpaul.de/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="datenpaul Full RSS Feed" />
+
+<meta name="keywords" content="Daten, Datenjournalismus, LibreOffice, Linux, RegEx, Regulärer Ausdruck, Writer">
+
+  <title>
+Tutorial: LibreOffice Writer - Erste Schritte mit regulären Ausdrücken  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="https://www.datenpaul.de">
+        <img src="https://www.datenpaul.de/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="https://www.datenpaul.de">datenpaul</a></h2>
+      <p>Creative Commons Zeug und was mit Daten</p>
+      <ul>
+        <li><a href="projekte/" target="_blank">Projekte</a></li>
+        <li><a href="http://www.flickr.com/photos/redcctshirt" target="_blank">Flickr</a></li>
+        <li><a href="http://www.openclipart.org/user-detail/redccshirt" target="_blank">openclipart</a></li>
+        <li><a href="http://redcctshirt.tumblr.com/" target="_blank">tumblr</a></li>
+        <li><a href="http://www.pixabay.com/de/users/redcctshirt" target="_blank">pixabay</a></li>
+        <li><a href="https://twitter.com/redcctshirt" target="_blank">twitter</a></li>
+        <li><a href="https://github.com/redcctshirt" target="_blank">github</a></li>
+        <li><a href="https://www.datenpaul.de/pages/impressum.html">Impressum</a></li>
+      </ul>
+      <br /><br />
+      <a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://www.datenpaul.de/archive/by.png" alt="CC by Icon" /></a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+<p>Posted on Fr 28 Juni 2013</p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="https://www.datenpaul.de/tutorial-libreoffice-writer-erste-schritte-mit-regularen-ausdrucken.html">Tutorial: LibreOffice Writer - Erste Schritte mit regulären Ausdrücken</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Reguläre Ausdrücke  (regular expressions, RegExp, RegEx, Grep, …)</p>
+<p>Viele Aufgaben eines/r Datenjournalist/in kann man mit "Suchen und
+Ersetzen" lösen, z.B. in LibreOffice Writer. Für komplexere "Suchen und
+Ersetzen" gibt es die sogenannten "regulären Ausdrücke". Diese werden
+von vielen einfachen Texteditoren unterstützt. Wie man mit "Suchen und
+Ersetzen" einen Text bereinigen kann, werde ich nun an einem Beispiel
+demonstrieren. Dafür habe ich eine Liste gewählt, in der alle
+Leerzeichen fehlen. Dieses Phänomen tritt in der Arbeit öfters auf, z.B.
+weil der Text mit einer OCR-Software (Bild-zu-Text-Erkennung) erstellt
+oder aus einem PDF-Dokument kopiert wurde. Hier ein Beispiel: die Liste
+der ehemaligen Bundespräsidenten der BRD kopiert von der <a href="http://de.wikipedia.org/wiki/Bundespr%C3%A4sident_(Deutschland)#Die_bisherigen_Bundespr.C3.A4sidenten_der_Bundesrepublik_Deutschland" title="WP:Bundespräsidenten">entsprechenden
+Wikipedia Seite</a>.</p>
+<p>TheodorHeuss(1884–1963)<br />
+HeinrichLübke(1894–1972)<br />
+GustavHeinemann(1899–1976)<br />
+WalterScheel(*1919)<br />
+KarlCarstens(1914–1992)<br />
+RichardvonWeizsäcker(*1920)<br />
+RomanHerzog(*1934)<br />
+JohannesRau(1931–2006)<br />
+HorstKöhler(*1943)<br />
+ChristianWulff(*1959)<br />
+JoachimGauck(*1940)</p>
+<p>Als erstes kann man alle "(" ersetzen durch ein Tab, dass von
+LibreOffice Calc als Spaltenwechsel interpretiert wird.</p>
+<p>In Writer: ersetze "\(" durch "\t" (Unter Bearbeiten - Suchen und
+Ersetzen - Suchen nach "\(" - Ersetzen durch "\t" - Unter Mehr
+Optionen - Regulärer Ausdruck anklicken)</p>
+<p>TheodorHeuss 1884–1963)<br />
+HeinrichLübke 1894–1972)<br />
+GustavHeinemann 1899–1976)<br />
+WalterScheel *1919)<br />
+KarlCarstens 1914–1992)<br />
+RichardvonWeizsäcker *1920)<br />
+RomanHerzog *1934)<br />
+JohannesRau 1931–2006)<br />
+HorstKöhler *1943)<br />
+ChristianWulff *1959)<br />
+JoachimGauck *1940</p>
+<p>Nun die schließenden Klammern entfernen.</p>
+<p>In Writer: ersetze ")" durch "" (Unter Bearbeiten - Suchen und Ersetzen
+- Suchen nach "\)" - Ersetzen durch "" - Unter Mehr Optionen -
+Regulärer Ausdruck anklicken)</p>
+<p>TheodorHeuss 1884–1963<br />
+HeinrichLübke 1894–1972<br />
+GustavHeinemann 1899–1976<br />
+WalterScheel *1919<br />
+KarlCarstens 1914–1992<br />
+RichardvonWeizsäcker *1920<br />
+RomanHerzog *1934<br />
+JohannesRau 1931–2006<br />
+HorstKöhler *1943<br />
+ChristianWulff *1959<br />
+JoachimGauck *1940</p>
+<p>Nun die Minuszeichen durch einen Tab ersetzen.</p>
+<p>In Writer: ersetze "–" durch "\t" (Unter Bearbeiten - Suchen und
+Ersetzen - Suchen nach "–" - Ersetzen durch "\t" - Unter Mehr Optionen
+- Regulärer Ausdruck anklicken)</p>
+<p>TheodorHeuss 1884 1963<br />
+HeinrichLübke 1894 1972<br />
+GustavHeinemann 1899 1976<br />
+WalterScheel *1919<br />
+KarlCarstens 1914 1992<br />
+RichardvonWeizsäcker *1920<br />
+RomanHerzog *1934<br />
+JohannesRau 1931 2006<br />
+HorstKöhler *1943<br />
+ChristianWulff *1959<br />
+JoachimGauck *1940</p>
+<p>Nun die Mal-Zeichen entfernen.</p>
+<p>In Writer: ersetze "*" durch "" (Unter Bearbeiten - Suchen und Ersetzen
+- Suchen nach "\*" - Ersetzen durch "" - Unter Mehr Optionen -
+Regulärer Ausdruck anklicken)</p>
+<p>TheodorHeuss 1884 1963<br />
+HeinrichLübke 1894 1972<br />
+GustavHeinemann 1899 1976<br />
+WalterScheel 1919<br />
+KarlCarstens 1914 1992<br />
+RichardvonWeizsäcker 1920<br />
+RomanHerzog 1934<br />
+JohannesRau 1931 2006<br />
+HorstKöhler 1943<br />
+ChristianWulff 1959<br />
+JoachimGauck 1940</p>
+<p>Die Daten sind nun schon sehr gut strukturiert, aber die Namen sind noch
+nicht korrekt. Vor- und Nachnamen kleben noch aneinander. Man müsste
+nach jeden Kleinbuchstaben, auf den ein Großbuchstabe folgt, ein
+Leerzeichen setzen. Solch eine Aufgabe lässt sich nicht mehr mit einem
+einfachen "Suchen und Ersetzen" lösen. Theoretisch müsste man jede
+Kombination von Klein- und Großbuchstaben suchen.</p>
+<p>Als regulärer Ausdruck: ersetze "([a-z])([A-Z])" durch "\1 \2" (Unter
+Bearbeiten - Suchen und Ersetzen - Suchen nach "([a-z])([A-Z])" -
+Ersetzen durch "\$1 \$2" - Unter Mehr Optionen - Regulärer Ausdruck
+anklicken, Groß-/Kleinschreibung anklicken)</p>
+<p>Theodor Heuss 1884 1963<br />
+Heinrich Lübke 1894 1972<br />
+Gustav Heinemann 1899 1976<br />
+Walter Scheel 1919<br />
+Karl Carstens 1914 1992<br />
+Richardvon Weizsäcker 1920<br />
+Roman Herzog 1934<br />
+Johannes Rau 1931 2006<br />
+Horst Köhler 1943<br />
+Christian Wulff 1959<br />
+Joachim Gauck 1940</p>
+<p>Durch den oben verwendeten regulären Ausdruck werden beliebige
+Kombinationen aus Klein- und Großbuchstaben gefunden: ([a-z])([A-Z]) -
+ein beliebiger Kleinbuchstabe (1. Teil in Klammern), ein beliebiger
+Großbuchstabe (2. Teil in Klammern)</p>
+<p>Wenn etwas gefunden wird, wird es ersetzt durch: \1 \2 (In Writer
+durch \$1 \$2)<br />
+Was im 1. Teil in Klammern gefunden wurde. Leerzeichen. Was im 2. Teil
+in Klammern gefunden wurde.</p>
+<p>Reguläre Ausdrücke sind scheinbar kompliziert, aber auch hier ist alles
+eine Frage der Übung! Wenn man einmal damit anfängt, hat man schnell die
+ersten Erfolgserlebnisse und lernt dann kontinuierlich weitere Tricks
+dazu. Aber den ersten Schritt muss man erst einmal machen, und zwar
+einfach mal nach "Regulären Ausdrücken" googeln und sich die vielen
+Einführungskurse anschauen.</p>
+<p>(<a href="http://www.opendatacity.de/tutorial-erste-schritte-mit-regularen-ausdrucken/" title="Tutorial: Erste Schritte mit regulären Ausdrücken">Quelltext</a> ist von Michael Kreil und steht unter einer Creative
+Commons-Lizenz (CC BY 3.0 Michael Kreil))</p>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://www.datenpaul.de/category/libreoffice.html">LibreOffice</a></p>
+    <p>Tags:
+      <a href="https://www.datenpaul.de/tag/daten.html">Daten</a>,      <a href="https://www.datenpaul.de/tag/datenjournalismus.html">Datenjournalismus</a>,      <a href="https://www.datenpaul.de/tag/libreoffice.html">LibreOffice</a>,      <a href="https://www.datenpaul.de/tag/linux.html">Linux</a>,      <a href="https://www.datenpaul.de/tag/regex.html">RegEx</a>,      <a href="https://www.datenpaul.de/tag/regularer-ausdruck.html">Regulärer Ausdruck</a>,      <a href="https://www.datenpaul.de/tag/writer.html">Writer</a>    </p>
+  </div>
+
+  	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+			<a href="https://www.datenpaul.de/feeds/comment.tutorial-libreoffice-writer-erste-schritte-mit-regularen-ausdrucken.atom.xml">
+				Comment Atom Feed
+			</a>
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://www.datenpaul.de/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "info";
+			CommentSystem.email_domain = "datenpaul.de";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) { 
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("tutorial-libreoffice-writer-erste-schritte-mit-regularen-ausdrucken"));
+				}
+			);
+		});
+	</script>
+
+
+
+</article>
+
+    <footer>
+<p><a href="https://www.datenpaul.de/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
+    </footer>
+
+    <div id="ending_message">
+      <p>&copy; heiko. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. .</p>
+    </div>
+  </main>
+</body>
+</html>

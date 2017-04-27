@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/6von49.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 03 Nov 2010 21:48:00 +0100</lastBuildDate><item><title>PHP 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/php-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
+ermitteln.&lt;br /&gt;
+Geschrieben ist das Programm in PHP. Das Programm ist für Webserver&lt;br /&gt;
+denn die Ausgabe erscheint im HTML-Code.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/zufall6von49php.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 03 Nov 2010 21:48:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-03:php-6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>PHP</category><category>Zufall</category></item><item><title>Wordpress widget 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/wordpress-widget-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Wordpress widget 6 Zufallszahlen von 1 bis 49&lt;br /&gt;
+License: GPLv3&lt;br /&gt;
+Version: 0.1 (23.06.2010)&lt;br /&gt;
+&lt;a href="http://www.datenpaul.de/archive/six_random_numbers.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Prinzip:  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$numberlist = range(1,49); // Liste erstellen mit Zahlen von 1 bis 49 shuffle($numberlist); // Liste mischen for ($i=0; $i&amp;lt;=5; $i++) { $rand_nr[$i] = $numberlist[$i]; } // ersten 6 Zahlen in eine neue Liste schreiben sort($rand_nr); // die 6 Zufallszahlen sortieren foreach ($rand_nr as $value) { echo "$value "; } // die 6 geordneten Zufallszahlen ausgeben&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 Jun 2010 16:16:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-23:wordpress-widget-6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>PHP</category><category>Programmierung</category><category>Widget</category><category>Wordpress</category></item><item><title>6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
+ermitteln.&lt;br /&gt;
+Geschrieben ist das Programm in Python. Das Programm ist für Webserver&lt;br /&gt;
+denn die Ausgabe erscheint in einem HTML-Code.&lt;br /&gt;
+&lt;a href="http://www.datenpaul.de/archive/Zufall6von49.tar.gz"&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Prinzip:&lt;br /&gt;
+&lt;code&gt;#!/usr/bin/python import random print random.sample(range(1,50,1),6)&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 10 Jun 2010 10:45:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-10:6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>Python</category><category>Zufall</category></item></channel></rss>

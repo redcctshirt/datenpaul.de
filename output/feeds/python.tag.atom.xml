@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/python.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-10-19T01:28:00+02:00</updated><entry><title>bottle.py auf Uberspace installieren</title><link href="https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html" rel="alternate"></link><published>2013-10-19T01:28:00+02:00</published><author><name>admin</name></author><id>tag:www.datenpaul.de,2013-10-19:bottle-py-auf-uberspace-installieren.html</id><summary type="html">&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
+Mikro-Framework für Webanwendungen, ähnlich wie &lt;a href="https://github.com/JonasGroeger/flask-uberspace-quickstart" title="Flask"&gt;Flask&lt;/a&gt; (Python) oder
+&lt;a href="http://blog.sangyye.de/2012/06/sinatra-on-uberspace/" title="Sinatra"&gt;Sinatra&lt;/a&gt; (Ruby). Freiesmagazin.de erklärt &lt;a href="http://www.freiesmagazin.de/mobil/freiesMagazin-2011-02.html#11_02_bottle" title="bottle"&gt;hier&lt;/a&gt; kurz und bündig
+wie bottle.py genutzt werden kann. In den folgenden Zeilen möchte ich
+erläutern wie man bottle.py auf &lt;a href="https://uberspace.de/" title="uberspace"&gt;Uberspace&lt;/a&gt; installieren kann.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;bottle.py installieren&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nach dem Einloggen (per ssh) wechselt man ins Verzeichnis \~/bin um dort
+ein neues Projekt-Verzeichnis zu erstellen. (z.B. bottlepy) Anschließend
+wird bottle.py mittels Kommando wget heruntergeladen und man schreibt
+sein erstes Skript, z.B. in die Datei index.py. In diesem Beispiel wird
+in der run-Zeile ein Webserver gestartet der auf Port 8787 läuft.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# ins Verzeichnis bin wechseln&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir bottlepy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# ein neues Verzeichnis mit dem Namen bottlepy erstellen&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bottlepy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# in das neue Verzeichnis bottlepy wechseln&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/defnull/bottle/raw/master/bottle.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# bottle.py herunterladen&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;__EOF__&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="c1"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo Welt!&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8787&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;__EOF__&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;# Python-Skript mit bottle.py erstellen, im Verzeichnis \~/bin/bottlepy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Daemon erstellen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Was es mit dem Daemon auf sich hat und wie man einen erstellt wird im
+&lt;a href="https://uberspace.de/dokuwiki/system:daemontools" title="uberspace wiki"&gt;Wiki von Uberspace&lt;/a&gt; genaustens erklärt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test -d ~/service || uberspace-setup-svscan
+
+mkdir ~/etc/run-my-daemon
+cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/run
+#!/bin/sh
+cd ~/bin/bottlepy 
+/usr/bin/env python ~/bin/bottlepy/index.py
+__EOF__
+chmod +x ~/etc/run-my-daemon/run
+mkdir ~/etc/run-my-daemon/log
+cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/log/run
+#!/bin/sh
+exec multilog t ./main
+__EOF__
+chmod +x ~/etc/run-my-daemon/log/run
+ln -s ~/etc/run-my-daemon ~/service/my-daemon
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;.htaccess konfigurieren&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Am Ende wird die .htaccess-Datei für den Apache-Webserver im Verzeichnis
+\~/html so konfiguriert, dass die an den Webserver gerichteten Anfragen
+an den lokalen Port 8787 weitergeleitet werden, also an den laufenden
+Webserver der mit dem index.py-Skript und bottle.py gestartet wurde.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/html/.htaccess
+RewriteEngine On
+RewriteRule (.*) http://127.0.0.1:8787/$1 [P]
+__EOF__
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nun sollte alles funktionieren und bei einer Anfrage an den Webserver
+(http://www.beispieldomain.de/) wird man nun mit einem Hallo Welt!
+begrüßt.&lt;/p&gt;
+&lt;p&gt;[Artikel steht unter der Lizenz:
+&lt;a href="http://creativecommons.org/licenses/by/3.0/"&gt;http://creativecommons.org/licenses/by/3.0/&lt;/a&gt;&lt;br /&gt;
+(by datenpaul.de)]&lt;/p&gt;</summary><category term="bash"></category><category term="bottle"></category><category term="bottle.py"></category><category term="Flask"></category><category term="Linux"></category><category term="Python"></category><category term="Sinatra"></category><category term="Tutorial"></category><category term="Uberspace"></category><category term="web"></category><category term="WSGI"></category><category term="www"></category></entry><entry><title>Informationen über ein vimeo-Video ermitteln</title><link href="https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html" rel="alternate"></link><published>2013-04-13T00:04:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-04-13:informationen-uber-ein-vimeo-video-ermitteln.html</id><summary type="html">&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
+vimeo-Video-Portal zu beziehen wird die vimeo data API angeboten. Die
+Funktionsweise ist die gleiche wie beim &lt;a href="http://www.cc-juno.de/archives/364" title="Informationen über ein Youtube-Video auslesen"&gt;Auslesen von Informationen über
+ein Youtube-Video&lt;/a&gt;. Eine sehr sorgfältige und leicht verständliche
+Dokumentation mit Beispielen entdeckt man auf der Website
+&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http://developer.vimeo.com/apis/simple&lt;/a&gt; Tippt man folgendes in den
+Browser ein, werden die Metadaten vom jeweiligen Video geliefert. (Das
+Video wird mittels ID bestimmt. Die Video-ID steht in der URL eines
+Video-Aufrufs nach dem / https://vimeo.com/\&amp;lt;ID&gt;)&lt;/p&gt;
+&lt;p&gt;Browser-Eingabe: &lt;code&gt;http://vimeo.com/api/v2/video/&amp;lt;ID&amp;gt;.&amp;lt;Format&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Mögliche Formate: &lt;code&gt;json, php, xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Beispiel: &lt;code&gt;http://vimeo.com/api/v2/video/52387087.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Mittels Skript können gewünschte Daten nun mühelos ermittelt werden. In
+PHP könnte dies so aussehen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+
+&lt;span class="nt"&gt;foreach&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+   &lt;span class="err"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$key&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;:&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;$value&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;n&amp;lt;br&lt;/span&gt; &lt;span class="err"&gt;/&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Python könnte ein Skript so aussehen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
+
+&lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;{0}: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="API"></category><category term="json"></category><category term="Meta"></category><category term="PHP"></category><category term="Programmierung"></category><category term="Python"></category><category term="video"></category><category term="vimeo"></category><category term="xml"></category></entry><entry><title>Informationen über ein Youtube-Video auslesen</title><link href="https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html" rel="alternate"></link><published>2013-04-07T00:13:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-04-07:informationen-uber-ein-youtube-video-auslesen.html</id><summary type="html">&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
+über ein Youtube-Video zu bekommen nutzt man ganz einfach die Youtube
+data API. Gibt man folgendes in den Browser ein, sendet die API
+Informationen zum angegebenen Video im JSON-Format. (Das Video wird
+mittels ID bestimmt. Die Video-ID steht in der URL eines Video-Aufrufs
+nach dem watch?v= https://www.youtube.com/watch?v=\&amp;lt;ID&gt;)&lt;/p&gt;
+&lt;p&gt;Browser-Eingabe:
+&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Für eine bessere Übersicht sorgt der URL-Anhang &lt;code&gt;&amp;amp;prettyprint=true&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Eingabe:
+&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;amp;prettyprint=true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Die Ausgabe, die von der API erzeugt wird, ist nichts weiter als ein
+String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
+aussehen:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;wird&lt;/span&gt; &lt;span class="nt"&gt;durch&lt;/span&gt; &lt;span class="nt"&gt;die&lt;/span&gt; &lt;span class="nt"&gt;Youtube-Video-ID&lt;/span&gt; &lt;span class="nt"&gt;ersetzt&lt;/span&gt;
+&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Einzelne&lt;/span&gt; &lt;span class="nt"&gt;Angaben&lt;/span&gt; &lt;span class="nt"&gt;k&lt;/span&gt;&lt;span class="err"&gt;ö&lt;/span&gt;&lt;span class="nt"&gt;nnen&lt;/span&gt; &lt;span class="nt"&gt;nun&lt;/span&gt; &lt;span class="nt"&gt;mit&lt;/span&gt; &lt;span class="nt"&gt;diesem&lt;/span&gt; &lt;span class="nt"&gt;Muster&lt;/span&gt; &lt;span class="nt"&gt;ausgegeben&lt;/span&gt; &lt;span class="nt"&gt;werden&lt;/span&gt;
+&lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Video-Title: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;data-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In Python könnte dies so aussehen:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
+
+&lt;span class="c1"&gt;# &amp;lt;ID&amp;gt; wird durch die Youtube-Video-ID ersetzt&lt;/span&gt;
+&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Titel: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aufrufe: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;viewCount&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="API"></category><category term="json"></category><category term="PHP"></category><category term="Programmierung"></category><category term="Python"></category><category term="web"></category><category term="www"></category><category term="youtube"></category></entry><entry><title>woof - Webserver mit Limit</title><link href="https://www.datenpaul.de/woof-webserver-mit-limit.html" rel="alternate"></link><published>2012-10-19T01:07:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-10-19:woof-webserver-mit-limit.html</id><summary type="html">&lt;p&gt;An dieser Stelle wird der kleine &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt; woof (web offer one file)
+vorgestellt. woof ist in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben. Das Besondere ist, dass
+es ein Download- und Upload-Limit gibt, sobald diese Grenze erreicht
+wird schaltet sich der Webserver von alleine aus. Das Skript findet man
+auf der Webseite &lt;a href="http://www.home.unix-ag.org/simon/woof.html"&gt;http://www.home.unix-ag.org/simon/woof.html&lt;/a&gt;. Klickt
+man das Skript im Downloadbereich an, kann man den Inhalt auf der
+Webseite sehen. Der Datei-Menüpunkt "Seite Speichern unter" im
+Webbrowser kann nun benutzt werden um woof an die gewünschte Stelle im
+Dateisystem zu kopieren. Das Zugriffsrecht "Datei als Programm
+ausführen" muss für das Skript noch markiert werden und schon steht woof
+zum Einsatz bereit. Eine Hilfestellung erscheint nach der Eingabe
+&lt;code&gt;./woof.py&lt;/code&gt;. Mit der Option -i wird die IP-Adresse, durch -c das Limit
+und mit -p wird der Port bestimmt. Ohne Angaben werden die Standardwerte
+genutzt. (Port 8080, Limit 1, IP 127.0.0.1).&lt;/p&gt;
+&lt;p&gt;Beispiel:&lt;br /&gt;
+&lt;code&gt;./woof.py dateiname&lt;/code&gt; (Jene Anweisung ermöglicht ein Download der
+Datei, durch den Zugriff auf http://127.0.0.1:8080).&lt;br /&gt;
+&lt;code&gt;./woof.py -c 2 dateiname&lt;/code&gt; (2 Downloads möglich bis der Dienst beendet
+wird)&lt;br /&gt;
+Mittels &lt;code&gt;./woof.py -U&lt;/code&gt; erlaubt man einen Upload bevor woof beendet
+wird.&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="Linux"></category><category term="Python"></category><category term="web"></category><category term="webserver"></category><category term="woof"></category><category term="www"></category></entry><entry><title>bottle - statische Dateien</title><link href="https://www.datenpaul.de/bottle-statische-dateien.html" rel="alternate"></link><published>2012-06-20T21:57:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-20:bottle-statische-dateien.html</id><summary type="html">&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
+pdf-Dateien sind nicht automatisch Bestandteil einer bottle-App. Für
+jede einzelne Datei muss eine Route definiert werden. Per Dynamischer
+Route kann dies durch eine einzige @route-Anweisung erledigt werden. Um
+Zugriff auf Dateien mittels Web zu ermöglichen gibt es die Funktion
+static_file. Um die Funktion zu aktivieren muss zusätzlich die Klasse
+static_file von bottle importiert werden. Als ersten Parameter gibt man
+den Dateinamen an und als zweiten Parameter das lokale Verzeichnis in
+dem diese Datei zu finden ist. Hier ein Beispiel: (z.B.
+http://localhost:8080/static/index.png greift auf /home/paul/index.png
+zu)&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/static/&amp;lt;filepath:path&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/paul/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="bottle"></category><category term="Fedora"></category><category term="Linux"></category><category term="Programmierung"></category><category term="Python"></category><category term="WSGI"></category></entry><entry><title>bottle - dynamisches Routing</title><link href="https://www.datenpaul.de/bottle-dynamisches-routing.html" rel="alternate"></link><published>2012-06-10T22:01:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-10:bottle-dynamisches-routing.html</id><summary type="html">&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
+oder Werte eingesetzt werden können. Es sind Variablen. Diese Variable
+wird an die angedockte Funktion weitergegeben und mittels
+Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo/&amp;lt;name&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello {0} !&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Nach /hallo/ können nun Zeichenketten verwendet werden. (z.B.
+/hallo/paul /hallo/ina ...) Die eingesetzte Zeichenkette wird in der
+Variable name gespeichert und in Zeile 7 ersetzt diese Zeichenkette den
+Platzhalter {0}. Platzhalter können auch durch folgende Filter
+spezifiziert werden.  &lt;/p&gt;
+&lt;p&gt;@route('/route/&lt;id:int&gt;') - nur Integer-Werte sind erlaubt 
+@route('/route/&lt;id:float&gt;') - nur float-Werte sind erlaubt 
+@route('/route/&lt;name:re:[a-z]+&gt;') - erlaubt reguläre Ausdrücke 
+@route('/route/&lt;path:path&gt;') - erlaubt Verzeichnisangaben&lt;/p&gt;
+&lt;p&gt;Durch die Zeile 9 mit dem Inhalt debug(True) werden hilfreiche
+Fehlermeldungen mit Einzelheiten angezeigt. Der reloader, der in Zeile
+10 auf True gesetzt wird, bewirkt dass bei Veränderungen des Skripts
+kein Neustart des Programms notwendig ist. (&lt;a href="http://bottlepy.org" title="bottle"&gt;bottle&lt;/a&gt;)&lt;/p&gt;</summary><category term="bottle"></category><category term="Fedora"></category><category term="Linux"></category><category term="Programmierung"></category><category term="Python"></category><category term="WSGI"></category></entry><entry><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link href="https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html" rel="alternate"></link><published>2012-06-06T23:37:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-06:bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</id><summary type="html">&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
+Seite &lt;a href="http://bottlepy.org" title="bottlepy.org"&gt;bottlepy.org&lt;/a&gt; zu finden. Bottle ist ein schnelles und einfaches
+&lt;a href="https://de.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="WP:WSGI"&gt;WSGI&lt;/a&gt;-Microframework. Es besteht aus einer einzelnen Modul-Datei und
+hat keine Abhängigkeiten. Installiert wird bottle bei Fedora mittels
+Kommando &lt;code&gt;su -c "easy_install bottle"&lt;/code&gt;. Ebenso kann bottle durch den
+Paketmanager oder durch den direkten Download der Modul-Datei ins
+Betriebssystem gelangen. Ein Beispiel zeigt wie einfach es nun ist mit
+bottle eine Webapplication zu erstellen.&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;b&amp;gt;Hallo Welt!&amp;lt;/b&amp;gt;&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;In Zeile 3 werden die erforderlichen Klassen von bottle importiert.
+Ebenso wäre das Importieren von allen Klassen durch &lt;code&gt;import bottle&lt;/code&gt;
+möglich. @route('/hallo') erzeugt eine Seite wobei die folgende Funktion
+an diese Route gebunden wird. Die Ausgabe erfolgt am Ende durch den
+Befehl return. Es kann nur eine Funktion an die Route gebunden werden.
+Aber es ist machbar mehrere Routen an eine Funktion zu binden. In Zeile
+9 wird die Webapplication gestartet. Sobald das Skript mit python
+ausgeführt wird, sieht man die Ausgabe Hallo Welt, nach der Eingabe
+http://localhost:8080/hallo, im Browser. Beendet wird die Webapplication
+anhand von Strg+C.&lt;/p&gt;</summary><category term="bottle"></category><category term="Fedora"></category><category term="Linux"></category><category term="Programmierung"></category><category term="Python"></category><category term="WSGI"></category></entry><entry><title>SimpleHTTPServer - schnell mal Dateien über www verfügbar machen</title><link href="https://www.datenpaul.de/simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html" rel="alternate"></link><published>2012-05-25T19:27:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-05-25:simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</id><summary type="html">&lt;p&gt;SimpleHTTPServer ist ein &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt;, in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben und
+für den einfachen, schnellen, temporären Einsatz gedacht, um z.B.
+Dateien oder statische Webseiten per World Wide Web abrufbereit zu
+machen. SimpleHTTPServer muss bei den meisten grossen
+&lt;a href="https://de.wikipedia.org/wiki/Linux-Distribution" title="WP:Linux-Distributionen"&gt;Linux-Distribution&lt;/a&gt; nicht nachinstalliert werden, denn er ist ein
+Modul von Python. Gestartet wird der Webserver mittels Befehl
+&lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt; im jeweiligen Verzeichnis. Dieses
+Verzeichnis wird gewissermassen zum Wurzelverzeichnis des Webservers. Im
+Browser tippt man nunmehr &lt;code&gt;http://localhost:8000&lt;/code&gt; ein um auf die Dateien
+zugreifen zu können. 8000 ist die Standardportnummer. Die Portnummer
+kann man auch abändern indem man eine andere beim Start angibt. z.B.
+&lt;code&gt;python -m SimpleHTTPServer 8080&lt;/code&gt; Die dazugehörigen Python-Dateien
+findet man übrigens bei Fedora 16 (64bit) im Verzeichnis
+/usr/lib64/python2.7/.&lt;/p&gt;</summary><category term="Fedora"></category><category term="Linux"></category><category term="Python"></category><category term="SimpleHTTPServer"></category><category term="web"></category><category term="webserver"></category><category term="www"></category></entry><entry><title>6 Zufallszahlen von 1 bis 49</title><link href="https://www.datenpaul.de/6-zufallszahlen-von-1-bis-49.html" rel="alternate"></link><published>2010-06-10T10:45:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2010-06-10:6-zufallszahlen-von-1-bis-49.html</id><summary type="html">&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
+ermitteln.&lt;br /&gt;
+Geschrieben ist das Programm in Python. Das Programm ist für Webserver&lt;br /&gt;
+denn die Ausgabe erscheint in einem HTML-Code.&lt;br /&gt;
+&lt;a href="http://www.datenpaul.de/archive/Zufall6von49.tar.gz"&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Prinzip:&lt;br /&gt;
+&lt;code&gt;#!/usr/bin/python import random print random.sample(range(1,50,1),6)&lt;/code&gt;&lt;/p&gt;</summary><category term="6von49"></category><category term="Python"></category><category term="Zufall"></category></entry></feed>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/linux.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 05 Aug 2015 18:51:00 +0200</lastBuildDate><item><title>Mit nethogs ermitteln wie viel Bandbreite die einzelnen Prozesse nutzen</title><link>https://www.datenpaul.de/linux-nethogs.html</link><description>&lt;p&gt;&lt;img alt="linux - nethogs" src="http://www.datenpaul.de/archive/nethogs.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Netzwerk-top-Kommando - so könnte man nethogs umschreiben. &lt;code&gt;nethogs&lt;/code&gt; ermittelt wie viel Bandbreite die einzelnen Prozesse nutzen. Inzwischen gibt es viele verschiedene Netzwerk-&lt;a href="https://de.wikipedia.org/wiki/Monitoring"&gt;Monitoring&lt;/a&gt;-Tools unter Linux. Auf der Webseite &lt;a href="http://nethogs.sourceforge.net"&gt;nethogs.sourceforge.net&lt;/a&gt; befinden sich Informationen, über das einfach zu bedienende &lt;a href="https://de.wikipedia.org/wiki/Open_Source"&gt;OpenSource&lt;/a&gt;-Tool für die Konsole. Das Programm wird per Paketmanager installiert.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install nethogs # bei Linux Mint
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Mittels &lt;code&gt;sudo nethogs&lt;/code&gt; wird das Tool gestartet. Man kann erkennen welche Prozesse viel Bandbreite nutzen und welche Prozesse eher weniger. Drückt man die Taste &lt;code&gt;q&lt;/code&gt; wird nethogs beendet. Tippt man &lt;code&gt;sudo nethogs&lt;/code&gt; und anschließend eine bestimmte Netzwerk-Schnittstelle ein, so wird nur diese Schnittstelle überwacht. Standardmäßig wird nethogs jede Sekunde aktualisiert. Durch &lt;code&gt;-d&lt;/code&gt; kann man die Wartedauer zwischen den Aktualisierungen bestimmen, z.B. &lt;code&gt;sudo nethogs -d 3&lt;/code&gt; für 3 Sekunden. 
+Mit den Tasten &lt;code&gt;s&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; kann man nach gesendet und empfangen sortieren. Ob die Anzeige in Byte, KByte oder MByte ist, kann man durch das Drücken der Taste &lt;code&gt;m&lt;/code&gt; regeln.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 05 Aug 2015 18:51:00 +0200</pubDate><guid>tag:www.datenpaul.de,2015-08-05:linux-nethogs.html</guid><category>Linux</category><category>nethogs</category></item><item><title>Webserver lighttpd bei Fedora</title><link>https://www.datenpaul.de/webserver-lighttpd-bei-fedora.html</link><description>&lt;p&gt;In diesem Beitrag soll kurz der ressourcensparende Webserver
+&lt;a href="https://de.wikipedia.org/wiki/Lighttpd" title="WP:lighttpd"&gt;lighttpd&lt;/a&gt; (ausgesprochen: lighty) vorgestellt werden. lighttpd wurde
+in der &lt;a href="https://de.wikipedia.org/wiki/C_%28Programmiersprache%29" title="WP:C"&gt;Programmiersprache C&lt;/a&gt; geschrieben, ist auf der Webseite
+&lt;a href="http://www.lighttpd.net" title="www.lighttpd.net"&gt;www.lighttpd.net&lt;/a&gt; daheim und die Funktionalität kann durch Module
+erweitert werden. Er gehört bei vielen &lt;a href="https://de.wikipedia.org/wiki/Linux" title="WP:Linux"&gt;Linux&lt;/a&gt;-Distributionen zur
+Paketsammlung und kann somit kinderleicht mittels Paketmanager
+installiert werden. Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt; lautet der Installationsbefehl
+&lt;code&gt;su -c "yum install lighttpd"&lt;/code&gt;. Bei der Installation wurde das
+Konfigurationsverzeichnis /etc durch die Einstellungsdateien von
+lighttpd erweitert. Diese befinden sich im Pfad /etc/lighttpd.
+/etc/lighttpd/lighttpd.conf ist die Einstellungsdatei von lighttpd. Die
+WorldWideWeb-Ressourcen, sprich &lt;a href="https://de.wikipedia.org/wiki/HTML" title="WP:HTML"&gt;HTML&lt;/a&gt;-Dateien, CSS-Dateien usw.,
+werden im Ordner /var/www/lighttpd abgelegt. Der Start des Webservers
+erfolgt per Anweisung &lt;code&gt;su -c "systemctl start lighttpd.service"&lt;/code&gt;. Durch
+den Webbrowser kann man nun auf die HTML-Dateien zugreifen, die Eingabe
+localhost und die Begrüßungsseite wird geladen. Ein Neustart wird
+mittels &lt;code&gt;su -c "systemctl restart lighttpd.service"&lt;/code&gt; ausgelöst. Beendet
+wird der Webserver prompt nach der Eingabe
+&lt;code&gt;su -c "sytemctl stop lighttpd.service"&lt;/code&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 22 Oct 2012 22:48:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-22:webserver-lighttpd-bei-fedora.html</guid><category>Fedora</category><category>lighttpd</category><category>Linux</category><category>web</category><category>webserver</category><category>www</category></item><item><title>woof - Webserver mit Limit</title><link>https://www.datenpaul.de/woof-webserver-mit-limit.html</link><description>&lt;p&gt;An dieser Stelle wird der kleine &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt; woof (web offer one file)
+vorgestellt. woof ist in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben. Das Besondere ist, dass
+es ein Download- und Upload-Limit gibt, sobald diese Grenze erreicht
+wird schaltet sich der Webserver von alleine aus. Das Skript findet man
+auf der Webseite &lt;a href="http://www.home.unix-ag.org/simon/woof.html"&gt;http://www.home.unix-ag.org/simon/woof.html&lt;/a&gt;. Klickt
+man das Skript im Downloadbereich an, kann man den Inhalt auf der
+Webseite sehen. Der Datei-Menüpunkt "Seite Speichern unter" im
+Webbrowser kann nun benutzt werden um woof an die gewünschte Stelle im
+Dateisystem zu kopieren. Das Zugriffsrecht "Datei als Programm
+ausführen" muss für das Skript noch markiert werden und schon steht woof
+zum Einsatz bereit. Eine Hilfestellung erscheint nach der Eingabe
+&lt;code&gt;./woof.py&lt;/code&gt;. Mit der Option -i wird die IP-Adresse, durch -c das Limit
+und mit -p wird der Port bestimmt. Ohne Angaben werden die Standardwerte
+genutzt. (Port 8080, Limit 1, IP 127.0.0.1).&lt;/p&gt;
+&lt;p&gt;Beispiel:&lt;br /&gt;
+&lt;code&gt;./woof.py dateiname&lt;/code&gt; (Jene Anweisung ermöglicht ein Download der
+Datei, durch den Zugriff auf http://127.0.0.1:8080).&lt;br /&gt;
+&lt;code&gt;./woof.py -c 2 dateiname&lt;/code&gt; (2 Downloads möglich bis der Dienst beendet
+wird)&lt;br /&gt;
+Mittels &lt;code&gt;./woof.py -U&lt;/code&gt; erlaubt man einen Upload bevor woof beendet
+wird.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 19 Oct 2012 01:07:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-19:woof-webserver-mit-limit.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Python</category><category>web</category><category>webserver</category><category>woof</category><category>www</category></item><item><title>Opus - freier Audio-Codec</title><link>https://www.datenpaul.de/opus-freier-audio-codec.html</link><description>&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/Opus_(Audioformat)" title="WP:Opus"&gt;Opus&lt;/a&gt; ist ein neuer, freier und offener Audio-Codec. Die Bandbreite
+reicht von 8kHz bis 48kHz. Für die Speicherung ist eine Bitrate von
+6kbit/s bis 510kbit/s möglich. CBR und &lt;a href="http://de.wikipedia.org/wiki/Bitrate#Variable_Bitrate" title="WP:VBR"&gt;VBR&lt;/a&gt;, das heisst konstante und
+variable Bitraten werden unterstützt. Er kann sowohl für
+&lt;a href="http://de.wikipedia.org/wiki/Voice_over_IP" title="WP:VoIP"&gt;Voice-over-IP,&lt;/a&gt; als auch für hochwertige Musik verwendet werden.
+Weitere Informationen findet man auf der Website &lt;a href="http://opus-codec.org" title="opus"&gt;opus-codec.org&lt;/a&gt;. Um
+Opus zu implementieren muss das Paket opus installiert werden. Das Paket
+opus-tools enthält die Programme opusenc, opusdec und opusinfo. Die
+Installation bei &lt;a href="http://de.wikipedia.org/wiki/Fedora_(Linux-Distribution)" title="WP:Fedora"&gt;Fedora&lt;/a&gt; erfolgt durch den Paketmanager oder mittels
+Befehl &lt;code&gt;su -c "yum install opus opus-tools"&lt;/code&gt;. opusenc wird eingesetzt um
+.wav-Dateien in .opus-Dateien umzuwandeln. opusdec hingegen konvertiert
+.opus-Dateien in .wav-Dateien. Informationen über .opus-Dateien werden
+unter Zuhilfenahme von opusinfo eingeblendet. Mehrere Optionen stehen
+für jedes Programm zur Verfügung. Mit Firefox 15 können .opus-Dateien
+geöffnet und abgespielt werden. Beispiele für die opus-tools:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;opusinfo --help # Optionen werden aufgelistet&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;opusinfo datei.opus # Informationsanzeige über die Opus-Datei&lt;/p&gt;
+&lt;p&gt;opusenc --help # Optionen werden aufgelistet&lt;/p&gt;
+&lt;p&gt;opusenc --bitrate 224 datei.wav output.opus # .wav in .opus umwandeln,
+mit Bitrate 224000bit/s&lt;/p&gt;
+&lt;p&gt;opusdec --help # Optionen werden aufgelistet&lt;/p&gt;
+&lt;p&gt;opusdec datei.opus output.wav # .opus in .wav umwandeln&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 12 Sep 2012 20:59:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-12:opus-freier-audio-codec.html</guid><category>Audio-Codec</category><category>Fedora</category><category>Linux</category><category>opus</category><category>opusdec</category><category>opusenc</category><category>opusinfo</category></item><item><title>Linux - Bleachbit</title><link>https://www.datenpaul.de/linux-bleachbit.html</link><description>&lt;p&gt;Bleachbit kann eingesetzt werden um die Geschwindigkeit zu optimieren,
+aber hauptsächlich wird es benutzt um Daten zu löschen die die
+Privatsphäre betreffen, wie z.B. Cookies, temporäre files, Logs, den
+Browserverlauf usw.. Sowohl für Windows, als auch für
+Linux-Distributionen steht das Programm zur Verfügung. Es wurde in
+Python geschrieben, steht unter der &lt;a href="http://de.wikipedia.org/wiki/GPL" title="WP:GPL"&gt;GPL-Lizenz&lt;/a&gt; und wurde bisher in
+56 Sprachen übersetzt. Bleachbit findet man auf der Website
+&lt;a href="http://bleachbit.sourceforge.net" title="bleachbit"&gt;bleachbit.sourceforge.net&lt;/a&gt;. Die Installation erfolgt über den
+Paketmanager oder mittels Befehl &lt;code&gt;su -c "yum install bleachbit"&lt;/code&gt;. (bei
+Fedora). Unter Aktivitäten - Anwendungen - Systemwerkzeuge wird das Tool
+eingegliedert.&lt;br /&gt;
+&lt;img alt="Bleachbit Screenshot" src="http://www.datenpaul.de/archive/bleachbit.png" /&gt;&lt;br /&gt;
+Die Vorschau-Option gibt Auskunft darüber welche Dateien entfernt
+werden. Sobald der Button Löschen betätigt wurde beginnt die
+Reinigungsaktion. Durch das XML-Format CleanerML ist es machbar selbst
+zu definieren welche Dateien gelöscht werden sollen. Man kann selbst
+neue Cleaner für bestimmte Programme schreiben. Diese xml-Dateien
+befinden sich im Verzeichnis /usr/share/bleachbit/cleaners. In der
+Kommandozeile kann bleachbit ebenso zum Einsatz kommen. bleachbit -l
+listet alle Cleaner und Optionen auf. Die Vorschau wird mittels
+--preview oder -p angestoßen (z.B. bleachbit -p bash.history) und
+--delete --overwrite oder -d -o ist die Reinigungsanweisung (z.B.
+bleachbit -d -o bash.history). Die Konfigurationsdatei befindet sich im
+Verzeichnis \~/.config/bleachbit/ und heisst bleachbit.ini.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 11 Sep 2012 17:58:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-11:linux-bleachbit.html</guid><category>bleachbit</category><category>Fedora</category><category>Linux</category></item><item><title>PDF-Seiten in Bilder umwandeln</title><link>https://www.datenpaul.de/pdf-seiten-in-bilder-umwandeln.html</link><description>&lt;p&gt;In diesem Artikel möchte ich 3 Tools vorstellen. Das Tool &lt;code&gt;pdftoppm&lt;/code&gt;
+verwandelt Seiten von einem &lt;a href="https://de.wikipedia.org/wiki/Pdf" title="WP:PDF"&gt;PDF-Dokument&lt;/a&gt; in Bilder. Mögliche
+Optionen werden nach der Eingabe &lt;code&gt;pdftoppm --help&lt;/code&gt; aufgelistet.
+&lt;code&gt;pdftoppm dateiname.pdf dateiname&lt;/code&gt; konvertiert jede Seite zu einem
+&lt;a href="https://de.wikipedia.org/wiki/Portable_Pixmap" title="WP:PPM"&gt;ppm-Bild&lt;/a&gt;. Mittels Option -png können &lt;a href="https://de.wikipedia.org/wiki/Portable_Network_Graphics" title="WP:PNG"&gt;PNG-Bilder&lt;/a&gt; erstellt werden.
+Per -jpeg kommt es zur Ausgabe von JPG-Bildern. Außerdem existiert das
+Tool &lt;code&gt;pdftocairo&lt;/code&gt;, mit ähnlichen Funktionen. Durch den Befehl
+&lt;code&gt;pdftocairo --help&lt;/code&gt; werden alle Optionen sichtbar.
+&lt;code&gt;pdftocairo dateiname.pdf -png dateiname&lt;/code&gt; generiert PNG-Bilder. Ebenso
+gibt es noch die Schaffungsoptionen -jpeg, -ps, -pdf und -svg. Durch das
+Tool &lt;code&gt;pdfimages&lt;/code&gt; können Bilder innerhalb einer PDF-Datei extrahiert
+werden. &lt;code&gt;pdfimages dateiname.pdf dateiname&lt;/code&gt; ist das Muster für die
+Ausführung des Kommandos. Anhand der Optionen -f und -l kann übrigens
+bei allen 3 Tools eine Selektion durchgeführt werden. (-f n - bestimmt
+die erste Seite für die Ausgabe, -l n - bestimmt die letzte Seite für
+die Ausgabe)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 31 May 2012 22:05:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-31:pdf-seiten-in-bilder-umwandeln.html</guid><category>Fedora</category><category>Linux</category><category>pdf</category><category>pdfimages</category><category>pdftocairo</category><category>pdftoppm</category></item></channel></rss>

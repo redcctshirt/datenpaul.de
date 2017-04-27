@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/gnome.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Jun 2015 18:58:00 +0200</lastBuildDate><item><title>Gnome - einfache Bildschirmaufnahmen mit EasyScreenCast</title><link>https://www.datenpaul.de/gnome-easyscreencast.html</link><description>&lt;p&gt;&lt;img alt="easyscreencast - options" src="http://www.datenpaul.de/archive/easyscreencast0.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Die Bildschirmaktivitäten in ein Video fließen zu lassen, diese Funktion ist schon von Anfang an
+ein Bestandteil der &lt;a href="https://de.wikipedia.org/wiki/Gnome_Shell"&gt;Gnome-Shell&lt;/a&gt;. Die Tastenkombination &lt;strong&gt;Strg+Alt+Shift+R&lt;/strong&gt; startet und beendet die &lt;a href="https://fedoraproject.org/wiki/ScreenCasting"&gt;Aufnahme der Desktopumgebung&lt;/a&gt;. Der rote Kreis, rechts oben in der Leiste, signalisiert, jetzt gerade läuft eine Aufnahme.
+Die Aufnahme dauert mit der Standardeinstellung maximal 30 Sekunden. Die Dauer der Aufnahme kann mittels &lt;a href="https://developer.gnome.org/gio/stable/gsettings-tool.html"&gt;&lt;strong&gt;gsettings&lt;/strong&gt;&lt;/a&gt; in der Kommandozeile oder mit dem &lt;a href="https://wiki.ubuntuusers.de/GNOME_Konfiguration/dconf"&gt;dconf-editor&lt;/a&gt; nach oben geschraubt werden. Die Einstellung dazu findet man unter &lt;strong&gt;org.gnome.settings-daemon.plugins.media-keys max-screencast-length&lt;/strong&gt;. Statt 30 Sekunden könnten es z.B. 600 sein, 10 Minuten. Angenehm und einfach sind Aufnahmen mit der Gnome-Shell-Erweiterung &lt;a href="https://extensions.gnome.org/extension/690/easyscreencast/"&gt;EasyScreenCast&lt;/a&gt;. Diese &lt;a href="https://de.wikipedia.org/wiki/Screencast"&gt;Screencasting&lt;/a&gt;-Erweiterung findet man unter den vielen anderen Erweiterungen auf der Webseite &lt;a href="https://extensions.gnome.org"&gt;extensions.gnome.org&lt;/a&gt;. Für die Installation von EasyScreenCast klickt man auf Off und anschließend auf den Button Installieren, sodass ein On erscheint. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="easyscreencast" src="http://www.datenpaul.de/archive/easyscreencast1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Ein Klick auf das Kamerasymbol, oben rechts, und es ist machbar per EasyScreenCast eine Aufnahme zu starten und zu stoppen. Die Aufnahmen landen als &lt;a href="https://de.wikipedia.org/wiki/WebM"&gt;webm&lt;/a&gt;-Videodateien im Verzeichnis Videos. Die Einstellungen entdeckt man unter Options. Die Aufnahmen durch EasyScreenCast sind mit dem Video-Codec &lt;a href="https://de.wikipedia.org/wiki/VP8"&gt;VP8&lt;/a&gt;. Die mittels der Tastenkombination &lt;strong&gt;Strg+Alt+Shift+R&lt;/strong&gt; erstellten Screencasts laufen mit dem Nachfolger von VP8, dem Video-Codec &lt;a href="https://de.wikipedia.org/wiki/VP9"&gt;VP9&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 29 Jun 2015 18:58:00 +0200</pubDate><guid>tag:www.datenpaul.de,2015-06-29:gnome-easyscreencast.html</guid><category>Linux</category><category>Fedora</category><category>Gnome</category><category>Easyscreencast</category><category>Screencasting</category></item><item><title>Tipp: Gnome 3.6 - neues leeres Dokument mittels Tastenkombination erstellen</title><link>https://www.datenpaul.de/tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html</link><description>&lt;p&gt;Bei Gnome 3.6 ist der Eintrag "Neues Leeres Dokument" im Kontextmenü des
+Dateimanagers nicht mehr vorhanden. Lediglich die Funktion "Neuer
+Ordner" existiert noch. Es ist auch leicht möglich mit dem jeweiligen
+Programm oder per Befehl touch eine neue Datei zu erstellen. Wer
+dennoch, wenigsten mit Hilfe einer Tastenkombination, ein neues leeres
+Dokument erzeugen will kann die Datei &lt;code&gt;~/.config/nautilus/accels&lt;/code&gt;
+mittels eines Texteditor abändern. Zum Beispiel durch den Befehl
+&lt;code&gt;nano ~/.config/nautilus/accels&lt;/code&gt;. Man editiert folgende Zeile:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;; (gtk_accel_path "&amp;lt;Actions&amp;gt;/DirViewActions/New Empty Document" "")&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Das Semikolon wird ganz am Anfang entfernt und zwischen den beiden
+Anführungszeichen "" gibt man eine Tastenkombination seiner Wahl an. So
+könnte die modifizierte Zeile so aussehen:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(gtk_accel_path "&amp;lt;Actions&amp;gt;/DirViewActions/New Empty Document" "&amp;lt;Alt&amp;gt;n")&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Mit Strg+O und anschliessend Strg+X werden die Veränderungen gesichert
+und nano wird beendet. Ab sofort wird per Tastenkombination Alt+n im
+Dateimanager eine neue leere Datei angelegt. (Hinweis:
+Dateimanagerfenster schliessen und neu öffnen um Änderungen wirksam zu
+machen) Ausserdem gibt es die Möglichkeit den Kontextmenüeintrag "Neues
+Leeres Dokument" zurückzuholen. Unter Zuhilfenahme des Kommandos
+&lt;code&gt;touch ~/Vorlagen/neu&lt;/code&gt; erzeugt man ein neues Dokument im Ordner Vorlagen
+(engl. Templates). Nach dem Neustart des Dateimanagers ist die Funktion
+wieder verfügbar. Den Vorlagen-Ordner kann man übrigens in der Datei
+&lt;code&gt;~/.config/user-dirs.dirs&lt;/code&gt; bestimmen.
+(&lt;code&gt;XDG_TEMPLATES_DIR="$HOME/Vorlagen"&lt;/code&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 19 Feb 2013 21:12:00 +0100</pubDate><guid>tag:www.datenpaul.de,2013-02-19:tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html</guid><category>accels</category><category>Dateimanager</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>nautilus</category><category>touch</category></item><item><title>Gnome3 - Ordner vor Dateien anzeigen</title><link>https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html</link><description>&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
+Änderungsdatum sortiert werden. Dabei kann es vorkommen, dass Ordner
+ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br /&gt;
+&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png" /&gt;&lt;br /&gt;
+Um die Ordner vor den Dateien zu sortieren klickt man auf Dateien, geht
+zu den Einstellungen und setzt ein Häkchen bei "Ordner vor Dateien
+anzeigen".&lt;br /&gt;
+&lt;img alt="nautilus - Einstellungen" src="http://www.datenpaul.de/archive/sortdirfirst2.png" /&gt;&lt;br /&gt;
+Im &lt;code&gt;dconf-editor&lt;/code&gt; findet man diese Einstellung unter
+org.gnome.nautilus.preferences sort-directories-first.&lt;br /&gt;
+&lt;img alt="dconf-editor-Einstellung" src="http://www.datenpaul.de/archive/sortdirfirst1.png" /&gt;&lt;br /&gt;
+Per Befehl
+&lt;code&gt;gsettings get org.gnome.nautilus.preferences sort-directories-first&lt;/code&gt;
+kann man den Einstellungszustand abfragen. Mittels set kann man die
+Einstellung ändern, true für das Häkchen und false für kein Häkchen.
+(&lt;code&gt;gsettings set org.gnome.nautilus.preferences sort-directories-first true|false&lt;/code&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 15 Feb 2013 18:39:00 +0100</pubDate><guid>tag:www.datenpaul.de,2013-02-15:gnome3-ordner-vor-dateien-anzeigen.html</guid><category>donf-editor</category><category>Gnome</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>nautilus</category><category>sort-directories-first</category></item><item><title>woof - Webserver mit Limit</title><link>https://www.datenpaul.de/woof-webserver-mit-limit.html</link><description>&lt;p&gt;An dieser Stelle wird der kleine &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt; woof (web offer one file)
+vorgestellt. woof ist in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben. Das Besondere ist, dass
+es ein Download- und Upload-Limit gibt, sobald diese Grenze erreicht
+wird schaltet sich der Webserver von alleine aus. Das Skript findet man
+auf der Webseite &lt;a href="http://www.home.unix-ag.org/simon/woof.html"&gt;http://www.home.unix-ag.org/simon/woof.html&lt;/a&gt;. Klickt
+man das Skript im Downloadbereich an, kann man den Inhalt auf der
+Webseite sehen. Der Datei-Menüpunkt "Seite Speichern unter" im
+Webbrowser kann nun benutzt werden um woof an die gewünschte Stelle im
+Dateisystem zu kopieren. Das Zugriffsrecht "Datei als Programm
+ausführen" muss für das Skript noch markiert werden und schon steht woof
+zum Einsatz bereit. Eine Hilfestellung erscheint nach der Eingabe
+&lt;code&gt;./woof.py&lt;/code&gt;. Mit der Option -i wird die IP-Adresse, durch -c das Limit
+und mit -p wird der Port bestimmt. Ohne Angaben werden die Standardwerte
+genutzt. (Port 8080, Limit 1, IP 127.0.0.1).&lt;/p&gt;
+&lt;p&gt;Beispiel:&lt;br /&gt;
+&lt;code&gt;./woof.py dateiname&lt;/code&gt; (Jene Anweisung ermöglicht ein Download der
+Datei, durch den Zugriff auf http://127.0.0.1:8080).&lt;br /&gt;
+&lt;code&gt;./woof.py -c 2 dateiname&lt;/code&gt; (2 Downloads möglich bis der Dienst beendet
+wird)&lt;br /&gt;
+Mittels &lt;code&gt;./woof.py -U&lt;/code&gt; erlaubt man einen Upload bevor woof beendet
+wird.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 19 Oct 2012 01:07:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-19:woof-webserver-mit-limit.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Python</category><category>web</category><category>webserver</category><category>woof</category><category>www</category></item><item><title>Gnome3 - ein eigenes user-Theme</title><link>https://www.datenpaul.de/gnome3-ein-eigenes-user-theme.html</link><description>&lt;p&gt;In vielen Artikeln der Reihe &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; wurde schon oftmals darauf
+hingewiesen, dass Erscheinungsbildveränderungen erreicht werden indem
+man mit &lt;a href="https://de.wikipedia.org/wiki/Root-Konto" title="WP:Root"&gt;Root&lt;/a&gt;rechten die Werte in der Datei gnome-shell.css im
+Verzeichnis /usr/share/gnome-shell/theme/ abändert. Es wurde beschrieben
+wie man die Hintergrundfarbe vom Dash und die Schrift im Run-Dialog nach
+seinem Geschmack verändern kann. In diesem Beitrag möchte ich nun
+erläutern wie diese gerade erwähnte Datei unangetastet bleibt und
+Aussehensabwandlungen dennoch durch die Erstellung eines eigenen
+user-Theme realisierbar sind. Vorraussetzung dafür ist die Installation
+des Pakets gnome-shell-extension-user-theme und die Aktivierung der
+Erweiterung, z.B. per gnome-tweak-tool unter Shell-Erweiterungen.
+Anschliessend erstellt man den versteckten Ordner .themes im
+Home-Verzeichnis, gibt seinem Theme einen Namen, erstellt im Verzeichnis
+\~/.themes dazu einen Ordner und legt den Ordner gnome-shell in diesem
+Ordner an. In dem Ordner gnome-shell wird die Datei gnome-shell.css
+angelegt, so dass folgende Struktur entsteht:
+\~/.themes/\&amp;lt;name&gt;/gnome-shell/gnome-shell.css. Durch diese
+&lt;a href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets" title="WP:CSS"&gt;css&lt;/a&gt;-Datei werden nun mittels Importierung alle globalen Werte
+übernommen und können einzeln editiert werden. Jenes neue user-Theme
+kann anhand des gnome-tweak-tools unter Thema ausgewählt werden.
+Werte-Änderungen werden erst nach einem Theme-Neustart (Alt+F2 drücken
+und rt eingeben) sichtbar. Beispiel um die Dash-Hintergrundfarbe zu
+ändern:&lt;/p&gt;
+&lt;p&gt;Installation der beiden erwähnten Pakete bei Fedora:
+&lt;code&gt;su -c "yum install gnome-shell-extension-user-theme gnome-tweak-tool"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;\~/.themes/james/gnome-shell/gnome-shell.css&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@import&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/share/gnome-shell/theme/gnome-shell.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;#dash {&lt;/span&gt;
+    &lt;span class="n"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Oct 2012 17:35:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-05:gnome3-ein-eigenes-user-theme.html</guid><category>CSS</category><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Linux</category><category>user-Theme</category></item><item><title>Gnome3 - eine neue Suche hinzufügen</title><link>https://www.datenpaul.de/gnome3-eine-neue-suche-hinzufugen.html</link><description>&lt;p&gt;Bei der neuen Suche wird als Beispiel die Suchmaschine
+&lt;a href="http://duckduckgo.com" title="Suchmaschine duckduckgo.com"&gt;duckduckgo.com&lt;/a&gt; eingesetzt. Die Such-URL bei duckduckgo sieht wie
+folgt aus: https://duckduckgo.com/?q=Suchbegriff&lt;br /&gt;
+Sobald man den Aktivitäten-Modus (mit dem Mauspfeil links oben in die
+Ecke wandern) wählt, erscheint oben rechts eine Sucheingabe, mit dem
+Text Suchbegriff eingeben.&lt;br /&gt;
+&lt;img alt="Gnome3 Suchbox Screenshot" src="http://www.datenpaul.de/archive/gnome_suchbox.png" /&gt;&lt;br /&gt;
+Gibt man etwas ein wird in den Anwendungen, Einstellungen, bei den
+Kontakten und bei der Dokumentverwaltung danach gesucht. Ebenso
+erscheinen unten 2 Buttons (Wikipedia, Google), die es ermöglichen, dass
+nach diesem Eintrag auch in einer Suchmaschine gestöbert wird. Diese
+Suchmaschinen findet man im Verzeichnis
+&lt;code&gt;/usr/share/gnome-shell/open-search-providers/&lt;/code&gt;. Um eine neue Suche
+hinzuzufügen kopiert man einfach eine dieser xml-Dateien und modifiziert
+die neue Datei. Das Kopieren wird mittels Befehl (bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt;)
+&lt;code&gt;su -c "cp /usr/share/gnome-shell/open-search-providers/wikipedia.xml /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"&lt;/code&gt;
+bewerkstelligt. Die Modifizierung erfolgt durch einen Texteditor, z.B.
+durch
+&lt;code&gt;su -c "nano /usr/share/gnome-shell/open-search-providers/duckduckgo.xml"&lt;/code&gt;
+(Strg+O - Speichern, Strg+X - nano Beenden). \&amp;lt;ShortName&gt;,
+\&amp;lt;Description&gt; und \&amp;lt;Url template&gt; sind die wichtigsten Anpassungen
+die durchgeführt werden müssen.&lt;br /&gt;
+Bsp: /usr/share/gnome-shell/open-search-providers/duckduckgo.xml&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;ShortName&amp;gt;&lt;/span&gt;DuckDuckGo&lt;span class="nt"&gt;&amp;lt;/ShortName&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;Description&amp;gt;&lt;/span&gt;DuckDuckGo, free Search&lt;span class="nt"&gt;&amp;lt;/Description&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;InputEncoding&amp;gt;&lt;/span&gt;UTF-8&lt;span class="nt"&gt;&amp;lt;/InputEncoding&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;Url&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/html&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GET&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;template=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://duckduckgo.com/?q={searchTerms}&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nach einem Neustart mit Alt+F2 r ist DuckDuckGo nun ebenfalls bei den
+Suchmaschinen mit dabei. Die Funktionen für die Suche, in Javascript
+geschrieben, befinden sich in den Dateien
+&lt;code&gt;/usr/share/gnome-shell/js/ui/search.js&lt;/code&gt; und
+&lt;code&gt;/usr/share/gnome-shell/js/ui/searchDisplay.js&lt;/code&gt;. Das Aussehen kann man
+in der Datei &lt;code&gt;/usr/share/gnome-shell/theme/gnome-shell.css&lt;/code&gt;
+beeinflussen. 2 Beispiele: Im Bereich Search Box unter #searchArea kann
+man z.B. die Hintergrundfarbe der Suchbox verändern. Im Teil Search
+Results unter .dash-search-button ist es machbar die Hintergrundfarbe
+der Suchbuttons zu ändern. Natürlich sind viele Änderungen mehr möglich.
+Nach einem Neustart mittels Alt+F2 r werden die Abänderungen sichtbar.
+Bsp: /usr/share/gnome-shell/theme/gnome-shell.css&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;/* Search Box */&lt;/span&gt;
+
+&lt;span class="p"&gt;#&lt;/span&gt;&lt;span class="nn"&gt;searchArea&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c"&gt;/* Search Results */&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;dash-search-button&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;border-radius&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding-top&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding-bottom&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;background-color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;green&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 28 Sep 2012 18:18:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-28:gnome3-eine-neue-suche-hinzufugen.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Suche</category></item><item><title>Gnome3 - gnome-tweal-tool im userMenu</title><link>https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html</link><description>&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
+&lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt;. Es gehört oft nicht zum Standard der meist genutzten
+Linux-Distributionen, muss bei Bedarf also über den herkömmlichen
+Paketmanager nachinstalliert werden. (Beispiel für Fedora:
+&lt;code&gt;su -c "yum install gnome-tweak-tool&lt;/code&gt;") Um sich leichten Zugang zum
+gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu
+erweitern. Der einfachste Weg führt dabei über die &lt;a href="https://extensions.gnome.org" title="extensions.gnome.org"&gt;Gnome3-Extension&lt;/a&gt;
+"Advanced Settings in UserMenu" auf der Website
+&lt;a href="https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/"&gt;https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/&lt;/a&gt;.
+Ebenso ist es machbar die userMenu.js-Datei im Verzeichnis
+/usr/share/gnome-shell/js/ui zu modifizieren. Nach der Bearbeitung wird
+die Veränderung durch einen Gnome-Shell-Neustart, mittels Alt+F2 r,
+wirksam. Die Modifikationen können durch einen Texteditor erfolgen.
+(z.B. bei Fedora:
+&lt;code&gt;su -c "nano /usr/share/gnome-shell/js/ui/userMenu.js"&lt;/code&gt;) Folgende Zeilen
+kommen hinzu: (647-649 und 717-721)&lt;/p&gt;
+&lt;p&gt;/usr/share/gnome-shell/js/ui/userMenu.js&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;item = new PopupMenu.PopupMenuItem(_(&amp;quot;System Settings&amp;quot;));
+item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onPreferencesActivate));
+this.menu.addMenuItem(item);
+
+item = new PopupMenu.PopupMenuItem(_(&amp;quot;Gnome-Tweak-Tool&amp;quot;));
+item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onGnometweaktoolActivate));
+this.menu.addMenuItem(item);
+
+item = new PopupMenu.PopupSeparatorMenuItem();
+this.menu.addMenuItem(item);
+
+
+_onPreferencesActivate: function() {
+    Main.overview.hide();
+    let app = Shell.AppSystem.get_default().lookup_app(&amp;#39;gnome-control-center.desktop&amp;#39;);
+    app.activate();
+},
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;_onGnometweaktoolActivate: function() {
+    Main.overview.hide();
+    let app = Shell.AppSystem.get_default().lookup_app('gnome-tweak-tool.desktop');
+        app.activate();
+    },&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_onLockScreenActivate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;overview&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;hide&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;_screenSaverProxy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;LockRemote&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;span class="o"&gt;},&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Screenshot: Gnome3 userMenu mit gnome-tweak-tool-Eintrag" src="http://www.datenpaul.de/archive/gtt_userMenu.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Jul 2012 23:15:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-11:gnome3-gnome-tweal-tool-im-usermenu.html</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Javascript</category><category>Linux</category><category>Programmierung</category><category>userMenu</category><category>userMenu.js</category></item><item><title>Gnome3 - Die Shell Extension NetMonitor Lite</title><link>https://www.datenpaul.de/gnome3-die-shell-extension-netmonitor-lite.html</link><description>&lt;p&gt;Durch sogenannte Shell Extensions ist man in der Lage die
+Gnome3-Oberfläche zu erweitern und zu ergänzen. Speziell für diese
+Erweiterungen wurde die frische Webseite &lt;a href="http://extensions.gnome.org/" title="extensions.gnome.org"&gt;extensions.gnome.org&lt;/a&gt; ins
+Leben gerufen. Hier sind die Shell Extensions verfügbar, eigene können
+hinzugefügt werden und installierte Extensions werden aufgelistet.
+&lt;a href="http://extensions.gnome.org/extension/52/netmonitor/" title="netmonitor lite"&gt;NetMonitor Lite&lt;/a&gt; ist eine von diesen vielen Erweiterungen. Sie zeigt
+die Download- und Upload-Bandbreite in der oberen Leiste an. Installiert
+wird eine Shell Extension indem man auf die Schaltfläche wo off steht
+klickt, links neben dem Namen der Erweiterung, so dass ein on erscheint.
+Anschliessend folgt man der Anweisung und klickt auf den Button
+Installieren. Willkommen Erweiterung NetMonitor Lite. Das Plugin Gnome
+Shell Integration macht diesen Vorgang realisierbar. Deinstalliert wird
+eine Erweiterung wie folgt: Man startet den Dateimanager, macht auch
+alle unsichtbaren Dateien sichtbar indem man auf Ansicht klickt und dann
+verborgene Dateien anzeigen wählt. Man wechselt ins Verzeichnis
+\~/.local/share/gnome-shell/extensions. Hier werden alle
+Erweiterungsverzeichnisse aufgelistet. Möchte man eine Erweiterung nun
+deinstallieren, löscht man einfach das Verzeichnis dazu. Abschliessend
+leitet man einen Gnome-Shell Neustart ein, mittels Alt+F2 restart. An
+dieser Stelle kann man die Erweiterungen auch modifizieren.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 25 Jun 2012 21:51:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-25:gnome3-die-shell-extension-netmonitor-lite.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>NetMonitor Lite</category><category>Shell Extension</category></item><item><title>Ruby - Hallo Welt</title><link>https://www.datenpaul.de/ruby-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt;-Quelltextdateien erkennt man an der Endung .rb und können mit
+einfachen Texteditoren verändert bzw. überhaupt erst erstellt werden.
+Eine .rb-Datei öffnet man mit einem Doppelklick, so wird die Datei mit
+dem Standard-Texteditor (z.B. &lt;a href="https://de.wikipedia.org/wiki/Gedit" title="WP:gedit"&gt;gedit&lt;/a&gt;) geöffnet.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;puts &amp;quot;Hallo Welt&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;sorgt für die Ausgabe Hallo Welt.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;print &amp;quot;Hallo Welt&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;ist ebensfalls eine Ausgabe-Anweisung. Durch &lt;code&gt;ruby datei.rb&lt;/code&gt; werden die
+Befehle in der Datei durch den Ruby-Interpreter ausgeführt. Die
+&lt;a href="https://de.wikipedia.org/wiki/Shebang" title="WP:Shebang"&gt;Shebang&lt;/a&gt;-Zeile,&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;ganz oben, und das Zugriffsrecht "Datei als Programm ausführen"
+(&lt;code&gt;chmod +x datei.rb&lt;/code&gt;) machen die Datei ausführbar. Diese kann nun
+mittels &lt;code&gt;./datei.rb&lt;/code&gt; ausgeführt werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:ruby-hallo-welt.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Programmierung</category><category>Ruby</category><category>Shebang</category></item><item><title>Ruby - die interaktive Ruby Shell</title><link>https://www.datenpaul.de/ruby-die-interaktive-ruby-shell.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt; ist eine &lt;a href="https://de.wikipedia.org/wiki/Objektorientierte_Programmierung" title="WP:OOP"&gt;objektorientierte&lt;/a&gt; Interpretersprache die 1995 von
+einem Japaner veröffentlicht wurde. Sie ist meistens bei allen großen
+&lt;a href="https://de.wikipedia.org/wiki/Linux-Distribution" title="WP:Linux-Distribution"&gt;Linux-Distributionen&lt;/a&gt; vorinstalliert. Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt; ist das nicht
+der Fall. Mittels Befehl &lt;code&gt;su -c "yum install ruby ruby-irb"&lt;/code&gt; müssen die
+Pakete nachinstalliert werden. Ruby besitzt eine interaktive Ruby-Shell
+in der eine Eingabe sofort ausgeführt wird und ein Ergebnis ausgegeben
+wird. Mittels &lt;code&gt;irb&lt;/code&gt; wird die interaktive Ruby-Shell gestartet und es
+folgt eine Eingabeaufforderung. Ruby-Kommandos können nun ausprobiert
+werden. Durch den Befehl &lt;code&gt;puts "Hallo Welt"&lt;/code&gt; kommt es zur Ausgabe Hallo
+Welt. Die Zeilennummer und die Blockebene werden angezeigt.
+&lt;code&gt;irb(main):&amp;lt;Zeilennr&amp;gt;:&amp;lt;Blockebene&amp;gt;&amp;gt;&lt;/code&gt;. Per quit oder exit kann man die
+interaktive Ruby-Shell wieder verlassen. Weitere Optionen werden durch
+&lt;code&gt;irb --help&lt;/code&gt; sichtbar. Die Option &lt;code&gt;--simple-prompt&lt;/code&gt; unterdrückt die
+Zeilennummer- und Blockzifferanzeige. Auf der Website &lt;a href="http://www.tryruby.org" title="try ruby"&gt;tryruby.org&lt;/a&gt;
+kann Ruby ebenso, auch ohne Installation, ausprobiert werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:43:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:ruby-die-interaktive-ruby-shell.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Programmierung</category><category>Ruby</category></item><item><title>Gnome3 - Looking Glass</title><link>https://www.datenpaul.de/gnome-looking-glass.html</link><description>&lt;p&gt;Looking Glass ist ein Inspektor-Tool von Gnome-Shell, bzw. eine
+Javascript-Konsole für die Fehlersuche. Gestartet wird das Tool durch
+Alt+F2 und die Eingabe lg. Beendet wird die Konsole durch ESC. Es
+existieren 5 Areale. (Evaluator, Windows, Errors, Memory, Extensions)
+Der Evaluator ist ein interaktiver Javascript-Dialog. Einfache
+Rechenaufgaben können an dieser Stelle z.B. ausgeführt werden. Jedes
+Ergebnis wird gespeichert und kann wieder ausgegeben werden durch r(Nr).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt; 1+2 r(0) = 3 &amp;gt; 2+3 r(1) = 5 &amp;gt; r(0) r(2) = 3 &amp;gt; r(1) r(3) = 5 &amp;gt; r(0) + r(1) r(4) = 8&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Eine History-Funktion besteht. Das bedeutet durch die Cursor-Tasten Hoch
+und Runter kann man zwischen den Eingaben, die man schon getätigt hat,
+hin- und herspringen. Gespeichert wird die History unter dem
+dconf-Eintrag /org/gnome/shell/looking-glass-history. Durch die Vergabe
+von False und True beim Eintrag /org/gnome/shell/development-tools kann
+Looking Glass deaktiviert und aktiviert werden.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dconf read /org/gnome/shell/looking-glass-history # Looking-Glass-History anzeigen lassen dconf read /org/gnome/shell/development-tools # Wert auslesen dconf write /org/gnome/shell/development-tools false # Looking Glass deaktivieren dconf write /org/gnome/shell/development-tools true # Looking Glass aktivieren&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Die Fenster werden unter Windows aufgelistet. Unter Errors findet man
+eine Ansicht für die Shell-Log-Nachrichten. Eine eigene Meldung kann
+durch die Eingabe global.log("Meldung") hinzugefügt werden.
+Speicherinformationen enthält der Bereich Memory. Unter Extensions
+werden die Erweiterungen angezeigt. Die definierten Funktionen von
+Looking Glass findet man in der Datei
+/usr/share/gnome-shell/js/ui/LookingGlass.js. Das Aussehen von Looking
+Glass kann man verändern in der Datei
+/usr/share/gnome-shell/theme/gnome-shell.css im Abschnitt /* Looking
+Glass */.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 21 Mar 2012 22:23:00 +0100</pubDate><guid>tag:www.datenpaul.de,2012-03-21:gnome-looking-glass.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Looking Glass</category></item><item><title>Gnome3 - der Run-Dialog</title><link>https://www.datenpaul.de/gnome3-der-run-dialog.html</link><description>&lt;p&gt;In diesem Artikel steht der Run-Dialog von Gnome3 im Mittelpunkt. Sowie
+zeitgleich die Tasten Alt und F2 gedrückt werden erscheint der
+Run-Dialog. Der Zweck des Run-Dialogs besteht in der Ausführung von
+Kommandos, die manuell vom Benutzer eingegeben werden. Der Run-Dialog
+kann an eine andere Tastenkombination gebunden werden. Unter
+Systemeinstellungen - Tastatur - Tastaturkürzel - System - Den Befehl
+ausführen-Dialog kann man dies bewerkstelligen. Die Funktionen des
+Run-Dialogs werden in der Datei
+/usr/share/gnome-shell/js/ui/runDialog.js in der Programmiersprache
+Javascript definiert. Um die Datei zu modifizieren führt man folgenden
+Befehl in einem Terminal aus:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "nano /usr/share/gnome-shell/js/ui/runDialog.js"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So ist es z.B. realisierbar den Kommandoeingabetext oder die internen
+Kommandos (r,restart,rt,lg,debugexit) zu editieren. Die gespeicherten
+(nano: Strg+O - Speichern, Strg+X - Beenden) Abänderungen werden durch
+einen Gnome-Shell-Neustart (Alt+F2 r) wirksam.&lt;/p&gt;
+&lt;p&gt;Der Erscheinungsbild des Run-Dialogs wird in der
+Datei /usr/share/gnome-shell/theme/gnome-shell.css festgelegt. Ebenso
+ist es möglich in dieser Datei die Werte zu bearbeiten, die für das
+Aussehen des Run-Dialogs verantwortlich sind. In der Sektion Run Dialog
+ist man nunmehr in der Lage die Schriftfarbe, die Schriftgröße etc. zu
+verändern. Die gespeicherten (nano: Strg+O - Speichern, Strg+X -
+Beenden) Modifikationen werden durch einen Gnome-Shell-Neustart (Alt+F2
+r) sichtbar.&lt;/p&gt;
+&lt;p&gt;Beispiele:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/* Run Dialog */ .run-dialog-entry { color: white; /* Schriftfarbe ändern */ } .lightbox { background-color: rgba(0, 0, 0, 0.4);  /* Bildschirmhintergrundfarbe ändern */ } .run-dialog { background-color: red; /* Hintergrundfarbe vom Run Dialog ändern */ }&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 11 Mar 2012 19:25:00 +0100</pubDate><guid>tag:www.datenpaul.de,2012-03-11:gnome3-der-run-dialog.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category></item><item><title>Gnome3 - den Dash-Placeholder ändern</title><link>https://www.datenpaul.de/gnome3-den-dash-placeholder-andern.html</link><description>&lt;p&gt;In der Favoritenliste (Dash) wird der Dash-Placeholder dann angezeigt
+wenn ein Icon an einen anderen Platz gezogen wird. Die Grafikdatei
+/usr/share/gnome-shell/theme/dash-placeholder.svg wird unter dem Icon
+angezeigt. (ein kleiner weißer Strich mit einem weißen Punkt in der
+Mitte) Vom Prinzip her ist es genau das Gleiche wie beim
+&lt;a href="http://www.datenpaul.de/archives/111" title="Gnome - den Running-Indicator aendern"&gt;Running-Indicator&lt;/a&gt;. Es existieren die gleichen Möglichkeiten um den
+Dash-Placeholder zu ändern.&lt;/p&gt;
+&lt;p&gt;​1. Möglichkeit – mit einem &lt;a href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" title="WP:SVG"&gt;SVG-Editor&lt;/a&gt; die Datei
+dash-placeholder.svg ändern&lt;/p&gt;
+&lt;p&gt;​2. Möglichkeit – den Dash-Placeholder deaktivieren&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 /* background-image: url("dash-placeholder.svg") */ 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​3. Möglichkeit – eine andere Grafikdatei nutzen&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-image: url("name.svg") 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​4. Möglichkeit – eine Hintergrundfarbe benutzen&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-color: #D4E1F3; 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Um den neuen Dash-Placeholder im Dash sichtbar zu machen ist ein
+Gnome-Theme-Neustart erforderlich. Hierzu drückt man gleichzeitig die
+Tasten Alt und F2 und tippt rt ein.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 03 Sep 2011 20:52:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-09-03:gnome3-den-dash-placeholder-andern.html</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Placeholder</category></item><item><title>Gnome3 - den Running-Indicator ändern</title><link>https://www.datenpaul.de/gnome3-den-running-indicator-andern.html</link><description>&lt;p&gt;Sobald ein Programm läuft wird das Programm in der Favoritenliste, auch
+Dash genannt, besonders gekennzeichnet. Zu der Favoritenliste kommt man
+über Aktivitäten. (links oben) Wenn man z.B. den Dateimanager startet
+wird prompt im Hintergrund des Icons ein kleiner weißer Schatten
+angezeigt. Das ist der Running-Indicator.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Die Grafik dazu findet man im Verzeichnis /usr/share/gnome-shell/theme.
+Die Datei heißt running-indicator.svg.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="running-indicator2" src="http://www.datenpaul.de/archive/running-indicator2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Nun gibt es mehrere Möglichkeiten um den Running-Indicator zu ändern.&lt;/p&gt;
+&lt;p&gt;​1. Möglichkeit - mit Inkscape (oder einem anderen SVG-Editor) die Datei
+running-indicator.svg ändern&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;su -c "yum install inkscape"&lt;/strong&gt; (Paket installieren, falls noch nicht
+vorhanden)&lt;br /&gt;
+&lt;strong&gt;su -c "inkscape /usr/share/gnome-shell/theme/running-indicator.svg"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​2. Möglichkeit - den Running-Indicator deaktivieren&lt;br /&gt;
+Um jenes zu erreichen editiert man die Datei
+/usr/share/gnome-shell/theme/gnome-shell.css und kommentiert die Zeile
+background-image: url("running-indicator.svg") aus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 /* background-image: url("running-indicator.svg") */ 647 }&lt;/code&gt;&lt;br /&gt;
+&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="running-indicator3" src="http://www.datenpaul.de/archive/running-indicator3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;​3. Möglichkeit - eine andere Grafikdatei nutzen&lt;br /&gt;
+(Grafikdatei name.svg vorher ins Verzeichnis kopieren, mittels su -c
+"cp name.svg /usr/share/gnome-shell/theme/")&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-image: url("name.svg") 647 }&lt;/code&gt;&lt;br /&gt;
+&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="running-indicator4" src="http://www.datenpaul.de/archive/running-indicator4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;​4. Möglichkeit - eine Hintergrundfarbe benutzen&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-color: #D2B48C; 647 }&lt;/code&gt;&lt;br /&gt;
+&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="running-indicator5" src="http://www.datenpaul.de/archive/running-indicator5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Um die Änderung sichtbar zu machen ist am Ende ein Gnome-Theme-Neustart
+erforderlich. Hierzu benutzt man die Tastenkombination Alt+F2 und gibt
+rt ein.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 21 Aug 2011 22:50:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-08-21:gnome3-den-running-indicator-andern.html</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>running-indicator</category></item><item><title>Fedora - Gnome3 - Theme wechseln</title><link>https://www.datenpaul.de/fedora-gnome3-theme-wechseln.html</link><description>&lt;p&gt;Hier möchte ich kurz und knapp erklären wie man &lt;a href="http://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; ein neues
+Erscheinungsbild spendieren kann, sprich wie man das Design ändert. Hat
+man erst mal den Installationsbefehl
+&lt;code&gt;su -c "yum install gnome-shell-extension-theme-selector"&lt;/code&gt; ausgeführt,
+ist die Hälfte der Arbeit schon getan. Die beiden Pakete
+gnome-shell-extensions-common und gnome-shell-extensions-user-theme
+werden ebenso installiert. Die Installation ist übrigens ebenfalls
+mittels gpk-application machbar. Ein Gnome-Shell-Neustart per Alt+F2 r
+aktiviert die 3 neuen Erweiterungen und macht sie im
+&lt;a href="https://live.gnome.org/GnomeTweakTool" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; sichtbar. Falls gnome-tweak-tool noch nicht im
+System verfügbar ist, wird die Nachinstallation durch
+&lt;code&gt;su -c "yum install gnome-tweak-tool"&lt;/code&gt; gestartet.&lt;/p&gt;
+&lt;p&gt;Nun sucht man sich ein Theme im Internet und lädt es herunter. (Quellen:
+&lt;a href="http://gnome-shell.deviantart.com/gallery/28081982"&gt;http://gnome-shell.deviantart.com/gallery/28081982&lt;/a&gt;,
+&lt;a href="http://gnome-look.org/"&gt;http://gnome-look.org/&lt;/a&gt;) Im gnome-tweak-tool unter Shell installiert
+man das Theme jetzt. Man klickt auf den Button (keine), wählt das
+heruntergeladene Theme-Paket, klickt auf den Button Öffnen, und das
+Theme ist installiert. Abschließend ist nochmal ein Gnome-Shell-Neustart
+per Alt+F2 r erforderlich. Die Themes findet man im übrigen im
+Persönlichen Ordner, im versteckten Verzeichnis .themes wieder.&lt;/p&gt;
+&lt;p&gt;Anhand des gnome-tweak-tools, unter Shell, neben den schon benutzten
+Button (keine), ist man nunmehr im Stande das Theme zu wechseln.
+Andernfalls geht man auf Aktivitäten, klickt auf Themes, neben Fenster
+und Anwendungen, und ist in der Lage ein neues Erscheinungsbild (Theme)
+zu bestimmen.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 30 Jul 2011 22:53:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-30:fedora-gnome3-theme-wechseln.html</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Linux</category><category>Theme</category></item><item><title>Gnome3 - Datum- und Sekundenanzeige aktivieren</title><link>https://www.datenpaul.de/gnome3-datum-und-sekundenanzeige-aktivieren.html</link><description>&lt;p&gt;Oben, in der Mitte des Panels, wird bei Gnome3 gegenwärtig der Wochentag
+und die Uhrzeit angezeigt.&lt;/p&gt;
+&lt;p&gt;Durch folgende Befehle ist es machbar die Anzeige zu modifizieren.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gsettings get org.gnome.shell.clock show-date # Wert abfragen, Anzeige des Datums&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;gsettings set org.gnome.shell.clock show-date true&lt;br /&gt;
+# Wert true setzen, Anzeige des Datums aktivieren&lt;/p&gt;
+&lt;p&gt;gsettings set org.gnome.shell.clock show-date false&lt;br /&gt;
+# Wert false setzen, Anzeige des Datums deaktivieren&lt;/p&gt;
+&lt;p&gt;gsettings get org.gnome.shell.clock show-seconds&lt;br /&gt;
+# Wert abfragen, Anzeige der Sekunden&lt;/p&gt;
+&lt;p&gt;gsettings set org.gnome.shell.clock show-seconds true&lt;br /&gt;
+# Wert true setzen, Anzeige der Sekunden aktivieren&lt;/p&gt;
+&lt;p&gt;gsettings set org.gnome.shell.clock show-seconds false&lt;br /&gt;
+# Wert false setzen, Anzeige der Sekunden deaktivieren&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Per Tool dconf-editor sind die Einstellungen ebenso realisierbar.
+Zusätzlich ist die Zeitanzeige durch &lt;a href="https://live.gnome.org/GnomeTweakTool" title="Link zu GnomeTweakTool"&gt;gnome-tweak-tool&lt;/a&gt; editierbar.
+Unter Shell findet man den Punkt "Show date in clock".&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 05 Jul 2011 19:05:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-05:gnome3-datum-und-sekundenanzeige-aktivieren.html</guid><category>dconf-editor</category><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>Zeitanzeige</category></item></channel></rss>

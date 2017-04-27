@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet/less" type="text/css" href="https://www.datenpaul.de/theme/css/style.less">
+  <script src="https://www.datenpaul.de/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/style.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/pygments.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/fonts.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="heiko">
+  <meta name="description" content="Posts and writings by heiko">
+  <meta name="referrer" content="no-referrer">
+
+  <link href="https://www.datenpaul.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="datenpaul Full Atom Feed" />
+  <link href="https://www.datenpaul.de/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="datenpaul Full RSS Feed" />
+
+<meta name="keywords" content="bottle, Fedora, Linux, Programmierung, Python, WSGI">
+
+  <title>
+bottle - dynamisches Routing  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="https://www.datenpaul.de">
+        <img src="https://www.datenpaul.de/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="https://www.datenpaul.de">datenpaul</a></h2>
+      <p>Creative Commons Zeug und was mit Daten</p>
+      <ul>
+        <li><a href="projekte/" target="_blank">Projekte</a></li>
+        <li><a href="http://www.flickr.com/photos/redcctshirt" target="_blank">Flickr</a></li>
+        <li><a href="http://www.openclipart.org/user-detail/redccshirt" target="_blank">openclipart</a></li>
+        <li><a href="http://redcctshirt.tumblr.com/" target="_blank">tumblr</a></li>
+        <li><a href="http://www.pixabay.com/de/users/redcctshirt" target="_blank">pixabay</a></li>
+        <li><a href="https://twitter.com/redcctshirt" target="_blank">twitter</a></li>
+        <li><a href="https://github.com/redcctshirt" target="_blank">github</a></li>
+        <li><a href="https://www.datenpaul.de/pages/impressum.html">Impressum</a></li>
+      </ul>
+      <br /><br />
+      <a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://www.datenpaul.de/archive/by.png" alt="CC by Icon" /></a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+<p>Posted on So 10 Juni 2012</p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="https://www.datenpaul.de/bottle-dynamisches-routing.html">bottle - dynamisches Routing</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
+oder Werte eingesetzt werden können. Es sind Variablen. Diese Variable
+wird an die angedockte Funktion weitergegeben und mittels
+Funktionsalgorithmus verarbeitet. Ein Beispiel:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">debug</span>
+
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hallo/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello {0} !&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">debug</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">run</span><span class="p">(</span><span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Nach /hallo/ können nun Zeichenketten verwendet werden. (z.B.
+/hallo/paul /hallo/ina ...) Die eingesetzte Zeichenkette wird in der
+Variable name gespeichert und in Zeile 7 ersetzt diese Zeichenkette den
+Platzhalter {0}. Platzhalter können auch durch folgende Filter
+spezifiziert werden.  </p>
+<p>@route('/route/<id:int>') - nur Integer-Werte sind erlaubt 
+@route('/route/<id:float>') - nur float-Werte sind erlaubt 
+@route('/route/<name:re:[a-z]+>') - erlaubt reguläre Ausdrücke 
+@route('/route/<path:path>') - erlaubt Verzeichnisangaben</p>
+<p>Durch die Zeile 9 mit dem Inhalt debug(True) werden hilfreiche
+Fehlermeldungen mit Einzelheiten angezeigt. Der reloader, der in Zeile
+10 auf True gesetzt wird, bewirkt dass bei Veränderungen des Skripts
+kein Neustart des Programms notwendig ist. (<a href="http://bottlepy.org" title="bottle">bottle</a>)</p>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://www.datenpaul.de/category/programmierung.html">Programmierung</a></p>
+    <p>Tags:
+      <a href="https://www.datenpaul.de/tag/bottle.html">bottle</a>,      <a href="https://www.datenpaul.de/tag/fedora.html">Fedora</a>,      <a href="https://www.datenpaul.de/tag/linux.html">Linux</a>,      <a href="https://www.datenpaul.de/tag/programmierung.html">Programmierung</a>,      <a href="https://www.datenpaul.de/tag/python.html">Python</a>,      <a href="https://www.datenpaul.de/tag/wsgi.html">WSGI</a>    </p>
+  </div>
+
+  	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+			<a href="https://www.datenpaul.de/feeds/comment.bottle-dynamisches-routing.atom.xml">
+				Comment Atom Feed
+			</a>
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://www.datenpaul.de/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "info";
+			CommentSystem.email_domain = "datenpaul.de";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) { 
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("bottle-dynamisches-routing"));
+				}
+			);
+		});
+	</script>
+
+
+
+</article>
+
+    <footer>
+<p><a href="https://www.datenpaul.de/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
+    </footer>
+
+    <div id="ending_message">
+      <p>&copy; heiko. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. .</p>
+    </div>
+  </main>
+</body>
+</html>

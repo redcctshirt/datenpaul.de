@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/bleachbit.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-09-11T17:58:00+02:00</updated><entry><title>Linux - Bleachbit</title><link href="https://www.datenpaul.de/linux-bleachbit.html" rel="alternate"></link><published>2012-09-11T17:58:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-09-11:linux-bleachbit.html</id><summary type="html">&lt;p&gt;Bleachbit kann eingesetzt werden um die Geschwindigkeit zu optimieren,
+aber hauptsächlich wird es benutzt um Daten zu löschen die die
+Privatsphäre betreffen, wie z.B. Cookies, temporäre files, Logs, den
+Browserverlauf usw.. Sowohl für Windows, als auch für
+Linux-Distributionen steht das Programm zur Verfügung. Es wurde in
+Python geschrieben, steht unter der &lt;a href="http://de.wikipedia.org/wiki/GPL" title="WP:GPL"&gt;GPL-Lizenz&lt;/a&gt; und wurde bisher in
+56 Sprachen übersetzt. Bleachbit findet man auf der Website
+&lt;a href="http://bleachbit.sourceforge.net" title="bleachbit"&gt;bleachbit.sourceforge.net&lt;/a&gt;. Die Installation erfolgt über den
+Paketmanager oder mittels Befehl &lt;code&gt;su -c "yum install bleachbit"&lt;/code&gt;. (bei
+Fedora). Unter Aktivitäten - Anwendungen - Systemwerkzeuge wird das Tool
+eingegliedert.&lt;br /&gt;
+&lt;img alt="Bleachbit Screenshot" src="http://www.datenpaul.de/archive/bleachbit.png" /&gt;&lt;br /&gt;
+Die Vorschau-Option gibt Auskunft darüber welche Dateien entfernt
+werden. Sobald der Button Löschen betätigt wurde beginnt die
+Reinigungsaktion. Durch das XML-Format CleanerML ist es machbar selbst
+zu definieren welche Dateien gelöscht werden sollen. Man kann selbst
+neue Cleaner für bestimmte Programme schreiben. Diese xml-Dateien
+befinden sich im Verzeichnis /usr/share/bleachbit/cleaners. In der
+Kommandozeile kann bleachbit ebenso zum Einsatz kommen. bleachbit -l
+listet alle Cleaner und Optionen auf. Die Vorschau wird mittels
+--preview oder -p angestoßen (z.B. bleachbit -p bash.history) und
+--delete --overwrite oder -d -o ist die Reinigungsanweisung (z.B.
+bleachbit -d -o bash.history). Die Konfigurationsdatei befindet sich im
+Verzeichnis \~/.config/bleachbit/ und heisst bleachbit.ini.&lt;/p&gt;</summary><category term="bleachbit"></category><category term="Fedora"></category><category term="Linux"></category></entry></feed>

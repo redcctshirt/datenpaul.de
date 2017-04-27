@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <link rel="stylesheet/less" type="text/css" href="https://www.datenpaul.de/theme/css/style.less">
+  <script src="https://www.datenpaul.de/theme/js/less-1.5.0.min.js" type="text/javascript"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/style.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/pygments.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono"> -->
+  <link rel="stylesheet" type="text/css" href="https://www.datenpaul.de/theme/css/fonts.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="heiko">
+  <meta name="description" content="Posts and writings by heiko">
+  <meta name="referrer" content="no-referrer">
+
+  <link href="https://www.datenpaul.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="datenpaul Full Atom Feed" />
+  <link href="https://www.datenpaul.de/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="datenpaul Full RSS Feed" />
+
+<meta name="keywords" content="Dash, Fedora, Gnome, Gnome3, Linux, running-indicator">
+
+  <title>
+Gnome3 - den Running-Indicator ändern  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="https://www.datenpaul.de">
+        <img src="https://www.datenpaul.de/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="https://www.datenpaul.de">datenpaul</a></h2>
+      <p>Creative Commons Zeug und was mit Daten</p>
+      <ul>
+        <li><a href="projekte/" target="_blank">Projekte</a></li>
+        <li><a href="http://www.flickr.com/photos/redcctshirt" target="_blank">Flickr</a></li>
+        <li><a href="http://www.openclipart.org/user-detail/redccshirt" target="_blank">openclipart</a></li>
+        <li><a href="http://redcctshirt.tumblr.com/" target="_blank">tumblr</a></li>
+        <li><a href="http://www.pixabay.com/de/users/redcctshirt" target="_blank">pixabay</a></li>
+        <li><a href="https://twitter.com/redcctshirt" target="_blank">twitter</a></li>
+        <li><a href="https://github.com/redcctshirt" target="_blank">github</a></li>
+        <li><a href="https://www.datenpaul.de/pages/impressum.html">Impressum</a></li>
+      </ul>
+      <br /><br />
+      <a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://www.datenpaul.de/archive/by.png" alt="CC by Icon" /></a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+<p>Posted on So 21 August 2011</p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="https://www.datenpaul.de/gnome3-den-running-indicator-andern.html">Gnome3 - den Running-Indicator ändern</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Sobald ein Programm läuft wird das Programm in der Favoritenliste, auch
+Dash genannt, besonders gekennzeichnet. Zu der Favoritenliste kommt man
+über Aktivitäten. (links oben) Wenn man z.B. den Dateimanager startet
+wird prompt im Hintergrund des Icons ein kleiner weißer Schatten
+angezeigt. Das ist der Running-Indicator.</p>
+<p><img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png" /></p>
+<p>Die Grafik dazu findet man im Verzeichnis /usr/share/gnome-shell/theme.
+Die Datei heißt running-indicator.svg.</p>
+<p><img alt="running-indicator2" src="http://www.datenpaul.de/archive/running-indicator2.png" /></p>
+<p>Nun gibt es mehrere Möglichkeiten um den Running-Indicator zu ändern.</p>
+<p>​1. Möglichkeit - mit Inkscape (oder einem anderen SVG-Editor) die Datei
+running-indicator.svg ändern</p>
+<p><strong>su -c "yum install inkscape"</strong> (Paket installieren, falls noch nicht
+vorhanden)<br />
+<strong>su -c "inkscape /usr/share/gnome-shell/theme/running-indicator.svg"</strong></p>
+<p>​2. Möglichkeit - den Running-Indicator deaktivieren<br />
+Um jenes zu erreichen editiert man die Datei
+/usr/share/gnome-shell/theme/gnome-shell.css und kommentiert die Zeile
+background-image: url("running-indicator.svg") aus.</p>
+<p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 /* background-image: url("running-indicator.svg") */ 647 }</code><br />
+<em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
+<p><img alt="running-indicator3" src="http://www.datenpaul.de/archive/running-indicator3.png" /></p>
+<p>​3. Möglichkeit - eine andere Grafikdatei nutzen<br />
+(Grafikdatei name.svg vorher ins Verzeichnis kopieren, mittels su -c
+"cp name.svg /usr/share/gnome-shell/theme/")</p>
+<p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-image: url("name.svg") 647 }</code><br />
+<em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
+<p><img alt="running-indicator4" src="http://www.datenpaul.de/archive/running-indicator4.png" /></p>
+<p>​4. Möglichkeit - eine Hintergrundfarbe benutzen</p>
+<p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-color: #D2B48C; 647 }</code><br />
+<em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
+<p><img alt="running-indicator5" src="http://www.datenpaul.de/archive/running-indicator5.png" /></p>
+<p>Um die Änderung sichtbar zu machen ist am Ende ein Gnome-Theme-Neustart
+erforderlich. Hierzu benutzt man die Tastenkombination Alt+F2 und gibt
+rt ein.</p>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="https://www.datenpaul.de/category/gnome.html">Gnome</a></p>
+    <p>Tags:
+      <a href="https://www.datenpaul.de/tag/dash.html">Dash</a>,      <a href="https://www.datenpaul.de/tag/fedora.html">Fedora</a>,      <a href="https://www.datenpaul.de/tag/gnome.html">Gnome</a>,      <a href="https://www.datenpaul.de/tag/gnome3.html">Gnome3</a>,      <a href="https://www.datenpaul.de/tag/linux.html">Linux</a>,      <a href="https://www.datenpaul.de/tag/running-indicator.html">running-indicator</a>    </p>
+  </div>
+
+  	<style>
+#pcs-comment-form input,
+#pcs-comment-form textarea {
+	width: 100%;
+}
+#pcs-comment-form-display-replyto {
+	border: solid 1px black;
+	padding: 2px;
+}
+#pcs-comment-form-display-replyto p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#pcs-comments ul {
+	list-style: none;
+}
+#pcs-comments .comment-left {
+	display: table-cell;
+	padding-right: 10px;
+}
+#pcs-comments .comment-body {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+}
+</style>
+
+	<section id="pcs-comments">
+	<header>
+		<h2>Comments</h2>
+		<hr/>
+	</header>
+		<p>There are no comments yet.</p>
+	<section>
+	<form id="pcs-comment-form" action="#">
+		<legend>Add a Comment</legend>
+		<input type="hidden" id="pcs-comment-form-input-replyto">
+		<fieldset>
+			<label for="pcs-comment-form-input-name">Name</label>
+			<input  id="pcs-comment-form-input-name" type="text" placeholder="Enter your name or nickname" />
+		</fieldset>
+		<fieldset>
+			<label for="pcs-comment-form-input-website">Website</label>
+			<input  id="pcs-comment-form-input-website" type="text" placeholder="Enter your website (optional)" />
+		</fieldset>
+		<fieldset>
+			<label   for="pcs-comment-form-input-textarea">Your Comment</label>
+			<textarea id="pcs-comment-form-input-textarea" rows="5" style="resize:vertical;" placeholder="Your comment"></textarea>
+			<p>You can use the <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> syntax to format your comment.</p>
+			<div style="display: none; " id="pcs-comment-form-display-replyto"></div>
+		</fieldset>
+
+		<button type="submit"
+				id="pcs-comment-form-button-submit"
+				>Post via email</button>
+
+			<a href="https://www.datenpaul.de/feeds/comment.gnome3-den-running-indicator-andern.atom.xml">
+				Comment Atom Feed
+			</a>
+	</form>
+</section>
+
+</section>
+
+			<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://www.datenpaul.de/theme/js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			CommentSystem.email_user   = "info";
+			CommentSystem.email_domain = "datenpaul.de";
+			CommentSystem.display_replyto_html = function(comment_content, article_slug, author) { 
+				return ''
+					+ '<button style="float:right;" onclick="CommentSystem.cancelReply(); return false;" title="Cancel the reply">'
+					+ 	'×'
+					+ '</button>'
+					+ '<p>This comment will be posted as a reply to \'<a title="'+comment_content+'" href="#comment-'+article_slug+'">'+author+'</a>\'</p>';
+			};
+
+			$('#pcs-comment-form').on("submit",
+				function( event )
+				{
+					event.preventDefault();
+					$(location).attr('href', CommentSystem.getMailtoLink("gnome3-den-running-indicator-andern"));
+				}
+			);
+		});
+	</script>
+
+
+
+</article>
+
+    <footer>
+<p><a href="https://www.datenpaul.de/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
+    </footer>
+
+    <div id="ending_message">
+      <p>&copy; heiko. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. .</p>
+    </div>
+  </main>
+</body>
+</html>

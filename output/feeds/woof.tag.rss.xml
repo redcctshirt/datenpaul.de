@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/woof.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 19 Oct 2012 01:07:00 +0200</lastBuildDate><item><title>woof - Webserver mit Limit</title><link>https://www.datenpaul.de/woof-webserver-mit-limit.html</link><description>&lt;p&gt;An dieser Stelle wird der kleine &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt; woof (web offer one file)
+vorgestellt. woof ist in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben. Das Besondere ist, dass
+es ein Download- und Upload-Limit gibt, sobald diese Grenze erreicht
+wird schaltet sich der Webserver von alleine aus. Das Skript findet man
+auf der Webseite &lt;a href="http://www.home.unix-ag.org/simon/woof.html"&gt;http://www.home.unix-ag.org/simon/woof.html&lt;/a&gt;. Klickt
+man das Skript im Downloadbereich an, kann man den Inhalt auf der
+Webseite sehen. Der Datei-Menüpunkt "Seite Speichern unter" im
+Webbrowser kann nun benutzt werden um woof an die gewünschte Stelle im
+Dateisystem zu kopieren. Das Zugriffsrecht "Datei als Programm
+ausführen" muss für das Skript noch markiert werden und schon steht woof
+zum Einsatz bereit. Eine Hilfestellung erscheint nach der Eingabe
+&lt;code&gt;./woof.py&lt;/code&gt;. Mit der Option -i wird die IP-Adresse, durch -c das Limit
+und mit -p wird der Port bestimmt. Ohne Angaben werden die Standardwerte
+genutzt. (Port 8080, Limit 1, IP 127.0.0.1).&lt;/p&gt;
+&lt;p&gt;Beispiel:&lt;br /&gt;
+&lt;code&gt;./woof.py dateiname&lt;/code&gt; (Jene Anweisung ermöglicht ein Download der
+Datei, durch den Zugriff auf http://127.0.0.1:8080).&lt;br /&gt;
+&lt;code&gt;./woof.py -c 2 dateiname&lt;/code&gt; (2 Downloads möglich bis der Dienst beendet
+wird)&lt;br /&gt;
+Mittels &lt;code&gt;./woof.py -U&lt;/code&gt; erlaubt man einen Upload bevor woof beendet
+wird.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 19 Oct 2012 01:07:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-10-19:woof-webserver-mit-limit.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Python</category><category>web</category><category>webserver</category><category>woof</category><category>www</category></item></channel></rss>
