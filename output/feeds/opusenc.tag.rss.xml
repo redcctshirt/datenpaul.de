@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/opusenc.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 12 Sep 2012 20:59:00 +0200</lastBuildDate><item><title>Opus - freier Audio-Codec</title><link>https://www.datenpaul.de/opus-freier-audio-codec.html</link><description>&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/Opus_(Audioformat)" title="WP:Opus"&gt;Opus&lt;/a&gt; ist ein neuer, freier und offener Audio-Codec. Die Bandbreite
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - opusenc</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/opusenc.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 12 Sep 2012 20:59:00 +0200</lastBuildDate><item><title>Opus - freier Audio-Codec</title><link>https://www.datenpaul.de/opus-freier-audio-codec.html</link><description>&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/Opus_(Audioformat)" title="WP:Opus"&gt;Opus&lt;/a&gt; ist ein neuer, freier und offener Audio-Codec. Die Bandbreite
 reicht von 8kHz bis 48kHz. Für die Speicherung ist eine Bitrate von
 6kbit/s bis 510kbit/s möglich. CBR und &lt;a href="http://de.wikipedia.org/wiki/Bitrate#Variable_Bitrate" title="WP:VBR"&gt;VBR&lt;/a&gt;, das heisst konstante und
 variable Bitraten werden unterstützt. Er kann sowohl für
-&lt;a href="http://de.wikipedia.org/wiki/Voice_over_IP" title="WP:VoIP"&gt;Voice-over-IP,&lt;/a&gt; als auch für hochwertige Musik verwendet werden.
-Weitere Informationen findet man auf der Website &lt;a href="http://opus-codec.org" title="opus"&gt;opus-codec.org&lt;/a&gt;. Um
-Opus zu implementieren muss das Paket opus installiert werden. Das Paket
-opus-tools enthält die Programme opusenc, opusdec und opusinfo. Die
-Installation bei &lt;a href="http://de.wikipedia.org/wiki/Fedora_(Linux-Distribution)" title="WP:Fedora"&gt;Fedora&lt;/a&gt; erfolgt durch den Paketmanager oder mittels
-Befehl &lt;code&gt;su -c "yum install opus opus-tools"&lt;/code&gt;. opusenc wird eingesetzt um
-.wav-Dateien in .opus-Dateien umzuwandeln. opusdec hingegen konvertiert
-.opus-Dateien in .wav-Dateien. Informationen über .opus-Dateien werden
-unter Zuhilfenahme von opusinfo eingeblendet. Mehrere Optionen stehen
-für jedes Programm zur Verfügung. Mit Firefox 15 können .opus-Dateien
-geöffnet und abgespielt werden. Beispiele für die opus-tools:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;opusinfo --help # Optionen werden aufgelistet&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;opusinfo datei.opus # Informationsanzeige über die Opus-Datei&lt;/p&gt;
-&lt;p&gt;opusenc --help # Optionen werden aufgelistet&lt;/p&gt;
-&lt;p&gt;opusenc --bitrate 224 datei.wav output.opus # .wav in .opus umwandeln,
-mit Bitrate 224000bit/s&lt;/p&gt;
-&lt;p&gt;opusdec --help # Optionen werden aufgelistet&lt;/p&gt;
-&lt;p&gt;opusdec datei.opus output.wav # .opus in .wav umwandeln&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 12 Sep 2012 20:59:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-12:opus-freier-audio-codec.html</guid><category>Audio-Codec</category><category>Fedora</category><category>Linux</category><category>opus</category><category>opusdec</category><category>opusenc</category><category>opusinfo</category></item></channel></rss>
+&lt;a href="http://de.wikipedia.org/wiki/Voice_over_IP" title="WP:VoIP"&gt;Voice-over-IP,&lt;/a&gt; als auch für hochwertige Musik verwendet …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 12 Sep 2012 20:59:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-12:/opus-freier-audio-codec.html/</guid><category>Audio-Codec</category><category>Fedora</category><category>Linux</category><category>opus</category><category>opusdec</category><category>opusenc</category><category>opusinfo</category></item></channel></rss>

@@ -1,86 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/json.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 13 Apr 2013 00:04:00 +0200</lastBuildDate><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - json</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/json.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 13 Apr 2013 00:04:00 +0200</lastBuildDate><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
 vimeo-Video-Portal zu beziehen wird die vimeo data API angeboten. Die
 Funktionsweise ist die gleiche wie beim &lt;a href="http://www.cc-juno.de/archives/364" title="Informationen über ein Youtube-Video auslesen"&gt;Auslesen von Informationen über
 ein Youtube-Video&lt;/a&gt;. Eine sehr sorgfältige und leicht verständliche
 Dokumentation mit Beispielen entdeckt man auf der Website
-&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http://developer.vimeo.com/apis/simple&lt;/a&gt; Tippt man folgendes in den
-Browser ein, werden die Metadaten vom jeweiligen Video geliefert. (Das
-Video wird mittels ID bestimmt. Die Video-ID steht in der URL eines
-Video-Aufrufs nach dem / https://vimeo.com/\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe: &lt;code&gt;http://vimeo.com/api/v2/video/&amp;lt;ID&amp;gt;.&amp;lt;Format&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mögliche Formate: &lt;code&gt;json, php, xml&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Beispiel: &lt;code&gt;http://vimeo.com/api/v2/video/52387087.json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mittels Skript können gewünschte Daten nun mühelos ermittelt werden. In
-PHP könnte dies so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-
-&lt;span class="nt"&gt;foreach&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-   &lt;span class="err"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$key&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;:&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;$value&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;n&amp;lt;br&lt;/span&gt; &lt;span class="err"&gt;/&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte ein Skript so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;{0}: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:informationen-uber-ein-vimeo-video-ermitteln.html</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
+&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:/informationen-uber-ein-vimeo-video-ermitteln.html/</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
 über ein Youtube-Video zu bekommen nutzt man ganz einfach die Youtube
 data API. Gibt man folgendes in den Browser ein, sendet die API
 Informationen zum angegebenen Video im JSON-Format. (Das Video wird
-mittels ID bestimmt. Die Video-ID steht in der URL eines Video-Aufrufs
-nach dem watch?v= https://www.youtube.com/watch?v=\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Für eine bessere Übersicht sorgt der URL-Anhang &lt;code&gt;&amp;amp;prettyprint=true&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;amp;prettyprint=true&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Die Ausgabe, die von der API erzeugt wird, ist nichts weiter als ein
-String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
-aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;wird&lt;/span&gt; &lt;span class="nt"&gt;durch&lt;/span&gt; &lt;span class="nt"&gt;die&lt;/span&gt; &lt;span class="nt"&gt;Youtube-Video-ID&lt;/span&gt; &lt;span class="nt"&gt;ersetzt&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Einzelne&lt;/span&gt; &lt;span class="nt"&gt;Angaben&lt;/span&gt; &lt;span class="nt"&gt;k&lt;/span&gt;&lt;span class="err"&gt;ö&lt;/span&gt;&lt;span class="nt"&gt;nnen&lt;/span&gt; &lt;span class="nt"&gt;nun&lt;/span&gt; &lt;span class="nt"&gt;mit&lt;/span&gt; &lt;span class="nt"&gt;diesem&lt;/span&gt; &lt;span class="nt"&gt;Muster&lt;/span&gt; &lt;span class="nt"&gt;ausgegeben&lt;/span&gt; &lt;span class="nt"&gt;werden&lt;/span&gt;
-&lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Video-Title: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;data-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte dies so aussehen:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="c1"&gt;# &amp;lt;ID&amp;gt; wird durch die Youtube-Video-ID ersetzt&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Titel: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aufrufe: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;viewCount&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:informationen-uber-ein-youtube-video-auslesen.html</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item></channel></rss>
+mittels ID bestimmt. Die Video-ID steht …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:/informationen-uber-ein-youtube-video-auslesen.html/</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item></channel></rss>

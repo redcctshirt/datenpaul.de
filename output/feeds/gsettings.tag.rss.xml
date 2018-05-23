@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/gsettings.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 15 Feb 2013 18:39:00 +0100</lastBuildDate><item><title>Gnome3 - Ordner vor Dateien anzeigen</title><link>https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html</link><description>&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - gsettings</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/gsettings.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 15 Feb 2013 18:39:00 +0100</lastBuildDate><item><title>Gnome3 - Ordner vor Dateien anzeigen</title><link>https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html</link><description>&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
 Änderungsdatum sortiert werden. Dabei kann es vorkommen, dass Ordner
-ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br /&gt;
-&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png" /&gt;&lt;br /&gt;
+ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br&gt;
+&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png"&gt;&lt;br&gt;
 Um die Ordner vor den Dateien zu sortieren klickt man auf Dateien, geht
-zu den Einstellungen und setzt ein Häkchen bei "Ordner vor Dateien
-anzeigen".&lt;br /&gt;
-&lt;img alt="nautilus - Einstellungen" src="http://www.datenpaul.de/archive/sortdirfirst2.png" /&gt;&lt;br /&gt;
-Im &lt;code&gt;dconf-editor&lt;/code&gt; findet man diese Einstellung unter
-org.gnome.nautilus.preferences sort-directories-first.&lt;br /&gt;
-&lt;img alt="dconf-editor-Einstellung" src="http://www.datenpaul.de/archive/sortdirfirst1.png" /&gt;&lt;br /&gt;
-Per Befehl
-&lt;code&gt;gsettings get org.gnome.nautilus.preferences sort-directories-first&lt;/code&gt;
-kann man den Einstellungszustand abfragen. Mittels set kann man die
-Einstellung ändern, true für das Häkchen und false für kein Häkchen.
-(&lt;code&gt;gsettings set org.gnome.nautilus.preferences sort-directories-first true|false&lt;/code&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 15 Feb 2013 18:39:00 +0100</pubDate><guid>tag:www.datenpaul.de,2013-02-15:gnome3-ordner-vor-dateien-anzeigen.html</guid><category>donf-editor</category><category>Gnome</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>nautilus</category><category>sort-directories-first</category></item><item><title>Gnome3 - Datum- und Sekundenanzeige aktivieren</title><link>https://www.datenpaul.de/gnome3-datum-und-sekundenanzeige-aktivieren.html</link><description>&lt;p&gt;Oben, in der Mitte des Panels, wird bei Gnome3 gegenwärtig der Wochentag
+zu den Einstellungen und setzt ein Häkchen bei …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 15 Feb 2013 18:39:00 +0100</pubDate><guid>tag:www.datenpaul.de,2013-02-15:/gnome3-ordner-vor-dateien-anzeigen.html/</guid><category>donf-editor</category><category>Gnome</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>nautilus</category><category>sort-directories-first</category></item><item><title>Gnome3 - Datum- und Sekundenanzeige aktivieren</title><link>https://www.datenpaul.de/gnome3-datum-und-sekundenanzeige-aktivieren.html</link><description>&lt;p&gt;Oben, in der Mitte des Panels, wird bei Gnome3 gegenwärtig der Wochentag
 und die Uhrzeit angezeigt.&lt;/p&gt;
 &lt;p&gt;Durch folgende Befehle ist es machbar die Anzeige zu modifizieren.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gsettings get org.gnome.shell.clock show-date # Wert abfragen, Anzeige des Datums&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;gsettings set org.gnome.shell.clock show-date true&lt;br /&gt;
-# Wert true setzen, Anzeige des Datums aktivieren&lt;/p&gt;
-&lt;p&gt;gsettings set org.gnome.shell.clock show-date false&lt;br /&gt;
-# Wert false setzen, Anzeige des Datums deaktivieren&lt;/p&gt;
-&lt;p&gt;gsettings get org.gnome.shell.clock show-seconds&lt;br /&gt;
-# Wert abfragen, Anzeige der Sekunden&lt;/p&gt;
-&lt;p&gt;gsettings set org.gnome.shell.clock show-seconds true&lt;br /&gt;
-# Wert true setzen, Anzeige der Sekunden aktivieren&lt;/p&gt;
-&lt;p&gt;gsettings set org.gnome.shell.clock show-seconds false&lt;br /&gt;
-# Wert false setzen, Anzeige der Sekunden deaktivieren&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Per Tool dconf-editor sind die Einstellungen ebenso realisierbar.
-Zusätzlich ist die Zeitanzeige durch &lt;a href="https://live.gnome.org/GnomeTweakTool" title="Link zu GnomeTweakTool"&gt;gnome-tweak-tool&lt;/a&gt; editierbar.
-Unter Shell findet man den Punkt "Show date in clock".&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 05 Jul 2011 19:05:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-05:gnome3-datum-und-sekundenanzeige-aktivieren.html</guid><category>dconf-editor</category><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>Zeitanzeige</category></item></channel></rss>
+&lt;p&gt;gsettings set org.gnome.shell.clock show-date true&lt;br&gt;
+# Wert true setzen, Anzeige …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 05 Jul 2011 19:05:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-05:/gnome3-datum-und-sekundenanzeige-aktivieren.html/</guid><category>dconf-editor</category><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>gsettings</category><category>Linux</category><category>Zeitanzeige</category></item></channel></rss>

@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/lighttpd.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-10-22T22:48:00+02:00</updated><entry><title>Webserver lighttpd bei Fedora</title><link href="https://www.datenpaul.de/webserver-lighttpd-bei-fedora.html" rel="alternate"></link><published>2012-10-22T22:48:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-10-22:webserver-lighttpd-bei-fedora.html</id><summary type="html">&lt;p&gt;In diesem Beitrag soll kurz der ressourcensparende Webserver
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - lighttpd</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/lighttpd.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-10-22T22:48:00+02:00</updated><entry><title>Webserver lighttpd bei Fedora</title><link href="https://www.datenpaul.de/webserver-lighttpd-bei-fedora.html" rel="alternate"></link><published>2012-10-22T22:48:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-10-22:/webserver-lighttpd-bei-fedora.html/</id><summary type="html">&lt;p&gt;In diesem Beitrag soll kurz der ressourcensparende Webserver
 &lt;a href="https://de.wikipedia.org/wiki/Lighttpd" title="WP:lighttpd"&gt;lighttpd&lt;/a&gt; (ausgesprochen: lighty) vorgestellt werden. lighttpd wurde
 in der &lt;a href="https://de.wikipedia.org/wiki/C_%28Programmiersprache%29" title="WP:C"&gt;Programmiersprache C&lt;/a&gt; geschrieben, ist auf der Webseite
 &lt;a href="http://www.lighttpd.net" title="www.lighttpd.net"&gt;www.lighttpd.net&lt;/a&gt; daheim und die Funktionalität kann durch Module
 erweitert werden. Er gehört bei vielen &lt;a href="https://de.wikipedia.org/wiki/Linux" title="WP:Linux"&gt;Linux&lt;/a&gt;-Distributionen zur
-Paketsammlung und kann somit kinderleicht mittels Paketmanager
-installiert werden. Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt; lautet der Installationsbefehl
-&lt;code&gt;su -c "yum install lighttpd"&lt;/code&gt;. Bei der Installation wurde das
-Konfigurationsverzeichnis /etc durch die Einstellungsdateien von
-lighttpd erweitert. Diese befinden sich im Pfad /etc/lighttpd.
-/etc/lighttpd/lighttpd.conf ist die Einstellungsdatei von lighttpd. Die
-WorldWideWeb-Ressourcen, sprich &lt;a href="https://de.wikipedia.org/wiki/HTML" title="WP:HTML"&gt;HTML&lt;/a&gt;-Dateien, CSS-Dateien usw.,
-werden im Ordner /var/www/lighttpd abgelegt. Der Start des Webservers
-erfolgt per Anweisung &lt;code&gt;su -c "systemctl start lighttpd.service"&lt;/code&gt;. Durch
-den Webbrowser kann man nun auf die HTML-Dateien zugreifen, die Eingabe
-localhost und die Begrüßungsseite wird geladen. Ein Neustart wird
-mittels &lt;code&gt;su -c "systemctl restart lighttpd.service"&lt;/code&gt; ausgelöst. Beendet
-wird der Webserver prompt nach der Eingabe
-&lt;code&gt;su -c "sytemctl stop lighttpd.service"&lt;/code&gt;.&lt;/p&gt;</summary><category term="Fedora"></category><category term="lighttpd"></category><category term="Linux"></category><category term="web"></category><category term="webserver"></category><category term="www"></category></entry></feed>
+Paketsammlung und kann somit kinderleicht mittels Paketmanager …&lt;/p&gt;</summary><category term="Fedora"></category><category term="lighttpd"></category><category term="Linux"></category><category term="web"></category><category term="webserver"></category><category term="www"></category></entry></feed>

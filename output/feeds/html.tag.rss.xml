@@ -1,95 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/html.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 05 Jul 2012 22:41:00 +0200</lastBuildDate><item><title>jQuery - ready- und click-Methode</title><link>https://www.datenpaul.de/jquery-ready-und-click-methode.html</link><description>&lt;p&gt;Die ready-Methode sorgt dafür dass bei dem Ereignis (Event), wenn das
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - HTML</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/html.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 05 Jul 2012 22:41:00 +0200</lastBuildDate><item><title>jQuery - ready- und click-Methode</title><link>https://www.datenpaul.de/jquery-ready-und-click-methode.html</link><description>&lt;p&gt;Die ready-Methode sorgt dafür dass bei dem Ereignis (Event), wenn das
 ganze Dokument vollständig geladen wurde, die Funktion innerhalb der
 Klammern, in diesem Fall eine anonyme Funktion, ausgeführt wird. Diese
 Anweisung kann ruhig mehrmals in einer Datei stehen. Die click-Methode
 hingegen verwirklicht die angegebene Funktion bei einem Mausklick. Durch
-.hide() versteckt man die selektierten Elemente.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;cursor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;pointer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;hide&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Zeile 7 wird das jQuery-Framework geladen. Von Zeile 14 bis 20 werden
-die jQuery-Anweisungen definiert. Sobald das ganze Dokument vollständig
-geladen wurde steht die click-Methode für alle div-Container bereit.
-\$(this) bezieht sich auf das jeweile Element (hier ein div-Container)
-auf das gerade geklickt wird. Durch die hide-Methode in der 17. Zeile
-wird das Element bei einem Mausklick versteckt.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 05 Jul 2012 22:41:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-05:jquery-ready-und-click-methode.html</guid><category>HMTL5</category><category>HTML</category><category>Javascript</category><category>jQuery</category><category>web</category><category>www</category></item><item><title>jQuery - $()-Aufruf deaktivieren</title><link>https://www.datenpaul.de/jquery-aufruf-deaktivieren.html</link><description>&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
+.hide …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 05 Jul 2012 22:41:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-05:/jquery-ready-und-click-methode.html/</guid><category>HMTL5</category><category>HTML</category><category>Javascript</category><category>jQuery</category><category>web</category><category>www</category></item><item><title>jQuery - $()-Aufruf deaktivieren</title><link>https://www.datenpaul.de/jquery-aufruf-deaktivieren.html</link><description>&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
 jQuery("div").css("color","blue") als jQuery-Anweisung schreibt, beides
 funktioniert. Aber es ist machbar die \$()-Funktion zu deaktivieren um
 möglichen Konflikten mit anderen Javascript-Frameworks entgegenzuwirken.
 Mittels jQuery.noConflict(); wird der \$()-Aufruf unwirksam. Beispiel.
-(Die Anweisung in Zeile 3 wird somit ignoriert.)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jQuery.noConflict();
-jQuery(document).ready(function() {
-$(&amp;quot;div#two&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;green&amp;quot;);
-jQuery(&amp;quot;div#one&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;blue&amp;quot;);
-});
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-aufruf-deaktivieren.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>jQuery - Hallo Welt</title><link>https://www.datenpaul.de/jquery-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
+(Die Anweisung in Zeile …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:/jquery-aufruf-deaktivieren.html/</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>jQuery - Hallo Welt</title><link>https://www.datenpaul.de/jquery-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
 &lt;a href="https://de.wikipedia.org/wiki/Javascript" title="WP:Javascript"&gt;Javascript&lt;/a&gt;-Framework. Dieses wundersame Rahmenwerk und Toolset
 erfreut sich großer Beliebtheit und wird in vielen bekannten
 &lt;a href="https://de.wikipedia.org/wiki/Content-Management-System" title="WP:CMS"&gt;Content-Management-Systemen&lt;/a&gt; eingesetzt. Es vereinfacht
 Javascript-Lösungswege und lässt Dynamik und Interaktivität in eine
 Website mit einfließen. Animationen können einfach erstellt, Inhalt
-hinzugefügt und Elemente verändert werden. Mittels \$-Funktion oder der
-jQuery-Funktion wird ein jQuery-Objekt erstellt. Als erstes wird
-bestimmt was manipuliert werden soll. Die selektierten Elemente können
-dann durch jQuery-Methoden verändert werden. Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;one&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;two&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;css&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;color&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Per &lt;code&gt;&amp;lt;script src="http://code.jquery.com/jquery-1.7.2.min.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
-in Zeile 7 wird jQuery in eine HTML-Seite eingebunden. Durch
-\$(document).ready(function() { }); in Zeile 15 und 17 wird das ganze
-Dokument geladen bevor die enthaltenen jQuery-Anweisungen ausgeführt
-werden. In Zeile 16 kommt es dann zur Veränderung der Textfarbe
-innerhalb aller div-Container. Anhand von \$("div") werden alle
-div-Container ausgewählt. Mittels \$("div").css("color","blue"); wird
-die Eigenschaft color (Textfarbe) mit dem Wert blue belegt. Statt rot,
-wie in Zeile 5 durch color: red; festgelegt, wird der Text in allen
-div-Containern in blau angezeigt. Eine Spezifizierung auf einen
-bestimmten div-Container ist durch die id möglich. Wird
-\$("div").css("color","blue"); durch \$("div#one").css("color","blue");
-ersetzt erscheint nur der Inhalt "Hallo Welt" vom div-Container mit der
-id one in blau.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:36:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-hallo-welt.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item></channel></rss>
+hinzugefügt und Elemente verändert werden. Mittels …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:36:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:/jquery-hallo-welt.html/</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item></channel></rss>

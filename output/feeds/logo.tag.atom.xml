@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/logo.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2011-08-25T21:54:00+02:00</updated><entry><title>Ein Logo im Video anzeigen lassen</title><link href="https://www.datenpaul.de/ein-logo-im-video-anzeigen-lassen.html" rel="alternate"></link><published>2011-08-25T21:54:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2011-08-25:ein-logo-im-video-anzeigen-lassen.html</id><summary type="html">&lt;p&gt;Mit &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="WP:ffmpeg"&gt;ffmpeg&lt;/a&gt; und dem Videofilter overlay ist man in der Lage ein Logo
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - Logo</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/logo.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2011-08-25T21:54:00+02:00</updated><entry><title>Ein Logo im Video anzeigen lassen</title><link href="https://www.datenpaul.de/ein-logo-im-video-anzeigen-lassen.html" rel="alternate"></link><published>2011-08-25T21:54:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2011-08-25:/ein-logo-im-video-anzeigen-lassen.html/</id><summary type="html">&lt;p&gt;Mit &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="WP:ffmpeg"&gt;ffmpeg&lt;/a&gt; und dem Videofilter overlay ist man in der Lage ein Logo
 ins Video zu zaubern. Um Übersichtlichkeit zu gewährleisten lasse ich
 hier bei diesem Beispiel mit ffmpeg alle anderen Optionen die man sonst
 so benutzt wie z.B. -b für die &lt;a href="http://de.wikipedia.org/wiki/Bitrate" title="WP:Bitrate"&gt;Bitrate&lt;/a&gt; einfach weg.&lt;/p&gt;
-&lt;p&gt;Hilfreiche Daten für das Beispiel:&lt;br /&gt;
-Input-Videodatei: a.ogv&lt;br /&gt;
-Output-Videodatei: b.webm&lt;br /&gt;
-Videogröße: 1280x720 (Breite: 1280 Pixel, Höhe: 720 Pixel)&lt;br /&gt;
-Bilddatei: logo.png&lt;br /&gt;
-Bildgröße: 50x50 (Breite: 50 Pixel, Höhe: 50 Pixel)&lt;/p&gt;
-&lt;p&gt;Mit folgendem Muster setzt man den Videofilter overlay ein:&lt;br /&gt;
-&lt;code&gt;-vf "movie=bilddatei.png [logo]; [in][logo] overlay=x:y [out]"&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Die Bilddatei mit dem Logo wird durch movie=bilddatei.png [logo]
-definiert. Durch overlay=x:y kann man die Stelle angeben wo das Logo
-dann erscheinen soll. (z.B. overlay=10:10 - das Logo wird nun oben links
-in der Ecke angezeigt)&lt;/p&gt;
-&lt;p&gt;Einige hilfreiche Variablen die eingesetzt werden können:&lt;br /&gt;
-main_w oder W - für die Breite des Videos (hier 1280)&lt;br /&gt;
-main_h, H - für die Höhe des Videos (hier 720)&lt;br /&gt;
-overlay_w, w - für die Breite des Logos (hier 50)&lt;br /&gt;
-overlay_h, h - für die Höhe des Logos (hier 50)&lt;/p&gt;
-&lt;p&gt;Beispiele:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=10:10 [out]" b.webm # Logo oben links&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=main_w-overlay_w-10:10 [out]" b.webm&lt;br /&gt;
-# Logo oben rechts, mit Zahlen: overlay=1280-50-10:10 -&gt;
-overlay=1220:10&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=10:main_h-overlay_h-10 [out]" b.webm&lt;br /&gt;
-# Logo unten links, mit Zahlen: overlay=10:720-50-10 -&gt;
-overlay=10:660&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=main_w-overlay_w-10:main_h-overlay_h-10 [out]" b.webm&lt;br /&gt;
-# Logo unten rechts, mit Zahlen: overlay=1280-50-10:720-50-10 -&gt;
-overlay=1220:660&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "movie=logo.png [logo1]; movie=logo2.png [logo2];
-[in][logo1] overlay=main_w-overlay_w-10:main_h-overlay_h-10
-[in+logo1]; [in+logo1][logo2] overlay=10:10 [out]" b.webm&lt;br /&gt;
-# 2 Logos&lt;br /&gt;
-&lt;/code&gt;&lt;/p&gt;</summary><category term="Fedora"></category><category term="ffmpeg"></category><category term="Linux"></category><category term="Logo"></category><category term="Videobearbeitung"></category></entry></feed>
+&lt;p&gt;Hilfreiche Daten für das …&lt;/p&gt;</summary><category term="Fedora"></category><category term="ffmpeg"></category><category term="Linux"></category><category term="Logo"></category><category term="Videobearbeitung"></category></entry></feed>

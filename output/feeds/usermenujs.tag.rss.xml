@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/usermenujs.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 11 Jul 2012 23:15:00 +0200</lastBuildDate><item><title>Gnome3 - gnome-tweal-tool im userMenu</title><link>https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html</link><description>&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - userMenu.js</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/usermenujs.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 11 Jul 2012 23:15:00 +0200</lastBuildDate><item><title>Gnome3 - gnome-tweal-tool im userMenu</title><link>https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html</link><description>&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
 &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt;. Es gehört oft nicht zum Standard der meist genutzten
 Linux-Distributionen, muss bei Bedarf also über den herkömmlichen
 Paketmanager nachinstalliert werden. (Beispiel für Fedora:
 &lt;code&gt;su -c "yum install gnome-tweak-tool&lt;/code&gt;") Um sich leichten Zugang zum
-gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu
-erweitern. Der einfachste Weg führt dabei über die &lt;a href="https://extensions.gnome.org" title="extensions.gnome.org"&gt;Gnome3-Extension&lt;/a&gt;
-"Advanced Settings in UserMenu" auf der Website
-&lt;a href="https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/"&gt;https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/&lt;/a&gt;.
-Ebenso ist es machbar die userMenu.js-Datei im Verzeichnis
-/usr/share/gnome-shell/js/ui zu modifizieren. Nach der Bearbeitung wird
-die Veränderung durch einen Gnome-Shell-Neustart, mittels Alt+F2 r,
-wirksam. Die Modifikationen können durch einen Texteditor erfolgen.
-(z.B. bei Fedora:
-&lt;code&gt;su -c "nano /usr/share/gnome-shell/js/ui/userMenu.js"&lt;/code&gt;) Folgende Zeilen
-kommen hinzu: (647-649 und 717-721)&lt;/p&gt;
-&lt;p&gt;/usr/share/gnome-shell/js/ui/userMenu.js&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;item = new PopupMenu.PopupMenuItem(_(&amp;quot;System Settings&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onPreferencesActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupMenuItem(_(&amp;quot;Gnome-Tweak-Tool&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onGnometweaktoolActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupSeparatorMenuItem();
-this.menu.addMenuItem(item);
-
-
-_onPreferencesActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app(&amp;#39;gnome-control-center.desktop&amp;#39;);
-    app.activate();
-},
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;_onGnometweaktoolActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app('gnome-tweak-tool.desktop');
-        app.activate();
-    },&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_onLockScreenActivate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;overview&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;hide&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;_screenSaverProxy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;LockRemote&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-&lt;span class="o"&gt;},&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;img alt="Screenshot: Gnome3 userMenu mit gnome-tweak-tool-Eintrag" src="http://www.datenpaul.de/archive/gtt_userMenu.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Jul 2012 23:15:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-11:gnome3-gnome-tweal-tool-im-usermenu.html</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Javascript</category><category>Linux</category><category>Programmierung</category><category>userMenu</category><category>userMenu.js</category></item></channel></rss>
+gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Jul 2012 23:15:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-11:/gnome3-gnome-tweal-tool-im-usermenu.html/</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Javascript</category><category>Linux</category><category>Programmierung</category><category>userMenu</category><category>userMenu.js</category></item></channel></rss>

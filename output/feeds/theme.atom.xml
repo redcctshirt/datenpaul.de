@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/theme.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2010-04-19T17:02:00+02:00</updated><entry><title>Wordpress Theme littleblue</title><link href="https://www.datenpaul.de/wordpress-theme-littleblue.html" rel="alternate"></link><published>2010-04-19T17:02:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2010-04-19:wordpress-theme-littleblue.html</id><summary type="html">&lt;p&gt;Wordpress Theme littleblue&lt;br /&gt;
-Version: 1.0 (19.04.2010)&lt;br /&gt;
-License: GPL&lt;br /&gt;
-&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br /&gt;
-&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png" /&gt;&lt;/p&gt;</summary><category term="littleblue"></category><category term="Theme"></category><category term="Wordpress"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - Theme</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/theme.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2010-04-19T17:02:00+02:00</updated><entry><title>Wordpress Theme littleblue</title><link href="https://www.datenpaul.de/wordpress-theme-littleblue.html" rel="alternate"></link><published>2010-04-19T17:02:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2010-04-19:/wordpress-theme-littleblue.html/</id><summary type="html">&lt;p&gt;Wordpress Theme littleblue&lt;br&gt;
+Version: 1.0 (19.04.2010)&lt;br&gt;
+License: GPL&lt;br&gt;
+&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br&gt;
+&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png"&gt;&lt;/p&gt;</summary><category term="littleblue"></category><category term="Theme"></category><category term="Wordpress"></category></entry></feed>

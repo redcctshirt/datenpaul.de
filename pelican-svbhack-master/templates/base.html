@@ -75,6 +75,9 @@
       {% if FEED_ALL_RSS %}
       &#124; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS Feed</a>
       {% endif %}
+      {% if PELICAN_COMMENT_SYSTEM %}
+      &#124; <a href="{{ FEED_DOMAIN }}/{{ PELICAN_COMMENT_SYSTEM_FEED_ALL }}">Comment All Atom Feed</a>
+      {% endif %}
       </p>
       {% endblock header %}
     </header>

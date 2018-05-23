@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/calc.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 14 Feb 2009 20:52:00 +0100</lastBuildDate><item><title>Aufgabe - OpenOffice.org Calc - Notenübersicht</title><link>https://www.datenpaul.de/aufgabe-01-openofficeorg-calc-notenuebersicht.html</link><description>&lt;p&gt;Ein paar Aufgaben für die Tabellenkalkulation Calc von OpenOffice.org um
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Calc</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/calc.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 14 Feb 2009 20:52:00 +0100</lastBuildDate><item><title>Aufgabe - OpenOffice.org Calc - Notenübersicht</title><link>https://www.datenpaul.de/aufgabe-01-openofficeorg-calc-notenuebersicht.html</link><description>&lt;p&gt;Ein paar Aufgaben für die Tabellenkalkulation Calc von OpenOffice.org um
 zu üben. Die Aufgaben beinhalten Formatierung, bedingte Formatierung und
 die Funktion Mittelwert.&lt;/p&gt;
 &lt;p&gt;Die eigentlichen Aufgaben stehen in einer .odt-Datei. Es gibt eine
 Arbeitsdatei .ods und eine Datei .ods die zeigt wie das Ergebnis
-aussehen sollte. Eine Video-Datei .ogg zeigt wie man zu dem Ergebnis
-kommt.&lt;/p&gt;
-&lt;p&gt;Alle Dateien dieses Artikels stehen unter der Lizenz: [&lt;img alt="Creative
-Commons by-sa" src="http://www.datenpaul.de/archive/bysa.png" /&gt;][]&lt;/p&gt;
-&lt;p&gt;[&lt;img alt="Creative Commons by-sa" src="http://www.datenpaul.de/archive/bysa.png" /&gt;]: http://creativecommons.org/licenses/by-sa/3.0/&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 14 Feb 2009 20:52:00 +0100</pubDate><guid>tag:www.datenpaul.de,2009-02-14:aufgabe-01-openofficeorg-calc-notenuebersicht.html</guid><category>Aufgaben</category><category>Calc</category><category>OpenOffice.org</category></item></channel></rss>
+aussehen sollte. Eine Video-Datei .ogg zeigt …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 14 Feb 2009 20:52:00 +0100</pubDate><guid>tag:www.datenpaul.de,2009-02-14:/aufgabe-01-openofficeorg-calc-notenuebersicht.html/</guid><category>Aufgaben</category><category>Calc</category><category>OpenOffice.org</category></item></channel></rss>

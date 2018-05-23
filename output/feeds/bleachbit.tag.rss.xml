@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/bleachbit.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 11 Sep 2012 17:58:00 +0200</lastBuildDate><item><title>Linux - Bleachbit</title><link>https://www.datenpaul.de/linux-bleachbit.html</link><description>&lt;p&gt;Bleachbit kann eingesetzt werden um die Geschwindigkeit zu optimieren,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - bleachbit</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/bleachbit.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 11 Sep 2012 17:58:00 +0200</lastBuildDate><item><title>Linux - Bleachbit</title><link>https://www.datenpaul.de/linux-bleachbit.html</link><description>&lt;p&gt;Bleachbit kann eingesetzt werden um die Geschwindigkeit zu optimieren,
 aber hauptsächlich wird es benutzt um Daten zu löschen die die
 Privatsphäre betreffen, wie z.B. Cookies, temporäre files, Logs, den
 Browserverlauf usw.. Sowohl für Windows, als auch für
 Linux-Distributionen steht das Programm zur Verfügung. Es wurde in
-Python geschrieben, steht unter der &lt;a href="http://de.wikipedia.org/wiki/GPL" title="WP:GPL"&gt;GPL-Lizenz&lt;/a&gt; und wurde bisher in
-56 Sprachen übersetzt. Bleachbit findet man auf der Website
-&lt;a href="http://bleachbit.sourceforge.net" title="bleachbit"&gt;bleachbit.sourceforge.net&lt;/a&gt;. Die Installation erfolgt über den
-Paketmanager oder mittels Befehl &lt;code&gt;su -c "yum install bleachbit"&lt;/code&gt;. (bei
-Fedora). Unter Aktivitäten - Anwendungen - Systemwerkzeuge wird das Tool
-eingegliedert.&lt;br /&gt;
-&lt;img alt="Bleachbit Screenshot" src="http://www.datenpaul.de/archive/bleachbit.png" /&gt;&lt;br /&gt;
-Die Vorschau-Option gibt Auskunft darüber welche Dateien entfernt
-werden. Sobald der Button Löschen betätigt wurde beginnt die
-Reinigungsaktion. Durch das XML-Format CleanerML ist es machbar selbst
-zu definieren welche Dateien gelöscht werden sollen. Man kann selbst
-neue Cleaner für bestimmte Programme schreiben. Diese xml-Dateien
-befinden sich im Verzeichnis /usr/share/bleachbit/cleaners. In der
-Kommandozeile kann bleachbit ebenso zum Einsatz kommen. bleachbit -l
-listet alle Cleaner und Optionen auf. Die Vorschau wird mittels
---preview oder -p angestoßen (z.B. bleachbit -p bash.history) und
---delete --overwrite oder -d -o ist die Reinigungsanweisung (z.B.
-bleachbit -d -o bash.history). Die Konfigurationsdatei befindet sich im
-Verzeichnis \~/.config/bleachbit/ und heisst bleachbit.ini.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 11 Sep 2012 17:58:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-11:linux-bleachbit.html</guid><category>bleachbit</category><category>Fedora</category><category>Linux</category></item></channel></rss>
+Python geschrieben, steht …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 11 Sep 2012 17:58:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-09-11:/linux-bleachbit.html/</guid><category>bleachbit</category><category>Fedora</category><category>Linux</category></item></channel></rss>

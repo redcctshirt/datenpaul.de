@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/r.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2014-06-22T16:30:00+02:00</updated><entry><title>R - Hilfe</title><link href="https://www.datenpaul.de/r-hilfe.html" rel="alternate"></link><published>2014-06-22T16:30:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2014-06-22:r-hilfe.html</id><summary type="html">&lt;p&gt;&lt;img alt="r - hilfe" src="http://www.datenpaul.de/archive/r-hilfe.jpg" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - R</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/r.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2014-06-22T16:30:00+02:00</updated><entry><title>R - Hilfe</title><link href="https://www.datenpaul.de/r-hilfe.html" rel="alternate"></link><published>2014-06-22T16:30:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2014-06-22:/r-hilfe.html/</id><summary type="html">&lt;p&gt;&lt;img alt="r - hilfe" src="http://www.datenpaul.de/archive/r-hilfe.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.r-project.org"&gt;R&lt;/a&gt; wird nach der Installation mittels R [ENTER] in der Kommandozeile gestartet.
 Der schnellste Weg um flott zu einer Funktionsbeschreibung zu kommen, die vielleicht helfen kann, ist über das Fragezeichen (?) am Anfang vor einer Funktion. So könnte man z.B. eingeben&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;?license
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;wenn man mehr über die Funktion license() erfahren möchte. Die Anzeige kann man mit der Taste q beenden.
-Durch help erreicht man das Gleiche, man gibt help ein und anschließend in runden Klammern den Namen der Funktion, z.B.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;help(license)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Apropos sucht speziell nach bestimmten Zeichenketten. Um zum Beispiel nach plot zu suchen tippt man ein&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apropos(&amp;quot;plot&amp;quot;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Mittels &lt;strong&gt;help.start()&lt;/strong&gt; wird in einem Webbrowser eine Seite geöffnet mit mehreren Links zu R-Anleitungen und Dokumentationen. Unter Zuhilfenahme von RSiteSearch('Suchbegriff') wird in Webseiten über R nach dem angegebenen Begriff gesucht, z.B.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;RSiteSearch(&amp;#39;plot&amp;#39;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;a href="http://pixabay.com/de/button-tasten-computer-design-2076/"&gt;1. Bild&lt;/a&gt; by &lt;a href="http://pixabay.com/de/users/PublicDomainPictures/"&gt;PublicDomainPictures&lt;/a&gt;, &lt;a href="https://creativecommons.org/publicdomain/zero/1.0"&gt;CC Zero&lt;/a&gt; &lt;/p&gt;</summary><category term="Linux"></category><category term="Linux Mint"></category><category term="R"></category><category term="Programmierung"></category><category term="Statistik"></category></entry><entry><title>R - Programmiersprache für Statistik</title><link href="https://www.datenpaul.de/r-programmiersprache-fuer-statistik.html" rel="alternate"></link><published>2014-06-14T21:20:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2014-06-14:r-programmiersprache-fuer-statistik.html</id><summary type="html">&lt;p&gt;&lt;img alt="r - was" src="http://www.datenpaul.de/archive/r-was.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/R_%28Programmiersprache%29"&gt;R&lt;/a&gt; ist eine Programmiersprache für Statistik und für die Visualisierung von Statistikdaten. Es ist eine freie, kostenlos verfügbare Programmiersprache die unter der Lizenz &lt;a href="http://de.wikipedia.org/wiki/GNU_General_Public_License"&gt;GPL&lt;/a&gt; steht. R ist mit der Programmiersprache &lt;a href="http://de.wikipedia.org/wiki/S_%28Statistiksprache%29"&gt;S&lt;/a&gt; kompatibel, wurde 1992 entwickelt und 1993 veröffentlicht. R findet man auf der Webseite &lt;a href="http://www.r-project.org/"&gt;http://www.r-project.org/&lt;/a&gt;. Die von Ross Ihaka und Robert Gentleman an der Universität Auckland entwickelte Programmiersprache gibt es für Mac OS, Windows und Linux und kommt in der Kommandozeile zur Anwendung. 
-Um R z.B. bei dem Betriebssystem &lt;a href="http://de.wikipedia.org/wiki/Linux_Mint"&gt;Linux Mint&lt;/a&gt; verfügbar zu machen wird das Paket r-base per Paketmanager installiert. Das Paket kann auch in der Kommandozeile mittels&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install r-base
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;installiert werden. (Der Status des Pakets wird durch &lt;strong&gt;dpkg -s r-base&lt;/strong&gt; angezeigt)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="r-base - Status" src="http://www.datenpaul.de/archive/r-base-status.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Gibt man nun &lt;strong&gt;R&lt;/strong&gt; in die Kommandozeile ein wird R mit einem Begrüssungstext im Terminal gestartet und ist, wie das "&amp;gt;"-Zeichen es signalisiert, für die Kommandoeingabe bereit. Unter Zuhilfenahme der Funktion &lt;strong&gt;q()&lt;/strong&gt; kann R wieder beendet werden. Abschliessend kommt noch die Frage ob die Sitzung gespeichert werden soll oder nicht. (y - Ja, n - Nein, c - Abbrechen)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="r - starten beenden" src="http://www.datenpaul.de/archive/r-starten-beenden.png" /&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Bild: &lt;a href="https://www.flickr.com/photos/carbonnyc/67187558/"&gt;R Graffiti&lt;/a&gt; by &lt;a href="https://www.flickr.com/photos/carbonnyc/"&gt;David M. Goehring&lt;/a&gt;, &lt;a href="https://creativecommons.org/licenses/by/2.0/deed.de"&gt;CC by 2.0&lt;/a&gt; &lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Linux"></category><category term="Linux Mint"></category><category term="R"></category><category term="Programmierung"></category><category term="Statistik"></category></entry></feed>
+&lt;p&gt;wenn man mehr über die Funktion license() erfahren …&lt;/p&gt;</summary><category term="Linux"></category><category term="Linux Mint"></category><category term="R"></category><category term="Programmierung"></category><category term="Statistik"></category></entry><entry><title>R - Programmiersprache für Statistik</title><link href="https://www.datenpaul.de/r-programmiersprache-fuer-statistik.html" rel="alternate"></link><published>2014-06-14T21:20:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2014-06-14:/r-programmiersprache-fuer-statistik.html/</id><summary type="html">&lt;p&gt;&lt;img alt="r - was" src="http://www.datenpaul.de/archive/r-was.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/R_%28Programmiersprache%29"&gt;R&lt;/a&gt; ist eine Programmiersprache für Statistik und für die Visualisierung von Statistikdaten. Es ist eine freie, kostenlos verfügbare Programmiersprache die unter der Lizenz &lt;a href="http://de.wikipedia.org/wiki/GNU_General_Public_License"&gt;GPL&lt;/a&gt; steht. R ist mit der Programmiersprache &lt;a href="http://de.wikipedia.org/wiki/S_%28Statistiksprache%29"&gt;S&lt;/a&gt; kompatibel, wurde 1992 entwickelt und 1993 veröffentlicht. R findet man auf der Webseite &lt;a href="http://www.r-project.org/"&gt;http://www.r-project.org/&lt;/a&gt;. Die von …&lt;/p&gt;</summary><category term="Linux"></category><category term="Linux Mint"></category><category term="R"></category><category term="Programmierung"></category><category term="Statistik"></category></entry></feed>

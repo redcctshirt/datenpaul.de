@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/theme.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 19 Apr 2010 17:02:00 +0200</lastBuildDate><item><title>Wordpress Theme littleblue</title><link>https://www.datenpaul.de/wordpress-theme-littleblue.html</link><description>&lt;p&gt;Wordpress Theme littleblue&lt;br /&gt;
-Version: 1.0 (19.04.2010)&lt;br /&gt;
-License: GPL&lt;br /&gt;
-&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br /&gt;
-&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 19 Apr 2010 17:02:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-04-19:wordpress-theme-littleblue.html</guid><category>littleblue</category><category>Theme</category><category>Wordpress</category></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Theme</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/theme.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 19 Apr 2010 17:02:00 +0200</lastBuildDate><item><title>Wordpress Theme littleblue</title><link>https://www.datenpaul.de/wordpress-theme-littleblue.html</link><description>&lt;p&gt;Wordpress Theme littleblue&lt;br&gt;
+Version: 1.0 (19.04.2010)&lt;br&gt;
+License: GPL&lt;br&gt;
+&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br&gt;
+&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 19 Apr 2010 17:02:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-04-19:/wordpress-theme-littleblue.html/</guid><category>littleblue</category><category>Theme</category><category>Wordpress</category></item></channel></rss>

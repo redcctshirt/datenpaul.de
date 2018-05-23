@@ -1,176 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/programmierung.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Oct 2013 01:28:00 +0200</lastBuildDate><item><title>bottle.py auf Uberspace installieren</title><link>https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html</link><description>&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Programmierung</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/programmierung.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Oct 2013 01:28:00 +0200</lastBuildDate><item><title>bottle.py auf Uberspace installieren</title><link>https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html</link><description>&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
 Mikro-Framework für Webanwendungen, ähnlich wie &lt;a href="https://github.com/JonasGroeger/flask-uberspace-quickstart" title="Flask"&gt;Flask&lt;/a&gt; (Python) oder
 &lt;a href="http://blog.sangyye.de/2012/06/sinatra-on-uberspace/" title="Sinatra"&gt;Sinatra&lt;/a&gt; (Ruby). Freiesmagazin.de erklärt &lt;a href="http://www.freiesmagazin.de/mobil/freiesMagazin-2011-02.html#11_02_bottle" title="bottle"&gt;hier&lt;/a&gt; kurz und bündig
 wie bottle.py genutzt werden kann. In den folgenden Zeilen möchte ich
 erläutern wie man bottle.py auf &lt;a href="https://uberspace.de/" title="uberspace"&gt;Uberspace&lt;/a&gt; installieren kann.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bottle.py installieren&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Nach dem Einloggen (per ssh) wechselt man ins Verzeichnis \~/bin um dort
-ein neues Projekt-Verzeichnis zu erstellen. (z.B. bottlepy) Anschließend
-wird bottle.py mittels Kommando wget heruntergeladen und man schreibt
-sein erstes Skript, z.B. in die Datei index.py. In diesem Beispiel wird
-in der run-Zeile ein Webserver gestartet der auf Port 8787 läuft.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bin
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# ins Verzeichnis bin wechseln&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir bottlepy
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# ein neues Verzeichnis mit dem Namen bottlepy erstellen&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bottlepy
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# in das neue Verzeichnis bottlepy wechseln&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/defnull/bottle/raw/master/bottle.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# bottle.py herunterladen&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;__EOF__&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="c1"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo Welt!&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8787&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;__EOF__&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# Python-Skript mit bottle.py erstellen, im Verzeichnis \~/bin/bottlepy&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Daemon erstellen&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Was es mit dem Daemon auf sich hat und wie man einen erstellt wird im
-&lt;a href="https://uberspace.de/dokuwiki/system:daemontools" title="uberspace wiki"&gt;Wiki von Uberspace&lt;/a&gt; genaustens erklärt.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test -d ~/service || uberspace-setup-svscan
-
-mkdir ~/etc/run-my-daemon
-cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/run
-#!/bin/sh
-cd ~/bin/bottlepy 
-/usr/bin/env python ~/bin/bottlepy/index.py
-__EOF__
-chmod +x ~/etc/run-my-daemon/run
-mkdir ~/etc/run-my-daemon/log
-cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/log/run
-#!/bin/sh
-exec multilog t ./main
-__EOF__
-chmod +x ~/etc/run-my-daemon/log/run
-ln -s ~/etc/run-my-daemon ~/service/my-daemon
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;.htaccess konfigurieren&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Am Ende wird die .htaccess-Datei für den Apache-Webserver im Verzeichnis
-\~/html so konfiguriert, dass die an den Webserver gerichteten Anfragen
-an den lokalen Port 8787 weitergeleitet werden, also an den laufenden
-Webserver der mit dem index.py-Skript und bottle.py gestartet wurde.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/html/.htaccess
-RewriteEngine On
-RewriteRule (.*) http://127.0.0.1:8787/$1 [P]
-__EOF__
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nun sollte alles funktionieren und bei einer Anfrage an den Webserver
-(http://www.beispieldomain.de/) wird man nun mit einem Hallo Welt!
-begrüßt.&lt;/p&gt;
-&lt;p&gt;[Artikel steht unter der Lizenz:
-&lt;a href="http://creativecommons.org/licenses/by/3.0/"&gt;http://creativecommons.org/licenses/by/3.0/&lt;/a&gt;&lt;br /&gt;
-(by datenpaul.de)]&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Sat, 19 Oct 2013 01:28:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-10-19:bottle-py-auf-uberspace-installieren.html</guid><category>bash</category><category>bottle</category><category>bottle.py</category><category>Flask</category><category>Linux</category><category>Python</category><category>Sinatra</category><category>Tutorial</category><category>Uberspace</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
+&lt;p&gt;Nach …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Sat, 19 Oct 2013 01:28:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-10-19:/bottle-py-auf-uberspace-installieren.html/</guid><category>bash</category><category>bottle</category><category>bottle.py</category><category>Flask</category><category>Linux</category><category>Python</category><category>Sinatra</category><category>Tutorial</category><category>Uberspace</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
 vimeo-Video-Portal zu beziehen wird die vimeo data API angeboten. Die
 Funktionsweise ist die gleiche wie beim &lt;a href="http://www.cc-juno.de/archives/364" title="Informationen über ein Youtube-Video auslesen"&gt;Auslesen von Informationen über
 ein Youtube-Video&lt;/a&gt;. Eine sehr sorgfältige und leicht verständliche
 Dokumentation mit Beispielen entdeckt man auf der Website
-&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http://developer.vimeo.com/apis/simple&lt;/a&gt; Tippt man folgendes in den
-Browser ein, werden die Metadaten vom jeweiligen Video geliefert. (Das
-Video wird mittels ID bestimmt. Die Video-ID steht in der URL eines
-Video-Aufrufs nach dem / https://vimeo.com/\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe: &lt;code&gt;http://vimeo.com/api/v2/video/&amp;lt;ID&amp;gt;.&amp;lt;Format&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mögliche Formate: &lt;code&gt;json, php, xml&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Beispiel: &lt;code&gt;http://vimeo.com/api/v2/video/52387087.json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mittels Skript können gewünschte Daten nun mühelos ermittelt werden. In
-PHP könnte dies so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-
-&lt;span class="nt"&gt;foreach&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-   &lt;span class="err"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$key&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;:&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;$value&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;n&amp;lt;br&lt;/span&gt; &lt;span class="err"&gt;/&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte ein Skript so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;{0}: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:informationen-uber-ein-vimeo-video-ermitteln.html</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
+&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:/informationen-uber-ein-vimeo-video-ermitteln.html/</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
 über ein Youtube-Video zu bekommen nutzt man ganz einfach die Youtube
 data API. Gibt man folgendes in den Browser ein, sendet die API
 Informationen zum angegebenen Video im JSON-Format. (Das Video wird
-mittels ID bestimmt. Die Video-ID steht in der URL eines Video-Aufrufs
-nach dem watch?v= https://www.youtube.com/watch?v=\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Für eine bessere Übersicht sorgt der URL-Anhang &lt;code&gt;&amp;amp;prettyprint=true&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;amp;prettyprint=true&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Die Ausgabe, die von der API erzeugt wird, ist nichts weiter als ein
-String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
-aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;wird&lt;/span&gt; &lt;span class="nt"&gt;durch&lt;/span&gt; &lt;span class="nt"&gt;die&lt;/span&gt; &lt;span class="nt"&gt;Youtube-Video-ID&lt;/span&gt; &lt;span class="nt"&gt;ersetzt&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Einzelne&lt;/span&gt; &lt;span class="nt"&gt;Angaben&lt;/span&gt; &lt;span class="nt"&gt;k&lt;/span&gt;&lt;span class="err"&gt;ö&lt;/span&gt;&lt;span class="nt"&gt;nnen&lt;/span&gt; &lt;span class="nt"&gt;nun&lt;/span&gt; &lt;span class="nt"&gt;mit&lt;/span&gt; &lt;span class="nt"&gt;diesem&lt;/span&gt; &lt;span class="nt"&gt;Muster&lt;/span&gt; &lt;span class="nt"&gt;ausgegeben&lt;/span&gt; &lt;span class="nt"&gt;werden&lt;/span&gt;
-&lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Video-Title: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;data-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte dies so aussehen:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="c1"&gt;# &amp;lt;ID&amp;gt; wird durch die Youtube-Video-ID ersetzt&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Titel: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aufrufe: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;viewCount&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:informationen-uber-ein-youtube-video-auslesen.html</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
+mittels ID bestimmt. Die Video-ID steht …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:/informationen-uber-ein-youtube-video-auslesen.html/</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
 (Seite nicht gefunden) kann durch den error decorator erstellt werden.
 Ein Beispiel:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -187,101 +31,12 @@ Ein Beispiel:&lt;/p&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
 
 &lt;span class="nd"&gt;@error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Seite nicht gefunden&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Fehlermeldungen (HTTP Error Pages) können ebenso mittels
-abort()-Funktion&lt;br /&gt;
-programmiert werden.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;401&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Leider kein Zugriff möglich !&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Umleitungen zu einer anderen URL werden durch redirect (HTTP Status Code
-- 303) erstellt.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo&amp;#39;&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/303&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;uml&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:bottle-fehlerseiten-umleitungen.html</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:/bottle-fehlerseiten-umleitungen.html/</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
 pdf-Dateien sind nicht automatisch Bestandteil einer bottle-App. Für
 jede einzelne Datei muss eine Route definiert werden. Per Dynamischer
 Route kann dies durch eine einzige @route-Anweisung erledigt werden. Um
 Zugriff auf Dateien mittels Web zu ermöglichen gibt es die Funktion
-static_file. Um die Funktion zu aktivieren muss zusätzlich die Klasse
-static_file von bottle importiert werden. Als ersten Parameter gibt man
-den Dateinamen an und als zweiten Parameter das lokale Verzeichnis in
-dem diese Datei zu finden ist. Hier ein Beispiel: (z.B.
-http://localhost:8080/static/index.png greift auf /home/paul/index.png
-zu)&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/static/&amp;lt;filepath:path&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/paul/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:bottle-statische-dateien.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
+static_file …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:/bottle-statische-dateien.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
 oder Werte eingesetzt werden können. Es sind Variablen. Diese Variable
 wird an die angedockte Funktion weitergegeben und mittels
 Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
@@ -296,152 +51,35 @@ Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
  9
 10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
 &lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo/&amp;lt;name&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello {0} !&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Nach /hallo/ können nun Zeichenketten verwendet werden. (z.B.
-/hallo/paul /hallo/ina ...) Die eingesetzte Zeichenkette wird in der
-Variable name gespeichert und in Zeile 7 ersetzt diese Zeichenkette den
-Platzhalter {0}. Platzhalter können auch durch folgende Filter
-spezifiziert werden.  &lt;/p&gt;
-&lt;p&gt;@route('/route/&lt;id:int&gt;') - nur Integer-Werte sind erlaubt 
-@route('/route/&lt;id:float&gt;') - nur float-Werte sind erlaubt 
-@route('/route/&lt;name:re:[a-z]+&gt;') - erlaubt reguläre Ausdrücke 
-@route('/route/&lt;path:path&gt;') - erlaubt Verzeichnisangaben&lt;/p&gt;
-&lt;p&gt;Durch die Zeile 9 mit dem Inhalt debug(True) werden hilfreiche
-Fehlermeldungen mit Einzelheiten angezeigt. Der reloader, der in Zeile
-10 auf True gesetzt wird, bewirkt dass bei Veränderungen des Skripts
-kein Neustart des Programms notwendig ist. (&lt;a href="http://bottlepy.org" title="bottle"&gt;bottle&lt;/a&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:bottle-dynamisches-routing.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:/bottle-dynamisches-routing.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
 Seite &lt;a href="http://bottlepy.org" title="bottlepy.org"&gt;bottlepy.org&lt;/a&gt; zu finden. Bottle ist ein schnelles und einfaches
 &lt;a href="https://de.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="WP:WSGI"&gt;WSGI&lt;/a&gt;-Microframework. Es besteht aus einer einzelnen Modul-Datei und
 hat keine Abhängigkeiten. Installiert wird bottle bei Fedora mittels
 Kommando &lt;code&gt;su -c "easy_install bottle"&lt;/code&gt;. Ebenso kann bottle durch den
-Paketmanager oder durch den direkten Download der Modul-Datei ins
-Betriebssystem gelangen. Ein Beispiel zeigt wie einfach es nun ist mit
-bottle eine Webapplication zu erstellen.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;b&amp;gt;Hallo Welt!&amp;lt;/b&amp;gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;In Zeile 3 werden die erforderlichen Klassen von bottle importiert.
-Ebenso wäre das Importieren von allen Klassen durch &lt;code&gt;import bottle&lt;/code&gt;
-möglich. @route('/hallo') erzeugt eine Seite wobei die folgende Funktion
-an diese Route gebunden wird. Die Ausgabe erfolgt am Ende durch den
-Befehl return. Es kann nur eine Funktion an die Route gebunden werden.
-Aber es ist machbar mehrere Routen an eine Funktion zu binden. In Zeile
-9 wird die Webapplication gestartet. Sobald das Skript mit python
-ausgeführt wird, sieht man die Ausgabe Hallo Welt, nach der Eingabe
-http://localhost:8080/hallo, im Browser. Beendet wird die Webapplication
-anhand von Strg+C.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>popcorn.js - Hallo Welt</title><link>https://www.datenpaul.de/popcorn-js-hallo-welt.html</link><description>&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
+Paketmanager …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>popcorn.js - Hallo Welt</title><link>https://www.datenpaul.de/popcorn-js-hallo-welt.html</link><description>&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
 popcorn.js ist ein &lt;a href="https://de.wikipedia.org/wiki/HTML5" title="WP:HTML5"&gt;HTML5&lt;/a&gt; Media Javascript Framework von &lt;a href="https://de.wikipedia.org/wiki/Mozilla" title="WP:Mozilla"&gt;Mozilla&lt;/a&gt;.
 Jeder der interaktive Medien ins Web bringen möchte kann dieses
 Framework einsetzen. Auf der Seite &lt;a href="http://mozillapopcorn.js" title="popcorn Project"&gt;mozillapopcorn.js&lt;/a&gt; findet man das
-Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs.org&lt;/a&gt;.
-Demos und Dokumentationen geben eine Übersicht über die Features die
-dieses Framework mit sich bringt. Dynamische Inhalte können abhängig von
-der Zeitposition eines Videos angezeigt werden. Ein Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://popcornjs.org/code/dist/popcorn-complete.js&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function() {
-
-var popcorn = Popcorn(&amp;quot;#video&amp;quot;);
-
-popcorn.footnote({
-        start: 0,
-        end: 3,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;Hallo Welt&amp;quot;
-       })
-.footnote({
-        start: 3,
-        end: 6,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;popcorn.js&amp;quot;
-});
-
-popcorn.play();
-popcorn.volume(0); // 0 .. 1.0
-
-}, false );
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;video&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;800&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;600&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;video&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;o.ogv&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;controls=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;preload=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footnote&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Zeile 2 wird das popcorn.js Framework geladen. Durch das Attribut src
-im Video-Tag (Zeile 28) wird die Videodatei festgelegt und per Attribut
-id wird die einmalige Identifikationszeichenkette bestimmt. Neben dem
-Video-Tag gibt es ebenso einen div-Container (Zeile 29) mit der id
-footnote. Mittels Funktion
-&lt;code&gt;document.addEventListener("DOMContentLoaded", function() { }, false);&lt;/code&gt;
-in Zeile 4 wird sichergestellt dass die Seite vollständig geladen wird
-bevor die Javascript-Anweisungen ausgeführt werden. Anhand des Befehls
-&lt;code&gt;var popcorn = Popcorn("#video");&lt;/code&gt; in Zeile 6 wird eine neue
-Popcorn-Instanz bezüglich der Video-Tag id video erstellt. Das Plugin
-footnote macht es möglich dass Text (Fussnoten) zu einem Element auf der
-Website hinzugefügt wird und kommt in Zeile 8 und 14 zum Einsatz. Von
-Sekunde 0 bis 3 wird der Text "Hallo Welt" im div-Container mit der id
-footnote angezeigt. Von Sekunden 3 bis 6 wird der Text "popcorn.js"
-ebenso im div-Container mit der id footnote angezeigt. Durch den Befehl
-&lt;code&gt;popcorn.play();&lt;/code&gt; in Zeile 21 wird das Video abgespielt.
-&lt;code&gt;popcorn.volume(0);&lt;/code&gt; in Zeile 22 setzt die Lautstärke auf 0.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 29 May 2012 19:34:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-29:popcorn-js-hallo-welt.html</guid><category>HTML5</category><category>Javascript</category><category>popcorn.js</category><category>Programmierung</category><category>video</category><category>Videobearbeitung</category></item><item><title>SimpleHTTPServer - schnell mal Dateien über www verfügbar machen</title><link>https://www.datenpaul.de/simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</link><description>&lt;p&gt;SimpleHTTPServer ist ein &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt;, in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben und
+Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 29 May 2012 19:34:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-29:/popcorn-js-hallo-welt.html/</guid><category>HTML5</category><category>Javascript</category><category>popcorn.js</category><category>Programmierung</category><category>video</category><category>Videobearbeitung</category></item><item><title>SimpleHTTPServer - schnell mal Dateien über www verfügbar machen</title><link>https://www.datenpaul.de/simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</link><description>&lt;p&gt;SimpleHTTPServer ist ein &lt;a href="https://de.wikipedia.org/wiki/Webserver" title="WP:Webserver"&gt;Webserver&lt;/a&gt;, in &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Python&lt;/a&gt; geschrieben und
 für den einfachen, schnellen, temporären Einsatz gedacht, um z.B.
 Dateien oder statische Webseiten per World Wide Web abrufbereit zu
 machen. SimpleHTTPServer muss bei den meisten grossen
 &lt;a href="https://de.wikipedia.org/wiki/Linux-Distribution" title="WP:Linux-Distributionen"&gt;Linux-Distribution&lt;/a&gt; nicht nachinstalliert werden, denn er ist ein
-Modul von Python. Gestartet wird der Webserver mittels Befehl
-&lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt; im jeweiligen Verzeichnis. Dieses
-Verzeichnis wird gewissermassen zum Wurzelverzeichnis des Webservers. Im
-Browser tippt man nunmehr &lt;code&gt;http://localhost:8000&lt;/code&gt; ein um auf die Dateien
-zugreifen zu können. 8000 ist die Standardportnummer. Die Portnummer
-kann man auch abändern indem man eine andere beim Start angibt. z.B.
-&lt;code&gt;python -m SimpleHTTPServer 8080&lt;/code&gt; Die dazugehörigen Python-Dateien
-findet man übrigens bei Fedora 16 (64bit) im Verzeichnis
-/usr/lib64/python2.7/.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 25 May 2012 19:27:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-25:simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html</guid><category>Fedora</category><category>Linux</category><category>Python</category><category>SimpleHTTPServer</category><category>web</category><category>webserver</category><category>www</category></item><item><title>simplemax Zeitanzeige</title><link>https://www.datenpaul.de/simplemax-zeitanzeige.html</link><description>&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
+Modul von Python. Gestartet wird der Webserver …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 25 May 2012 19:27:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-25:/simplehttpserver-schnell-mal-dateien-uber-www-verfugbar-machen.html/</guid><category>Fedora</category><category>Linux</category><category>Python</category><category>SimpleHTTPServer</category><category>web</category><category>webserver</category><category>www</category></item><item><title>simplemax Zeitanzeige</title><link>https://www.datenpaul.de/simplemax-zeitanzeige.html</link><description>&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
 angezeigt. (binär, oktal, dezimal, hexadezimal)&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/simplemax_zeitanzeige.html"&gt;simplemax Zeitanzeige&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Nov 2010 18:06:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-05:simplemax-zeitanzeige.html</guid><category>Javascript</category><category>Programmierung</category><category>Zeitanzeige</category></item><item><title>PHP 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/php-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
-ermitteln.&lt;br /&gt;
-Geschrieben ist das Programm in PHP. Das Programm ist für Webserver&lt;br /&gt;
+&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/simplemax_zeitanzeige.html"&gt;simplemax Zeitanzeige&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Nov 2010 18:06:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-05:/simplemax-zeitanzeige.html/</guid><category>Javascript</category><category>Programmierung</category><category>Zeitanzeige</category></item><item><title>PHP 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/php-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
+ermitteln.&lt;br&gt;
+Geschrieben ist das Programm in PHP. Das Programm ist für Webserver&lt;br&gt;
 denn die Ausgabe erscheint im HTML-Code.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/zufall6von49php.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 03 Nov 2010 21:48:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-03:php-6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>PHP</category><category>Zufall</category></item><item><title>Wordpress widget 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/wordpress-widget-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Wordpress widget 6 Zufallszahlen von 1 bis 49&lt;br /&gt;
-License: GPLv3&lt;br /&gt;
-Version: 0.1 (23.06.2010)&lt;br /&gt;
+&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/zufall6von49php.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 03 Nov 2010 21:48:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-03:/php-6-zufallszahlen-von-1-bis-49.html/</guid><category>6von49</category><category>PHP</category><category>Zufall</category></item><item><title>Wordpress widget 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/wordpress-widget-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Wordpress widget 6 Zufallszahlen von 1 bis 49&lt;br&gt;
+License: GPLv3&lt;br&gt;
+Version: 0.1 (23.06.2010)&lt;br&gt;
 &lt;a href="http://www.datenpaul.de/archive/six_random_numbers.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Prinzip:  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$numberlist = range(1,49); // Liste erstellen mit Zahlen von 1 bis 49 shuffle($numberlist); // Liste mischen for ($i=0; $i&amp;lt;=5; $i++) { $rand_nr[$i] = $numberlist[$i]; } // ersten 6 Zahlen in eine neue Liste schreiben sort($rand_nr); // die 6 Zufallszahlen sortieren foreach ($rand_nr as $value) { echo "$value "; } // die 6 geordneten Zufallszahlen ausgeben&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 Jun 2010 16:16:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-23:wordpress-widget-6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>PHP</category><category>Programmierung</category><category>Widget</category><category>Wordpress</category></item><item><title>6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
-ermitteln.&lt;br /&gt;
-Geschrieben ist das Programm in Python. Das Programm ist für Webserver&lt;br /&gt;
-denn die Ausgabe erscheint in einem HTML-Code.&lt;br /&gt;
+&lt;p&gt;&lt;code&gt;$numberlist = range(1,49); // Liste erstellen mit Zahlen von 1 bis 49 shuffle($numberlist); // Liste mischen for ($i=0; $i&amp;lt;=5; $i++) { $rand_nr[$i] = $numberlist[$i]; } // ersten 6 Zahlen in eine neue …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 Jun 2010 16:16:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-23:/wordpress-widget-6-zufallszahlen-von-1-bis-49.html/</guid><category>6von49</category><category>PHP</category><category>Programmierung</category><category>Widget</category><category>Wordpress</category></item><item><title>6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Hier ein bisschen Quellcode um 6 Zufallszahlen von 1 bis 49 zu
+ermitteln.&lt;br&gt;
+Geschrieben ist das Programm in Python. Das Programm ist für Webserver&lt;br&gt;
+denn die Ausgabe erscheint in einem HTML-Code.&lt;br&gt;
 &lt;a href="http://www.datenpaul.de/archive/Zufall6von49.tar.gz"&gt;Download&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Prinzip:&lt;br /&gt;
-&lt;code&gt;#!/usr/bin/python import random print random.sample(range(1,50,1),6)&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 10 Jun 2010 10:45:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-10:6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>Python</category><category>Zufall</category></item></channel></rss>
+&lt;p&gt;Prinzip:&lt;br&gt;
+&lt;code&gt;#!/usr/bin/python import random print random.sample(range(1,50,1),6)&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Thu, 10 Jun 2010 10:45:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-10:/6-zufallszahlen-von-1-bis-49.html/</guid><category>6von49</category><category>Python</category><category>Zufall</category></item></channel></rss>

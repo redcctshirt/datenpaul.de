@@ -1,176 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/programmierung.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 01 Jul 2015 17:59:00 +0200</lastBuildDate><item><title>Linktipp: 2 feine Tutorialsammlungen</title><link>https://www.datenpaul.de/linktipp-feine-tutorialsammlungen.html</link><description>&lt;p&gt;&lt;img alt="keyboard - help" src="http://www.datenpaul.de/archive/keyboard_help.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Eventuell kommt es vor, dass man auf ein neues Thema hingewiesen wird, oder man entdeckt zufällig im &lt;a href="https://de.wikipedia.org/wiki/Internet"&gt;Internet&lt;/a&gt; eine neue interessante &lt;a href="https://de.wikipedia.org/wiki/Programmiersprache"&gt;Programmiersprache&lt;/a&gt; oder ein grandioses Framework, das den Alltag erleichtert, und man möchte die Programmiersprache unbedingt lernen, aber die offizielle Dokumentation ist spärlich und vielleicht nicht besonders geeignet. Die Suche mithilfe einer Suchmaschine, z.B. &lt;a href="https://duckduckgo.com/"&gt;duckduckgo&lt;/a&gt;, bringt vermutlich erst beim 20. oder 30. Link das gewünschte Resultat (Tutorial). An dieser Stelle möchte ich 2 erste Anlaufstellen für englische Tutorials vorstellen: die Seite &lt;a href="https://www.bento.io/"&gt;bento.io&lt;/a&gt;, es heißt, dort findet man alles um sich selbst zum Experten zu machen, und die Webseite &lt;a href="http://hackr.io/"&gt;hackr.io&lt;/a&gt;, der 2. interessante Tutorialkatalog. Darüber hinaus kann man natürlich auch bei &lt;a href="https://www.youtube.com"&gt;Youtube&lt;/a&gt; nach Videotutorials suchen.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://pixabay.com/de/tastatur-hilfe-support-information-824317/"&gt;1. Bild&lt;/a&gt; by &lt;a href="https://pixabay.com/de/users/geralt-9301/"&gt;geralt-9301&lt;/a&gt;, &lt;a href="https://creativecommons.org/publicdomain/zero/1.0"&gt;CC Zero&lt;/a&gt; &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 01 Jul 2015 17:59:00 +0200</pubDate><guid>tag:www.datenpaul.de,2015-07-01:linktipp-feine-tutorialsammlungen.html</guid><category>Linux</category><category>Web</category><category>Programmierung</category><category>Linktipp</category><category>Tutorialsammlung</category></item><item><title>R - Hilfe</title><link>https://www.datenpaul.de/r-hilfe.html</link><description>&lt;p&gt;&lt;img alt="r - hilfe" src="http://www.datenpaul.de/archive/r-hilfe.jpg" /&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Programmierung</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/programmierung.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 01 Jul 2015 17:59:00 +0200</lastBuildDate><item><title>Linktipp: 2 feine Tutorialsammlungen</title><link>https://www.datenpaul.de/linktipp-feine-tutorialsammlungen.html</link><description>&lt;p&gt;&lt;img alt="keyboard - help" src="http://www.datenpaul.de/archive/keyboard_help.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Eventuell kommt es vor, dass man auf ein neues Thema hingewiesen wird, oder man entdeckt zufällig im &lt;a href="https://de.wikipedia.org/wiki/Internet"&gt;Internet&lt;/a&gt; eine neue interessante &lt;a href="https://de.wikipedia.org/wiki/Programmiersprache"&gt;Programmiersprache&lt;/a&gt; oder ein grandioses Framework, das den Alltag erleichtert, und man möchte die Programmiersprache unbedingt lernen, aber die offizielle Dokumentation ist spärlich und vielleicht nicht besonders geeignet. Die Suche …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 01 Jul 2015 17:59:00 +0200</pubDate><guid>tag:www.datenpaul.de,2015-07-01:/linktipp-feine-tutorialsammlungen.html/</guid><category>Linux</category><category>Web</category><category>Programmierung</category><category>Linktipp</category><category>Tutorialsammlung</category></item><item><title>R - Hilfe</title><link>https://www.datenpaul.de/r-hilfe.html</link><description>&lt;p&gt;&lt;img alt="r - hilfe" src="http://www.datenpaul.de/archive/r-hilfe.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.r-project.org"&gt;R&lt;/a&gt; wird nach der Installation mittels R [ENTER] in der Kommandozeile gestartet.
 Der schnellste Weg um flott zu einer Funktionsbeschreibung zu kommen, die vielleicht helfen kann, ist über das Fragezeichen (?) am Anfang vor einer Funktion. So könnte man z.B. eingeben&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;?license
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;wenn man mehr über die Funktion license() erfahren möchte. Die Anzeige kann man mit der Taste q beenden.
-Durch help erreicht man das Gleiche, man gibt help ein und anschließend in runden Klammern den Namen der Funktion, z.B.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;help(license)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Apropos sucht speziell nach bestimmten Zeichenketten. Um zum Beispiel nach plot zu suchen tippt man ein&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apropos(&amp;quot;plot&amp;quot;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Mittels &lt;strong&gt;help.start()&lt;/strong&gt; wird in einem Webbrowser eine Seite geöffnet mit mehreren Links zu R-Anleitungen und Dokumentationen. Unter Zuhilfenahme von RSiteSearch('Suchbegriff') wird in Webseiten über R nach dem angegebenen Begriff gesucht, z.B.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;RSiteSearch(&amp;#39;plot&amp;#39;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;a href="http://pixabay.com/de/button-tasten-computer-design-2076/"&gt;1. Bild&lt;/a&gt; by &lt;a href="http://pixabay.com/de/users/PublicDomainPictures/"&gt;PublicDomainPictures&lt;/a&gt;, &lt;a href="https://creativecommons.org/publicdomain/zero/1.0"&gt;CC Zero&lt;/a&gt; &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 22 Jun 2014 16:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2014-06-22:r-hilfe.html</guid><category>Linux</category><category>Linux Mint</category><category>R</category><category>Programmierung</category><category>Statistik</category></item><item><title>R - Programmiersprache für Statistik</title><link>https://www.datenpaul.de/r-programmiersprache-fuer-statistik.html</link><description>&lt;p&gt;&lt;img alt="r - was" src="http://www.datenpaul.de/archive/r-was.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/R_%28Programmiersprache%29"&gt;R&lt;/a&gt; ist eine Programmiersprache für Statistik und für die Visualisierung von Statistikdaten. Es ist eine freie, kostenlos verfügbare Programmiersprache die unter der Lizenz &lt;a href="http://de.wikipedia.org/wiki/GNU_General_Public_License"&gt;GPL&lt;/a&gt; steht. R ist mit der Programmiersprache &lt;a href="http://de.wikipedia.org/wiki/S_%28Statistiksprache%29"&gt;S&lt;/a&gt; kompatibel, wurde 1992 entwickelt und 1993 veröffentlicht. R findet man auf der Webseite &lt;a href="http://www.r-project.org/"&gt;http://www.r-project.org/&lt;/a&gt;. Die von Ross Ihaka und Robert Gentleman an der Universität Auckland entwickelte Programmiersprache gibt es für Mac OS, Windows und Linux und kommt in der Kommandozeile zur Anwendung. 
-Um R z.B. bei dem Betriebssystem &lt;a href="http://de.wikipedia.org/wiki/Linux_Mint"&gt;Linux Mint&lt;/a&gt; verfügbar zu machen wird das Paket r-base per Paketmanager installiert. Das Paket kann auch in der Kommandozeile mittels&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install r-base
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;installiert werden. (Der Status des Pakets wird durch &lt;strong&gt;dpkg -s r-base&lt;/strong&gt; angezeigt)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="r-base - Status" src="http://www.datenpaul.de/archive/r-base-status.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Gibt man nun &lt;strong&gt;R&lt;/strong&gt; in die Kommandozeile ein wird R mit einem Begrüssungstext im Terminal gestartet und ist, wie das "&amp;gt;"-Zeichen es signalisiert, für die Kommandoeingabe bereit. Unter Zuhilfenahme der Funktion &lt;strong&gt;q()&lt;/strong&gt; kann R wieder beendet werden. Abschliessend kommt noch die Frage ob die Sitzung gespeichert werden soll oder nicht. (y - Ja, n - Nein, c - Abbrechen)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="r - starten beenden" src="http://www.datenpaul.de/archive/r-starten-beenden.png" /&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Bild: &lt;a href="https://www.flickr.com/photos/carbonnyc/67187558/"&gt;R Graffiti&lt;/a&gt; by &lt;a href="https://www.flickr.com/photos/carbonnyc/"&gt;David M. Goehring&lt;/a&gt;, &lt;a href="https://creativecommons.org/licenses/by/2.0/deed.de"&gt;CC by 2.0&lt;/a&gt; &lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 14 Jun 2014 21:20:00 +0200</pubDate><guid>tag:www.datenpaul.de,2014-06-14:r-programmiersprache-fuer-statistik.html</guid><category>Linux</category><category>Linux Mint</category><category>R</category><category>Programmierung</category><category>Statistik</category></item><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
+&lt;p&gt;wenn man mehr über die Funktion license() erfahren …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 22 Jun 2014 16:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2014-06-22:/r-hilfe.html/</guid><category>Linux</category><category>Linux Mint</category><category>R</category><category>Programmierung</category><category>Statistik</category></item><item><title>R - Programmiersprache für Statistik</title><link>https://www.datenpaul.de/r-programmiersprache-fuer-statistik.html</link><description>&lt;p&gt;&lt;img alt="r - was" src="http://www.datenpaul.de/archive/r-was.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://de.wikipedia.org/wiki/R_%28Programmiersprache%29"&gt;R&lt;/a&gt; ist eine Programmiersprache für Statistik und für die Visualisierung von Statistikdaten. Es ist eine freie, kostenlos verfügbare Programmiersprache die unter der Lizenz &lt;a href="http://de.wikipedia.org/wiki/GNU_General_Public_License"&gt;GPL&lt;/a&gt; steht. R ist mit der Programmiersprache &lt;a href="http://de.wikipedia.org/wiki/S_%28Statistiksprache%29"&gt;S&lt;/a&gt; kompatibel, wurde 1992 entwickelt und 1993 veröffentlicht. R findet man auf der Webseite &lt;a href="http://www.r-project.org/"&gt;http://www.r-project.org/&lt;/a&gt;. Die von …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 14 Jun 2014 21:20:00 +0200</pubDate><guid>tag:www.datenpaul.de,2014-06-14:/r-programmiersprache-fuer-statistik.html/</guid><category>Linux</category><category>Linux Mint</category><category>R</category><category>Programmierung</category><category>Statistik</category></item><item><title>Informationen über ein vimeo-Video ermitteln</title><link>https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html</link><description>&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
 vimeo-Video-Portal zu beziehen wird die vimeo data API angeboten. Die
 Funktionsweise ist die gleiche wie beim &lt;a href="http://www.cc-juno.de/archives/364" title="Informationen über ein Youtube-Video auslesen"&gt;Auslesen von Informationen über
 ein Youtube-Video&lt;/a&gt;. Eine sehr sorgfältige und leicht verständliche
 Dokumentation mit Beispielen entdeckt man auf der Website
-&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http://developer.vimeo.com/apis/simple&lt;/a&gt; Tippt man folgendes in den
-Browser ein, werden die Metadaten vom jeweiligen Video geliefert. (Das
-Video wird mittels ID bestimmt. Die Video-ID steht in der URL eines
-Video-Aufrufs nach dem / https://vimeo.com/\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe: &lt;code&gt;http://vimeo.com/api/v2/video/&amp;lt;ID&amp;gt;.&amp;lt;Format&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mögliche Formate: &lt;code&gt;json, php, xml&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Beispiel: &lt;code&gt;http://vimeo.com/api/v2/video/52387087.json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mittels Skript können gewünschte Daten nun mühelos ermittelt werden. In
-PHP könnte dies so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-
-&lt;span class="nt"&gt;foreach&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-   &lt;span class="err"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$key&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;:&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;$value&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;n&amp;lt;br&lt;/span&gt; &lt;span class="err"&gt;/&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte ein Skript so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;{0}: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:informationen-uber-ein-vimeo-video-ermitteln.html</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
+&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 13 Apr 2013 00:04:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-13:/informationen-uber-ein-vimeo-video-ermitteln.html/</guid><category>API</category><category>json</category><category>Meta</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>video</category><category>vimeo</category><category>xml</category></item><item><title>Informationen über ein Youtube-Video auslesen</title><link>https://www.datenpaul.de/informationen-uber-ein-youtube-video-auslesen.html</link><description>&lt;p&gt;Um Meta-Daten (z.B. Anzahl der Likes, Anzahl der Kommentare oder Titel)
 über ein Youtube-Video zu bekommen nutzt man ganz einfach die Youtube
 data API. Gibt man folgendes in den Browser ein, sendet die API
 Informationen zum angegebenen Video im JSON-Format. (Das Video wird
-mittels ID bestimmt. Die Video-ID steht in der URL eines Video-Aufrufs
-nach dem watch?v= https://www.youtube.com/watch?v=\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Für eine bessere Übersicht sorgt der URL-Anhang &lt;code&gt;&amp;amp;prettyprint=true&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Eingabe:
-&lt;code&gt;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;amp;prettyprint=true&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Die Ausgabe, die von der API erzeugt wird, ist nichts weiter als ein
-String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
-aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;wird&lt;/span&gt; &lt;span class="nt"&gt;durch&lt;/span&gt; &lt;span class="nt"&gt;die&lt;/span&gt; &lt;span class="nt"&gt;Youtube-Video-ID&lt;/span&gt; &lt;span class="nt"&gt;ersetzt&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nt"&gt;Einzelne&lt;/span&gt; &lt;span class="nt"&gt;Angaben&lt;/span&gt; &lt;span class="nt"&gt;k&lt;/span&gt;&lt;span class="err"&gt;ö&lt;/span&gt;&lt;span class="nt"&gt;nnen&lt;/span&gt; &lt;span class="nt"&gt;nun&lt;/span&gt; &lt;span class="nt"&gt;mit&lt;/span&gt; &lt;span class="nt"&gt;diesem&lt;/span&gt; &lt;span class="nt"&gt;Muster&lt;/span&gt; &lt;span class="nt"&gt;ausgegeben&lt;/span&gt; &lt;span class="nt"&gt;werden&lt;/span&gt;
-&lt;span class="nt"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Video-Title: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;data-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte dies so aussehen:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="c1"&gt;# &amp;lt;ID&amp;gt; wird durch die Youtube-Video-ID ersetzt&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://gdata.youtube.com/feeds/api/videos/&amp;lt;ID&amp;gt;?v=2&amp;amp;alt=jsonc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Titel: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Aufrufe: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;viewCount&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:informationen-uber-ein-youtube-video-auslesen.html</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item><item><title>Gnome3 - gnome-tweal-tool im userMenu</title><link>https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html</link><description>&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
+mittels ID bestimmt. Die Video-ID steht …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 07 Apr 2013 00:13:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-04-07:/informationen-uber-ein-youtube-video-auslesen.html/</guid><category>API</category><category>json</category><category>PHP</category><category>Programmierung</category><category>Python</category><category>web</category><category>www</category><category>youtube</category></item><item><title>Gnome3 - gnome-tweal-tool im userMenu</title><link>https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html</link><description>&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
 &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt;. Es gehört oft nicht zum Standard der meist genutzten
 Linux-Distributionen, muss bei Bedarf also über den herkömmlichen
 Paketmanager nachinstalliert werden. (Beispiel für Fedora:
 &lt;code&gt;su -c "yum install gnome-tweak-tool&lt;/code&gt;") Um sich leichten Zugang zum
-gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu
-erweitern. Der einfachste Weg führt dabei über die &lt;a href="https://extensions.gnome.org" title="extensions.gnome.org"&gt;Gnome3-Extension&lt;/a&gt;
-"Advanced Settings in UserMenu" auf der Website
-&lt;a href="https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/"&gt;https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/&lt;/a&gt;.
-Ebenso ist es machbar die userMenu.js-Datei im Verzeichnis
-/usr/share/gnome-shell/js/ui zu modifizieren. Nach der Bearbeitung wird
-die Veränderung durch einen Gnome-Shell-Neustart, mittels Alt+F2 r,
-wirksam. Die Modifikationen können durch einen Texteditor erfolgen.
-(z.B. bei Fedora:
-&lt;code&gt;su -c "nano /usr/share/gnome-shell/js/ui/userMenu.js"&lt;/code&gt;) Folgende Zeilen
-kommen hinzu: (647-649 und 717-721)&lt;/p&gt;
-&lt;p&gt;/usr/share/gnome-shell/js/ui/userMenu.js&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;item = new PopupMenu.PopupMenuItem(_(&amp;quot;System Settings&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onPreferencesActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupMenuItem(_(&amp;quot;Gnome-Tweak-Tool&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onGnometweaktoolActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupSeparatorMenuItem();
-this.menu.addMenuItem(item);
-
-
-_onPreferencesActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app(&amp;#39;gnome-control-center.desktop&amp;#39;);
-    app.activate();
-},
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;_onGnometweaktoolActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app('gnome-tweak-tool.desktop');
-        app.activate();
-    },&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_onLockScreenActivate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;overview&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;hide&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;_screenSaverProxy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;LockRemote&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-&lt;span class="o"&gt;},&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;img alt="Screenshot: Gnome3 userMenu mit gnome-tweak-tool-Eintrag" src="http://www.datenpaul.de/archive/gtt_userMenu.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Jul 2012 23:15:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-11:gnome3-gnome-tweal-tool-im-usermenu.html</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Javascript</category><category>Linux</category><category>Programmierung</category><category>userMenu</category><category>userMenu.js</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
+gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 11 Jul 2012 23:15:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-07-11:/gnome3-gnome-tweal-tool-im-usermenu.html/</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Javascript</category><category>Linux</category><category>Programmierung</category><category>userMenu</category><category>userMenu.js</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
 (Seite nicht gefunden) kann durch den error decorator erstellt werden.
 Ein Beispiel:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -187,101 +39,12 @@ Ein Beispiel:&lt;/p&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
 
 &lt;span class="nd"&gt;@error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Seite nicht gefunden&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Fehlermeldungen (HTTP Error Pages) können ebenso mittels
-abort()-Funktion&lt;br /&gt;
-programmiert werden.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;401&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Leider kein Zugriff möglich !&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Umleitungen zu einer anderen URL werden durch redirect (HTTP Status Code
-- 303) erstellt.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo&amp;#39;&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/303&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;uml&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:bottle-fehlerseiten-umleitungen.html</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:/bottle-fehlerseiten-umleitungen.html/</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
 pdf-Dateien sind nicht automatisch Bestandteil einer bottle-App. Für
 jede einzelne Datei muss eine Route definiert werden. Per Dynamischer
 Route kann dies durch eine einzige @route-Anweisung erledigt werden. Um
 Zugriff auf Dateien mittels Web zu ermöglichen gibt es die Funktion
-static_file. Um die Funktion zu aktivieren muss zusätzlich die Klasse
-static_file von bottle importiert werden. Als ersten Parameter gibt man
-den Dateinamen an und als zweiten Parameter das lokale Verzeichnis in
-dem diese Datei zu finden ist. Hier ein Beispiel: (z.B.
-http://localhost:8080/static/index.png greift auf /home/paul/index.png
-zu)&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/static/&amp;lt;filepath:path&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/paul/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:bottle-statische-dateien.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
+static_file …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:/bottle-statische-dateien.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
 oder Werte eingesetzt werden können. Es sind Variablen. Diese Variable
 wird an die angedockte Funktion weitergegeben und mittels
 Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
@@ -296,182 +59,27 @@ Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
  9
 10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
 &lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo/&amp;lt;name&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello {0} !&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Nach /hallo/ können nun Zeichenketten verwendet werden. (z.B.
-/hallo/paul /hallo/ina ...) Die eingesetzte Zeichenkette wird in der
-Variable name gespeichert und in Zeile 7 ersetzt diese Zeichenkette den
-Platzhalter {0}. Platzhalter können auch durch folgende Filter
-spezifiziert werden.  &lt;/p&gt;
-&lt;p&gt;@route('/route/&lt;id:int&gt;') - nur Integer-Werte sind erlaubt 
-@route('/route/&lt;id:float&gt;') - nur float-Werte sind erlaubt 
-@route('/route/&lt;name:re:[a-z]+&gt;') - erlaubt reguläre Ausdrücke 
-@route('/route/&lt;path:path&gt;') - erlaubt Verzeichnisangaben&lt;/p&gt;
-&lt;p&gt;Durch die Zeile 9 mit dem Inhalt debug(True) werden hilfreiche
-Fehlermeldungen mit Einzelheiten angezeigt. Der reloader, der in Zeile
-10 auf True gesetzt wird, bewirkt dass bei Veränderungen des Skripts
-kein Neustart des Programms notwendig ist. (&lt;a href="http://bottlepy.org" title="bottle"&gt;bottle&lt;/a&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:bottle-dynamisches-routing.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:/bottle-dynamisches-routing.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
 Seite &lt;a href="http://bottlepy.org" title="bottlepy.org"&gt;bottlepy.org&lt;/a&gt; zu finden. Bottle ist ein schnelles und einfaches
 &lt;a href="https://de.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="WP:WSGI"&gt;WSGI&lt;/a&gt;-Microframework. Es besteht aus einer einzelnen Modul-Datei und
 hat keine Abhängigkeiten. Installiert wird bottle bei Fedora mittels
 Kommando &lt;code&gt;su -c "easy_install bottle"&lt;/code&gt;. Ebenso kann bottle durch den
-Paketmanager oder durch den direkten Download der Modul-Datei ins
-Betriebssystem gelangen. Ein Beispiel zeigt wie einfach es nun ist mit
-bottle eine Webapplication zu erstellen.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;b&amp;gt;Hallo Welt!&amp;lt;/b&amp;gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;In Zeile 3 werden die erforderlichen Klassen von bottle importiert.
-Ebenso wäre das Importieren von allen Klassen durch &lt;code&gt;import bottle&lt;/code&gt;
-möglich. @route('/hallo') erzeugt eine Seite wobei die folgende Funktion
-an diese Route gebunden wird. Die Ausgabe erfolgt am Ende durch den
-Befehl return. Es kann nur eine Funktion an die Route gebunden werden.
-Aber es ist machbar mehrere Routen an eine Funktion zu binden. In Zeile
-9 wird die Webapplication gestartet. Sobald das Skript mit python
-ausgeführt wird, sieht man die Ausgabe Hallo Welt, nach der Eingabe
-http://localhost:8080/hallo, im Browser. Beendet wird die Webapplication
-anhand von Strg+C.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>jQuery - $()-Aufruf deaktivieren</title><link>https://www.datenpaul.de/jquery-aufruf-deaktivieren.html</link><description>&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
+Paketmanager …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>jQuery - $()-Aufruf deaktivieren</title><link>https://www.datenpaul.de/jquery-aufruf-deaktivieren.html</link><description>&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
 jQuery("div").css("color","blue") als jQuery-Anweisung schreibt, beides
 funktioniert. Aber es ist machbar die \$()-Funktion zu deaktivieren um
 möglichen Konflikten mit anderen Javascript-Frameworks entgegenzuwirken.
 Mittels jQuery.noConflict(); wird der \$()-Aufruf unwirksam. Beispiel.
-(Die Anweisung in Zeile 3 wird somit ignoriert.)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jQuery.noConflict();
-jQuery(document).ready(function() {
-$(&amp;quot;div#two&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;green&amp;quot;);
-jQuery(&amp;quot;div#one&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;blue&amp;quot;);
-});
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-aufruf-deaktivieren.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>jQuery - Hallo Welt</title><link>https://www.datenpaul.de/jquery-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
+(Die Anweisung in Zeile …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:/jquery-aufruf-deaktivieren.html/</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>jQuery - Hallo Welt</title><link>https://www.datenpaul.de/jquery-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
 &lt;a href="https://de.wikipedia.org/wiki/Javascript" title="WP:Javascript"&gt;Javascript&lt;/a&gt;-Framework. Dieses wundersame Rahmenwerk und Toolset
 erfreut sich großer Beliebtheit und wird in vielen bekannten
 &lt;a href="https://de.wikipedia.org/wiki/Content-Management-System" title="WP:CMS"&gt;Content-Management-Systemen&lt;/a&gt; eingesetzt. Es vereinfacht
 Javascript-Lösungswege und lässt Dynamik und Interaktivität in eine
 Website mit einfließen. Animationen können einfach erstellt, Inhalt
-hinzugefügt und Elemente verändert werden. Mittels \$-Funktion oder der
-jQuery-Funktion wird ein jQuery-Objekt erstellt. Als erstes wird
-bestimmt was manipuliert werden soll. Die selektierten Elemente können
-dann durch jQuery-Methoden verändert werden. Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;one&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;two&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;css&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;color&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Per &lt;code&gt;&amp;lt;script src="http://code.jquery.com/jquery-1.7.2.min.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
-in Zeile 7 wird jQuery in eine HTML-Seite eingebunden. Durch
-\$(document).ready(function() { }); in Zeile 15 und 17 wird das ganze
-Dokument geladen bevor die enthaltenen jQuery-Anweisungen ausgeführt
-werden. In Zeile 16 kommt es dann zur Veränderung der Textfarbe
-innerhalb aller div-Container. Anhand von \$("div") werden alle
-div-Container ausgewählt. Mittels \$("div").css("color","blue"); wird
-die Eigenschaft color (Textfarbe) mit dem Wert blue belegt. Statt rot,
-wie in Zeile 5 durch color: red; festgelegt, wird der Text in allen
-div-Containern in blau angezeigt. Eine Spezifizierung auf einen
-bestimmten div-Container ist durch die id möglich. Wird
-\$("div").css("color","blue"); durch \$("div#one").css("color","blue");
-ersetzt erscheint nur der Inhalt "Hallo Welt" vom div-Container mit der
-id one in blau.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:36:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:jquery-hallo-welt.html</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>popcorn.js - Hallo Welt</title><link>https://www.datenpaul.de/popcorn-js-hallo-welt.html</link><description>&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
+hinzugefügt und Elemente verändert werden. Mittels …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 02 Jun 2012 23:36:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-02:/jquery-hallo-welt.html/</guid><category>HTML</category><category>HTML5</category><category>Javascript</category><category>jQuery</category><category>Programmierung</category><category>World Wide Web</category><category>www</category></item><item><title>popcorn.js - Hallo Welt</title><link>https://www.datenpaul.de/popcorn-js-hallo-welt.html</link><description>&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
 popcorn.js ist ein &lt;a href="https://de.wikipedia.org/wiki/HTML5" title="WP:HTML5"&gt;HTML5&lt;/a&gt; Media Javascript Framework von &lt;a href="https://de.wikipedia.org/wiki/Mozilla" title="WP:Mozilla"&gt;Mozilla&lt;/a&gt;.
 Jeder der interaktive Medien ins Web bringen möchte kann dieses
 Framework einsetzen. Auf der Seite &lt;a href="http://mozillapopcorn.js" title="popcorn Project"&gt;mozillapopcorn.js&lt;/a&gt; findet man das
-Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs.org&lt;/a&gt;.
-Demos und Dokumentationen geben eine Übersicht über die Features die
-dieses Framework mit sich bringt. Dynamische Inhalte können abhängig von
-der Zeitposition eines Videos angezeigt werden. Ein Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://popcornjs.org/code/dist/popcorn-complete.js&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function() {
-
-var popcorn = Popcorn(&amp;quot;#video&amp;quot;);
-
-popcorn.footnote({
-        start: 0,
-        end: 3,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;Hallo Welt&amp;quot;
-       })
-.footnote({
-        start: 3,
-        end: 6,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;popcorn.js&amp;quot;
-});
-
-popcorn.play();
-popcorn.volume(0); // 0 .. 1.0
-
-}, false );
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;video&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;800&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;600&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;video&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;o.ogv&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;controls=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;preload=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footnote&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Zeile 2 wird das popcorn.js Framework geladen. Durch das Attribut src
-im Video-Tag (Zeile 28) wird die Videodatei festgelegt und per Attribut
-id wird die einmalige Identifikationszeichenkette bestimmt. Neben dem
-Video-Tag gibt es ebenso einen div-Container (Zeile 29) mit der id
-footnote. Mittels Funktion
-&lt;code&gt;document.addEventListener("DOMContentLoaded", function() { }, false);&lt;/code&gt;
-in Zeile 4 wird sichergestellt dass die Seite vollständig geladen wird
-bevor die Javascript-Anweisungen ausgeführt werden. Anhand des Befehls
-&lt;code&gt;var popcorn = Popcorn("#video");&lt;/code&gt; in Zeile 6 wird eine neue
-Popcorn-Instanz bezüglich der Video-Tag id video erstellt. Das Plugin
-footnote macht es möglich dass Text (Fussnoten) zu einem Element auf der
-Website hinzugefügt wird und kommt in Zeile 8 und 14 zum Einsatz. Von
-Sekunde 0 bis 3 wird der Text "Hallo Welt" im div-Container mit der id
-footnote angezeigt. Von Sekunden 3 bis 6 wird der Text "popcorn.js"
-ebenso im div-Container mit der id footnote angezeigt. Durch den Befehl
-&lt;code&gt;popcorn.play();&lt;/code&gt; in Zeile 21 wird das Video abgespielt.
-&lt;code&gt;popcorn.volume(0);&lt;/code&gt; in Zeile 22 setzt die Lautstärke auf 0.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 29 May 2012 19:34:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-29:popcorn-js-hallo-welt.html</guid><category>HTML5</category><category>Javascript</category><category>popcorn.js</category><category>Programmierung</category><category>video</category><category>Videobearbeitung</category></item><item><title>Ruby - Hallo Welt</title><link>https://www.datenpaul.de/ruby-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt;-Quelltextdateien erkennt man an der Endung .rb und können mit
+Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Tue, 29 May 2012 19:34:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-29:/popcorn-js-hallo-welt.html/</guid><category>HTML5</category><category>Javascript</category><category>popcorn.js</category><category>Programmierung</category><category>video</category><category>Videobearbeitung</category></item><item><title>Ruby - Hallo Welt</title><link>https://www.datenpaul.de/ruby-hallo-welt.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt;-Quelltextdateien erkennt man an der Endung .rb und können mit
 einfachen Texteditoren verändert bzw. überhaupt erst erstellt werden.
 Eine .rb-Datei öffnet man mit einem Doppelklick, so wird die Datei mit
 dem Standard-Texteditor (z.B. &lt;a href="https://de.wikipedia.org/wiki/Gedit" title="WP:gedit"&gt;gedit&lt;/a&gt;) geöffnet.&lt;/p&gt;
@@ -484,38 +92,16 @@ dem Standard-Texteditor (z.B. &lt;a href="https://de.wikipedia.org/wiki/Gedit" t
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;ist ebensfalls eine Ausgabe-Anweisung. Durch &lt;code&gt;ruby datei.rb&lt;/code&gt; werden die
-Befehle in der Datei durch den Ruby-Interpreter ausgeführt. Die
-&lt;a href="https://de.wikipedia.org/wiki/Shebang" title="WP:Shebang"&gt;Shebang&lt;/a&gt;-Zeile,&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env ruby&lt;/span&gt;
-&lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hallo Welt&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;ganz oben, und das Zugriffsrecht "Datei als Programm ausführen"
-(&lt;code&gt;chmod +x datei.rb&lt;/code&gt;) machen die Datei ausführbar. Diese kann nun
-mittels &lt;code&gt;./datei.rb&lt;/code&gt; ausgeführt werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:ruby-hallo-welt.html</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Programmierung</category><category>Ruby</category><category>Shebang</category></item><item><title>Ruby - die interaktive Ruby Shell</title><link>https://www.datenpaul.de/ruby-die-interaktive-ruby-shell.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt; ist eine &lt;a href="https://de.wikipedia.org/wiki/Objektorientierte_Programmierung" title="WP:OOP"&gt;objektorientierte&lt;/a&gt; Interpretersprache die 1995 von
+&lt;p&gt;ist …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:/ruby-hallo-welt.html/</guid><category>Fedora</category><category>Gnome</category><category>Linux</category><category>Programmierung</category><category>Ruby</category><category>Shebang</category></item><item><title>Ruby - die interaktive Ruby Shell</title><link>https://www.datenpaul.de/ruby-die-interaktive-ruby-shell.html</link><description>&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/Ruby_%28Programmiersprache%29" title="WP:Ruby"&gt;Ruby&lt;/a&gt; ist eine &lt;a href="https://de.wikipedia.org/wiki/Objektorientierte_Programmierung" title="WP:OOP"&gt;objektorientierte&lt;/a&gt; Interpretersprache die 1995 von
 einem Japaner veröffentlicht wurde. Sie ist meistens bei allen großen
 &lt;a href="https://de.wikipedia.org/wiki/Linux-Distribution" title="WP:Linux-Distribution"&gt;Linux-Distributionen&lt;/a&gt; vorinstalliert. Bei &lt;a href="https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29" title="WP:Fedora"&gt;Fedora&lt;/a&gt; ist das nicht
 der Fall. Mittels Befehl &lt;code&gt;su -c "yum install ruby ruby-irb"&lt;/code&gt; müssen die
 Pakete nachinstalliert werden. Ruby besitzt eine interaktive Ruby-Shell
-in der eine Eingabe sofort ausgeführt wird und ein Ergebnis ausgegeben
-wird. Mittels &lt;code&gt;irb&lt;/code&gt; wird die interaktive Ruby-Shell gestartet und es
-folgt eine Eingabeaufforderung. Ruby-Kommandos können nun ausprobiert
-werden. Durch den Befehl &lt;code&gt;puts "Hallo Welt"&lt;/code&gt; kommt es zur Ausgabe Hallo
-Welt. Die Zeilennummer und die Blockebene werden angezeigt.
-&lt;code&gt;irb(main):&amp;lt;Zeilennr&amp;gt;:&amp;lt;Blockebene&amp;gt;&amp;gt;&lt;/code&gt;. Per quit oder exit kann man die
-interaktive Ruby-Shell wieder verlassen. Weitere Optionen werden durch
-&lt;code&gt;irb --help&lt;/code&gt; sichtbar. Die Option &lt;code&gt;--simple-prompt&lt;/code&gt; unterdrückt die
-Zeilennummer- und Blockzifferanzeige. Auf der Website &lt;a href="http://www.tryruby.org" title="try ruby"&gt;tryruby.org&lt;/a&gt;
-kann Ruby ebenso, auch ohne Installation, ausprobiert werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:43:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:ruby-die-interaktive-ruby-shell.html</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Programmierung</category><category>Ruby</category></item><item><title>simplemax Zeitanzeige</title><link>https://www.datenpaul.de/simplemax-zeitanzeige.html</link><description>&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
+in der eine Eingabe sofort …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 May 2012 18:43:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-05-23:/ruby-die-interaktive-ruby-shell.html/</guid><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Programmierung</category><category>Ruby</category></item><item><title>simplemax Zeitanzeige</title><link>https://www.datenpaul.de/simplemax-zeitanzeige.html</link><description>&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
 angezeigt. (binär, oktal, dezimal, hexadezimal)&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/simplemax_zeitanzeige.html"&gt;simplemax Zeitanzeige&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Nov 2010 18:06:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-05:simplemax-zeitanzeige.html</guid><category>Javascript</category><category>Programmierung</category><category>Zeitanzeige</category></item><item><title>Wordpress widget 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/wordpress-widget-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Wordpress widget 6 Zufallszahlen von 1 bis 49&lt;br /&gt;
-License: GPLv3&lt;br /&gt;
-Version: 0.1 (23.06.2010)&lt;br /&gt;
+&lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/simplemax_zeitanzeige.html"&gt;simplemax Zeitanzeige&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 05 Nov 2010 18:06:00 +0100</pubDate><guid>tag:www.datenpaul.de,2010-11-05:/simplemax-zeitanzeige.html/</guid><category>Javascript</category><category>Programmierung</category><category>Zeitanzeige</category></item><item><title>Wordpress widget 6 Zufallszahlen von 1 bis 49</title><link>https://www.datenpaul.de/wordpress-widget-6-zufallszahlen-von-1-bis-49.html</link><description>&lt;p&gt;Wordpress widget 6 Zufallszahlen von 1 bis 49&lt;br&gt;
+License: GPLv3&lt;br&gt;
+Version: 0.1 (23.06.2010)&lt;br&gt;
 &lt;a href="http://www.datenpaul.de/archive/six_random_numbers.zip"&gt;Download&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Prinzip:  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$numberlist = range(1,49); // Liste erstellen mit Zahlen von 1 bis 49 shuffle($numberlist); // Liste mischen for ($i=0; $i&amp;lt;=5; $i++) { $rand_nr[$i] = $numberlist[$i]; } // ersten 6 Zahlen in eine neue Liste schreiben sort($rand_nr); // die 6 Zufallszahlen sortieren foreach ($rand_nr as $value) { echo "$value "; } // die 6 geordneten Zufallszahlen ausgeben&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 Jun 2010 16:16:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-23:wordpress-widget-6-zufallszahlen-von-1-bis-49.html</guid><category>6von49</category><category>PHP</category><category>Programmierung</category><category>Widget</category><category>Wordpress</category></item></channel></rss>
+&lt;p&gt;&lt;code&gt;$numberlist = range(1,49); // Liste erstellen mit Zahlen von 1 bis 49 shuffle($numberlist); // Liste mischen for ($i=0; $i&amp;lt;=5; $i++) { $rand_nr[$i] = $numberlist[$i]; } // ersten 6 Zahlen in eine neue …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 23 Jun 2010 16:16:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-06-23:/wordpress-widget-6-zufallszahlen-von-1-bis-49.html/</guid><category>6von49</category><category>PHP</category><category>Programmierung</category><category>Widget</category><category>Wordpress</category></item></channel></rss>

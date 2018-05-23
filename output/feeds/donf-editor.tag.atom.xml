@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/donf-editor.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-02-15T18:39:00+01:00</updated><entry><title>Gnome3 - Ordner vor Dateien anzeigen</title><link href="https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html" rel="alternate"></link><published>2013-02-15T18:39:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-15:gnome3-ordner-vor-dateien-anzeigen.html</id><summary type="html">&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - donf-editor</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/donf-editor.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-02-15T18:39:00+01:00</updated><entry><title>Gnome3 - Ordner vor Dateien anzeigen</title><link href="https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html" rel="alternate"></link><published>2013-02-15T18:39:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-15:/gnome3-ordner-vor-dateien-anzeigen.html/</id><summary type="html">&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
 Änderungsdatum sortiert werden. Dabei kann es vorkommen, dass Ordner
-ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br /&gt;
-&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png" /&gt;&lt;br /&gt;
+ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br&gt;
+&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png"&gt;&lt;br&gt;
 Um die Ordner vor den Dateien zu sortieren klickt man auf Dateien, geht
-zu den Einstellungen und setzt ein Häkchen bei "Ordner vor Dateien
-anzeigen".&lt;br /&gt;
-&lt;img alt="nautilus - Einstellungen" src="http://www.datenpaul.de/archive/sortdirfirst2.png" /&gt;&lt;br /&gt;
-Im &lt;code&gt;dconf-editor&lt;/code&gt; findet man diese Einstellung unter
-org.gnome.nautilus.preferences sort-directories-first.&lt;br /&gt;
-&lt;img alt="dconf-editor-Einstellung" src="http://www.datenpaul.de/archive/sortdirfirst1.png" /&gt;&lt;br /&gt;
-Per Befehl
-&lt;code&gt;gsettings get org.gnome.nautilus.preferences sort-directories-first&lt;/code&gt;
-kann man den Einstellungszustand abfragen. Mittels set kann man die
-Einstellung ändern, true für das Häkchen und false für kein Häkchen.
-(&lt;code&gt;gsettings set org.gnome.nautilus.preferences sort-directories-first true|false&lt;/code&gt;)&lt;/p&gt;</summary><category term="donf-editor"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="gsettings"></category><category term="Linux"></category><category term="nautilus"></category><category term="sort-directories-first"></category></entry></feed>
+zu den Einstellungen und setzt ein Häkchen bei …&lt;/p&gt;</summary><category term="donf-editor"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="gsettings"></category><category term="Linux"></category><category term="nautilus"></category><category term="sort-directories-first"></category></entry></feed>

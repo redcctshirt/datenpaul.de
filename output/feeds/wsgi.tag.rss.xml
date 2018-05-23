@@ -1,92 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/wsgi.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Oct 2013 01:28:00 +0200</lastBuildDate><item><title>bottle.py auf Uberspace installieren</title><link>https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html</link><description>&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - WSGI</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/wsgi.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Oct 2013 01:28:00 +0200</lastBuildDate><item><title>bottle.py auf Uberspace installieren</title><link>https://www.datenpaul.de/bottle-py-auf-uberspace-installieren.html</link><description>&lt;p&gt;&lt;a href="http://bottlepy.org" title="bottle.py"&gt;bottle.py&lt;/a&gt; ist ein einfaches, in Python geschriebenes,
 Mikro-Framework für Webanwendungen, ähnlich wie &lt;a href="https://github.com/JonasGroeger/flask-uberspace-quickstart" title="Flask"&gt;Flask&lt;/a&gt; (Python) oder
 &lt;a href="http://blog.sangyye.de/2012/06/sinatra-on-uberspace/" title="Sinatra"&gt;Sinatra&lt;/a&gt; (Ruby). Freiesmagazin.de erklärt &lt;a href="http://www.freiesmagazin.de/mobil/freiesMagazin-2011-02.html#11_02_bottle" title="bottle"&gt;hier&lt;/a&gt; kurz und bündig
 wie bottle.py genutzt werden kann. In den folgenden Zeilen möchte ich
 erläutern wie man bottle.py auf &lt;a href="https://uberspace.de/" title="uberspace"&gt;Uberspace&lt;/a&gt; installieren kann.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bottle.py installieren&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Nach dem Einloggen (per ssh) wechselt man ins Verzeichnis \~/bin um dort
-ein neues Projekt-Verzeichnis zu erstellen. (z.B. bottlepy) Anschließend
-wird bottle.py mittels Kommando wget heruntergeladen und man schreibt
-sein erstes Skript, z.B. in die Datei index.py. In diesem Beispiel wird
-in der run-Zeile ein Webserver gestartet der auf Port 8787 läuft.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bin
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# ins Verzeichnis bin wechseln&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir bottlepy
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# ein neues Verzeichnis mit dem Namen bottlepy erstellen&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd bottlepy
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# in das neue Verzeichnis bottlepy wechseln&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/defnull/bottle/raw/master/bottle.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# bottle.py herunterladen&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;__EOF__&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="c1"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo Welt!&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8787&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;__EOF__&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;# Python-Skript mit bottle.py erstellen, im Verzeichnis \~/bin/bottlepy&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Daemon erstellen&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Was es mit dem Daemon auf sich hat und wie man einen erstellt wird im
-&lt;a href="https://uberspace.de/dokuwiki/system:daemontools" title="uberspace wiki"&gt;Wiki von Uberspace&lt;/a&gt; genaustens erklärt.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;test -d ~/service || uberspace-setup-svscan
-
-mkdir ~/etc/run-my-daemon
-cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/run
-#!/bin/sh
-cd ~/bin/bottlepy 
-/usr/bin/env python ~/bin/bottlepy/index.py
-__EOF__
-chmod +x ~/etc/run-my-daemon/run
-mkdir ~/etc/run-my-daemon/log
-cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/etc/run-my-daemon/log/run
-#!/bin/sh
-exec multilog t ./main
-__EOF__
-chmod +x ~/etc/run-my-daemon/log/run
-ln -s ~/etc/run-my-daemon ~/service/my-daemon
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;.htaccess konfigurieren&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Am Ende wird die .htaccess-Datei für den Apache-Webserver im Verzeichnis
-\~/html so konfiguriert, dass die an den Webserver gerichteten Anfragen
-an den lokalen Port 8787 weitergeleitet werden, also an den laufenden
-Webserver der mit dem index.py-Skript und bottle.py gestartet wurde.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat &amp;lt;&amp;lt;__EOF__ &amp;gt; ~/html/.htaccess
-RewriteEngine On
-RewriteRule (.*) http://127.0.0.1:8787/$1 [P]
-__EOF__
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nun sollte alles funktionieren und bei einer Anfrage an den Webserver
-(http://www.beispieldomain.de/) wird man nun mit einem Hallo Welt!
-begrüßt.&lt;/p&gt;
-&lt;p&gt;[Artikel steht unter der Lizenz:
-&lt;a href="http://creativecommons.org/licenses/by/3.0/"&gt;http://creativecommons.org/licenses/by/3.0/&lt;/a&gt;&lt;br /&gt;
-(by datenpaul.de)]&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Sat, 19 Oct 2013 01:28:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-10-19:bottle-py-auf-uberspace-installieren.html</guid><category>bash</category><category>bottle</category><category>bottle.py</category><category>Flask</category><category>Linux</category><category>Python</category><category>Sinatra</category><category>Tutorial</category><category>Uberspace</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
+&lt;p&gt;Nach …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Sat, 19 Oct 2013 01:28:00 +0200</pubDate><guid>tag:www.datenpaul.de,2013-10-19:/bottle-py-auf-uberspace-installieren.html/</guid><category>bash</category><category>bottle</category><category>bottle.py</category><category>Flask</category><category>Linux</category><category>Python</category><category>Sinatra</category><category>Tutorial</category><category>Uberspace</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - Fehlerseiten, Umleitungen</title><link>https://www.datenpaul.de/bottle-fehlerseiten-umleitungen.html</link><description>&lt;p&gt;Eine eigene Fehlerseite für den &lt;a href="https://de.wikipedia.org/wiki/HTTP-Statuscode" title="WP:HTTP Status Code"&gt;HTTP Status Code&lt;/a&gt; 404 - Not Found
 (Seite nicht gefunden) kann durch den error decorator erstellt werden.
 Ein Beispiel:&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -103,101 +22,12 @@ Ein Beispiel:&lt;/p&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
 
 &lt;span class="nd"&gt;@error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Seite nicht gefunden&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Fehlermeldungen (HTTP Error Pages) können ebenso mittels
-abort()-Funktion&lt;br /&gt;
-programmiert werden.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;abort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;401&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Leider kein Zugriff möglich !&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Umleitungen zu einer anderen URL werden durch redirect (HTTP Status Code
-- 303) erstellt.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Hallo&amp;#39;&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/303&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;uml&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;redirect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:bottle-fehlerseiten-umleitungen.html</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;error404 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 29 Jun 2012 21:30:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-29:/bottle-fehlerseiten-umleitungen.html/</guid><category>bottle</category><category>Linux</category><category>Programmierung</category><category>Pyhon</category><category>web</category><category>WSGI</category><category>www</category></item><item><title>bottle - statische Dateien</title><link>https://www.datenpaul.de/bottle-statische-dateien.html</link><description>&lt;p&gt;Routen für statische Dateien wie z.B. CSS-Dateien, Bildern und
 pdf-Dateien sind nicht automatisch Bestandteil einer bottle-App. Für
 jede einzelne Datei muss eine Route definiert werden. Per Dynamischer
 Route kann dies durch eine einzige @route-Anweisung erledigt werden. Um
 Zugriff auf Dateien mittels Web zu ermöglichen gibt es die Funktion
-static_file. Um die Funktion zu aktivieren muss zusätzlich die Klasse
-static_file von bottle importiert werden. Als ersten Parameter gibt man
-den Dateinamen an und als zweiten Parameter das lokale Verzeichnis in
-dem diese Datei zu finden ist. Hier ein Beispiel: (z.B.
-http://localhost:8080/static/index.png greift auf /home/paul/index.png
-zu)&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/static/&amp;lt;filepath:path&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;static_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filepath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/paul/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:bottle-statische-dateien.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
+static_file …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 20 Jun 2012 21:57:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-20:/bottle-statische-dateien.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - dynamisches Routing</title><link>https://www.datenpaul.de/bottle-dynamisches-routing.html</link><description>&lt;p&gt;Dynamische Routen enthalten Platzhalter für die jegliche Zeichenketten
 oder Werte eingesetzt werden können. Es sind Variablen. Diese Variable
 wird an die angedockte Funktion weitergegeben und mittels
 Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
@@ -212,64 +42,9 @@ Funktionsalgorithmus verarbeitet. Ein Beispiel:&lt;/p&gt;
  9
 10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
 &lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo/&amp;lt;name&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello {0} !&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reloader&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Nach /hallo/ können nun Zeichenketten verwendet werden. (z.B.
-/hallo/paul /hallo/ina ...) Die eingesetzte Zeichenkette wird in der
-Variable name gespeichert und in Zeile 7 ersetzt diese Zeichenkette den
-Platzhalter {0}. Platzhalter können auch durch folgende Filter
-spezifiziert werden.  &lt;/p&gt;
-&lt;p&gt;@route('/route/&lt;id:int&gt;') - nur Integer-Werte sind erlaubt 
-@route('/route/&lt;id:float&gt;') - nur float-Werte sind erlaubt 
-@route('/route/&lt;name:re:[a-z]+&gt;') - erlaubt reguläre Ausdrücke 
-@route('/route/&lt;path:path&gt;') - erlaubt Verzeichnisangaben&lt;/p&gt;
-&lt;p&gt;Durch die Zeile 9 mit dem Inhalt debug(True) werden hilfreiche
-Fehlermeldungen mit Einzelheiten angezeigt. Der reloader, der in Zeile
-10 auf True gesetzt wird, bewirkt dass bei Veränderungen des Skripts
-kein Neustart des Programms notwendig ist. (&lt;a href="http://bottlepy.org" title="bottle"&gt;bottle&lt;/a&gt;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:bottle-dynamisches-routing.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 10 Jun 2012 22:01:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-10:/bottle-dynamisches-routing.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item><item><title>bottle - ein schnelles und einfaches WSGI-Microframework</title><link>https://www.datenpaul.de/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</link><description>&lt;p&gt;Bottle ist in der &lt;a href="https://de.wikipedia.org/wiki/Python_%28Programmiersprache%29" title="WP:Python"&gt;Programmiersprache Python&lt;/a&gt; geschrieben und auf der
 Seite &lt;a href="http://bottlepy.org" title="bottlepy.org"&gt;bottlepy.org&lt;/a&gt; zu finden. Bottle ist ein schnelles und einfaches
 &lt;a href="https://de.wikipedia.org/wiki/Web_Server_Gateway_Interface" title="WP:WSGI"&gt;WSGI&lt;/a&gt;-Microframework. Es besteht aus einer einzelnen Modul-Datei und
 hat keine Abhängigkeiten. Installiert wird bottle bei Fedora mittels
 Kommando &lt;code&gt;su -c "easy_install bottle"&lt;/code&gt;. Ebenso kann bottle durch den
-Paketmanager oder durch den direkten Download der Modul-Datei ins
-Betriebssystem gelangen. Ein Beispiel zeigt wie einfach es nun ist mit
-bottle eine Webapplication zu erstellen.&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
-
-&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/hallo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hallo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;b&amp;gt;Hallo Welt!&amp;lt;/b&amp;gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;In Zeile 3 werden die erforderlichen Klassen von bottle importiert.
-Ebenso wäre das Importieren von allen Klassen durch &lt;code&gt;import bottle&lt;/code&gt;
-möglich. @route('/hallo') erzeugt eine Seite wobei die folgende Funktion
-an diese Route gebunden wird. Die Ausgabe erfolgt am Ende durch den
-Befehl return. Es kann nur eine Funktion an die Route gebunden werden.
-Aber es ist machbar mehrere Routen an eine Funktion zu binden. In Zeile
-9 wird die Webapplication gestartet. Sobald das Skript mit python
-ausgeführt wird, sieht man die Ausgabe Hallo Welt, nach der Eingabe
-http://localhost:8080/hallo, im Browser. Beendet wird die Webapplication
-anhand von Strg+C.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:bottle-ein-schnelles-und-einfaches-wsgi-microframework.html</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item></channel></rss>
+Paketmanager …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Wed, 06 Jun 2012 23:37:00 +0200</pubDate><guid>tag:www.datenpaul.de,2012-06-06:/bottle-ein-schnelles-und-einfaches-wsgi-microframework.html/</guid><category>bottle</category><category>Fedora</category><category>Linux</category><category>Programmierung</category><category>Python</category><category>WSGI</category></item></channel></rss>

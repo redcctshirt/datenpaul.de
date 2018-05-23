@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/futon.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-06-30T23:40:00+02:00</updated><entry><title>CouchDB - Dokumente erstellen und löschen</title><link href="https://www.datenpaul.de/couchdb-dokumente-erstellen-und-loschen.html" rel="alternate"></link><published>2012-06-30T23:40:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-30:couchdb-dokumente-erstellen-und-loschen.html</id><summary type="html">&lt;p&gt;Jedes Dokument besitzt mindestens die beiden Felder _id für die
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - futon</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/futon.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-06-30T23:40:00+02:00</updated><entry><title>CouchDB - Dokumente erstellen und löschen</title><link href="https://www.datenpaul.de/couchdb-dokumente-erstellen-und-loschen.html" rel="alternate"></link><published>2012-06-30T23:40:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-30:/couchdb-dokumente-erstellen-und-loschen.html/</id><summary type="html">&lt;p&gt;Jedes Dokument besitzt mindestens die beiden Felder _id für die
 einmalige Identifikationsnummer und _rev für die Versionsnummer.
 Betätigt man in einer Datenbank, mittels Webinterface Futon, den Button
 New Document um ein neues Dokument zu erstellen wird ein Hash-Wert als
 _id-Wert vorgeschlagen. Die Versionsnummer wird automatisch
-gespeichert. Ebenso ist es machbar einen eigenen _id-Wert zu bestimmen.
-Am Anfang darf es keinen Unterstrich geben und auf Sonderzeichen sollte
-man verzichten. Bei jeder Änderung in einem Dokument gibt es, wie bei
-Wikis, eine neue Version. Die Versionsnummer _rev wird geändert. Um
-sich Hash-Werte im Terminal für die _id anzeigen zu lassen muss
-folgender Befehl eingegeben werden:
-&lt;code&gt;curl -X GET http://localhost:5984/_uuids&lt;/code&gt;&lt;br /&gt;
-Mittels &lt;code&gt;curl -X GET http://localhost:5984/_uuids?count=10&lt;/code&gt; werden 10
-davon ausgegeben. Erstellt wird ein Dokument mittels Kommando
-&lt;code&gt;curl -X PUT http://localhost:5984/dbname/hashwert -d {}&lt;/code&gt;. Alle
-Dokumente in einer Datenbank werden nach der Eingabe
-&lt;code&gt;curl -X GET http://localhost:5984/dbname/_all_docs&lt;/code&gt; aufgelistet.
-Außerdem ist es möglich den New Document-Job durch den Befehl
-&lt;code&gt;curl -X POST http://localhost:5984/dbname/ -H "Content-Type: application/json" -d {}&lt;/code&gt;
-zu initiieren. Die _id wird diesmal automatisch vergeben. Gelöscht wird
-ein Dokument per Befehl
-&lt;code&gt;curl -X DELETE http://localhost:5984/dbname/hashwert?rev=Versionsnummer&lt;/code&gt;.&lt;/p&gt;</summary><category term="CouchDB"></category><category term="curl"></category><category term="Datenbank"></category><category term="Fedora"></category><category term="futon"></category><category term="Linux"></category><category term="NoSQL"></category></entry></feed>
+gespeichert. Ebenso ist es machbar …&lt;/p&gt;</summary><category term="CouchDB"></category><category term="curl"></category><category term="Datenbank"></category><category term="Fedora"></category><category term="futon"></category><category term="Linux"></category><category term="NoSQL"></category></entry></feed>

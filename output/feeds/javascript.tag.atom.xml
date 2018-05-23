@@ -1,204 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/javascript.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-07-11T23:15:00+02:00</updated><entry><title>Gnome3 - gnome-tweal-tool im userMenu</title><link href="https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html" rel="alternate"></link><published>2012-07-11T23:15:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-07-11:gnome3-gnome-tweal-tool-im-usermenu.html</id><summary type="html">&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - Javascript</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/javascript.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-07-11T23:15:00+02:00</updated><entry><title>Gnome3 - gnome-tweal-tool im userMenu</title><link href="https://www.datenpaul.de/gnome3-gnome-tweal-tool-im-usermenu.html" rel="alternate"></link><published>2012-07-11T23:15:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-07-11:/gnome3-gnome-tweal-tool-im-usermenu.html/</id><summary type="html">&lt;p&gt;Das &lt;a href="https://live.gnome.org/GnomeTweakTool/" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; ist ein erweitertes Einstellungstool für
 &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt;. Es gehört oft nicht zum Standard der meist genutzten
 Linux-Distributionen, muss bei Bedarf also über den herkömmlichen
 Paketmanager nachinstalliert werden. (Beispiel für Fedora:
 &lt;code&gt;su -c "yum install gnome-tweak-tool&lt;/code&gt;") Um sich leichten Zugang zum
-gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu
-erweitern. Der einfachste Weg führt dabei über die &lt;a href="https://extensions.gnome.org" title="extensions.gnome.org"&gt;Gnome3-Extension&lt;/a&gt;
-"Advanced Settings in UserMenu" auf der Website
-&lt;a href="https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/"&gt;https://extensions.gnome.org/extension/130/advanced-settings-in-usermenu/&lt;/a&gt;.
-Ebenso ist es machbar die userMenu.js-Datei im Verzeichnis
-/usr/share/gnome-shell/js/ui zu modifizieren. Nach der Bearbeitung wird
-die Veränderung durch einen Gnome-Shell-Neustart, mittels Alt+F2 r,
-wirksam. Die Modifikationen können durch einen Texteditor erfolgen.
-(z.B. bei Fedora:
-&lt;code&gt;su -c "nano /usr/share/gnome-shell/js/ui/userMenu.js"&lt;/code&gt;) Folgende Zeilen
-kommen hinzu: (647-649 und 717-721)&lt;/p&gt;
-&lt;p&gt;/usr/share/gnome-shell/js/ui/userMenu.js&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;item = new PopupMenu.PopupMenuItem(_(&amp;quot;System Settings&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onPreferencesActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupMenuItem(_(&amp;quot;Gnome-Tweak-Tool&amp;quot;));
-item.connect(&amp;#39;activate&amp;#39;, Lang.bind(this, this._onGnometweaktoolActivate));
-this.menu.addMenuItem(item);
-
-item = new PopupMenu.PopupSeparatorMenuItem();
-this.menu.addMenuItem(item);
-
-
-_onPreferencesActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app(&amp;#39;gnome-control-center.desktop&amp;#39;);
-    app.activate();
-},
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;_onGnometweaktoolActivate: function() {
-    Main.overview.hide();
-    let app = Shell.AppSystem.get_default().lookup_app('gnome-tweak-tool.desktop');
-        app.activate();
-    },&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_onLockScreenActivate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;Main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;overview&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;hide&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;_screenSaverProxy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;LockRemote&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-&lt;span class="o"&gt;},&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;img alt="Screenshot: Gnome3 userMenu mit gnome-tweak-tool-Eintrag" src="http://www.datenpaul.de/archive/gtt_userMenu.png" /&gt;&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="gnome-tweak-tool"></category><category term="Gnome3"></category><category term="Javascript"></category><category term="Linux"></category><category term="Programmierung"></category><category term="userMenu"></category><category term="userMenu.js"></category></entry><entry><title>jQuery - ready- und click-Methode</title><link href="https://www.datenpaul.de/jquery-ready-und-click-methode.html" rel="alternate"></link><published>2012-07-05T22:41:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-07-05:jquery-ready-und-click-methode.html</id><summary type="html">&lt;p&gt;Die ready-Methode sorgt dafür dass bei dem Ereignis (Event), wenn das
+gnome-tweak-tool zu verschaffen ist es möglich das userMenu zu …&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="gnome-tweak-tool"></category><category term="Gnome3"></category><category term="Javascript"></category><category term="Linux"></category><category term="Programmierung"></category><category term="userMenu"></category><category term="userMenu.js"></category></entry><entry><title>jQuery - ready- und click-Methode</title><link href="https://www.datenpaul.de/jquery-ready-und-click-methode.html" rel="alternate"></link><published>2012-07-05T22:41:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-07-05:/jquery-ready-und-click-methode.html/</id><summary type="html">&lt;p&gt;Die ready-Methode sorgt dafür dass bei dem Ereignis (Event), wenn das
 ganze Dokument vollständig geladen wurde, die Funktion innerhalb der
 Klammern, in diesem Fall eine anonyme Funktion, ausgeführt wird. Diese
 Anweisung kann ruhig mehrmals in einer Datei stehen. Die click-Methode
 hingegen verwirklicht die angegebene Funktion bei einem Mausklick. Durch
-.hide() versteckt man die selektierten Elemente.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;cursor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;pointer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;hide&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Zeile 7 wird das jQuery-Framework geladen. Von Zeile 14 bis 20 werden
-die jQuery-Anweisungen definiert. Sobald das ganze Dokument vollständig
-geladen wurde steht die click-Methode für alle div-Container bereit.
-\$(this) bezieht sich auf das jeweile Element (hier ein div-Container)
-auf das gerade geklickt wird. Durch die hide-Methode in der 17. Zeile
-wird das Element bei einem Mausklick versteckt.&lt;/p&gt;</summary><category term="HMTL5"></category><category term="HTML"></category><category term="Javascript"></category><category term="jQuery"></category><category term="web"></category><category term="www"></category></entry><entry><title>jQuery - $()-Aufruf deaktivieren</title><link href="https://www.datenpaul.de/jquery-aufruf-deaktivieren.html" rel="alternate"></link><published>2012-06-02T23:57:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-02:jquery-aufruf-deaktivieren.html</id><summary type="html">&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
+.hide …&lt;/p&gt;</summary><category term="HMTL5"></category><category term="HTML"></category><category term="Javascript"></category><category term="jQuery"></category><category term="web"></category><category term="www"></category></entry><entry><title>jQuery - $()-Aufruf deaktivieren</title><link href="https://www.datenpaul.de/jquery-aufruf-deaktivieren.html" rel="alternate"></link><published>2012-06-02T23:57:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-02:/jquery-aufruf-deaktivieren.html/</id><summary type="html">&lt;p&gt;Es ist völlig egal ob man z.B. \$("div").css("color","blue") oder
 jQuery("div").css("color","blue") als jQuery-Anweisung schreibt, beides
 funktioniert. Aber es ist machbar die \$()-Funktion zu deaktivieren um
 möglichen Konflikten mit anderen Javascript-Frameworks entgegenzuwirken.
 Mittels jQuery.noConflict(); wird der \$()-Aufruf unwirksam. Beispiel.
-(Die Anweisung in Zeile 3 wird somit ignoriert.)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jQuery.noConflict();
-jQuery(document).ready(function() {
-$(&amp;quot;div#two&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;green&amp;quot;);
-jQuery(&amp;quot;div#one&amp;quot;).css(&amp;quot;color&amp;quot;,&amp;quot;blue&amp;quot;);
-});
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="HTML"></category><category term="HTML5"></category><category term="Javascript"></category><category term="jQuery"></category><category term="Programmierung"></category><category term="World Wide Web"></category><category term="www"></category></entry><entry><title>jQuery - Hallo Welt</title><link href="https://www.datenpaul.de/jquery-hallo-welt.html" rel="alternate"></link><published>2012-06-02T23:36:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-02:jquery-hallo-welt.html</id><summary type="html">&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
+(Die Anweisung in Zeile …&lt;/p&gt;</summary><category term="HTML"></category><category term="HTML5"></category><category term="Javascript"></category><category term="jQuery"></category><category term="Programmierung"></category><category term="World Wide Web"></category><category term="www"></category></entry><entry><title>jQuery - Hallo Welt</title><link href="https://www.datenpaul.de/jquery-hallo-welt.html" rel="alternate"></link><published>2012-06-02T23:36:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-06-02:/jquery-hallo-welt.html/</id><summary type="html">&lt;p&gt;&lt;a href="https://de.wikipedia.org/wiki/JQuery" title="WP:jQuery"&gt;jQuery&lt;/a&gt; ist ein freies, umfangreiches und leicht erweiterbares
 &lt;a href="https://de.wikipedia.org/wiki/Javascript" title="WP:Javascript"&gt;Javascript&lt;/a&gt;-Framework. Dieses wundersame Rahmenwerk und Toolset
 erfreut sich großer Beliebtheit und wird in vielen bekannten
 &lt;a href="https://de.wikipedia.org/wiki/Content-Management-System" title="WP:CMS"&gt;Content-Management-Systemen&lt;/a&gt; eingesetzt. Es vereinfacht
 Javascript-Lösungswege und lässt Dynamik und Interaktivität in eine
 Website mit einfließen. Animationen können einfach erstellt, Inhalt
-hinzugefügt und Elemente verändert werden. Mittels \$-Funktion oder der
-jQuery-Funktion wird ein jQuery-Objekt erstellt. Als erstes wird
-bestimmt was manipuliert werden soll. Die selektierten Elemente können
-dann durch jQuery-Methoden verändert werden. Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;style&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://code.jquery.com/jquery-1.7.2.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;one&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Hallo Welt&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;two&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;jQuery&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;div&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;css&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;color&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Per &lt;code&gt;&amp;lt;script src="http://code.jquery.com/jquery-1.7.2.min.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
-in Zeile 7 wird jQuery in eine HTML-Seite eingebunden. Durch
-\$(document).ready(function() { }); in Zeile 15 und 17 wird das ganze
-Dokument geladen bevor die enthaltenen jQuery-Anweisungen ausgeführt
-werden. In Zeile 16 kommt es dann zur Veränderung der Textfarbe
-innerhalb aller div-Container. Anhand von \$("div") werden alle
-div-Container ausgewählt. Mittels \$("div").css("color","blue"); wird
-die Eigenschaft color (Textfarbe) mit dem Wert blue belegt. Statt rot,
-wie in Zeile 5 durch color: red; festgelegt, wird der Text in allen
-div-Containern in blau angezeigt. Eine Spezifizierung auf einen
-bestimmten div-Container ist durch die id möglich. Wird
-\$("div").css("color","blue"); durch \$("div#one").css("color","blue");
-ersetzt erscheint nur der Inhalt "Hallo Welt" vom div-Container mit der
-id one in blau.&lt;/p&gt;</summary><category term="HTML"></category><category term="HTML5"></category><category term="Javascript"></category><category term="jQuery"></category><category term="Programmierung"></category><category term="World Wide Web"></category><category term="www"></category></entry><entry><title>popcorn.js - Hallo Welt</title><link href="https://www.datenpaul.de/popcorn-js-hallo-welt.html" rel="alternate"></link><published>2012-05-29T19:34:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-05-29:popcorn-js-hallo-welt.html</id><summary type="html">&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
+hinzugefügt und Elemente verändert werden. Mittels …&lt;/p&gt;</summary><category term="HTML"></category><category term="HTML5"></category><category term="Javascript"></category><category term="jQuery"></category><category term="Programmierung"></category><category term="World Wide Web"></category><category term="www"></category></entry><entry><title>popcorn.js - Hallo Welt</title><link href="https://www.datenpaul.de/popcorn-js-hallo-welt.html" rel="alternate"></link><published>2012-05-29T19:34:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-05-29:/popcorn-js-hallo-welt.html/</id><summary type="html">&lt;p&gt;Durch diesen Artikel möchte ich auf &lt;a href="http://popcornjs.org/" title="popcornjs"&gt;popcorn.js&lt;/a&gt; aufmerksam machen.
 popcorn.js ist ein &lt;a href="https://de.wikipedia.org/wiki/HTML5" title="WP:HTML5"&gt;HTML5&lt;/a&gt; Media Javascript Framework von &lt;a href="https://de.wikipedia.org/wiki/Mozilla" title="WP:Mozilla"&gt;Mozilla&lt;/a&gt;.
 Jeder der interaktive Medien ins Web bringen möchte kann dieses
 Framework einsetzen. Auf der Seite &lt;a href="http://mozillapopcorn.js" title="popcorn Project"&gt;mozillapopcorn.js&lt;/a&gt; findet man das
-Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs.org&lt;/a&gt;.
-Demos und Dokumentationen geben eine Übersicht über die Features die
-dieses Framework mit sich bringt. Dynamische Inhalte können abhängig von
-der Zeitposition eines Videos angezeigt werden. Ein Beispiel:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://popcornjs.org/code/dist/popcorn-complete.js&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function() {
-
-var popcorn = Popcorn(&amp;quot;#video&amp;quot;);
-
-popcorn.footnote({
-        start: 0,
-        end: 3,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;Hallo Welt&amp;quot;
-       })
-.footnote({
-        start: 3,
-        end: 6,
-        target: &amp;quot;footnote&amp;quot;,
-        text: &amp;quot;popcorn.js&amp;quot;
-});
-
-popcorn.play();
-popcorn.volume(0); // 0 .. 1.0
-
-}, false );
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;video&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;800&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;600&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;video&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;o.ogv&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;controls=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;preload=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;footnote&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Zeile 2 wird das popcorn.js Framework geladen. Durch das Attribut src
-im Video-Tag (Zeile 28) wird die Videodatei festgelegt und per Attribut
-id wird die einmalige Identifikationszeichenkette bestimmt. Neben dem
-Video-Tag gibt es ebenso einen div-Container (Zeile 29) mit der id
-footnote. Mittels Funktion
-&lt;code&gt;document.addEventListener("DOMContentLoaded", function() { }, false);&lt;/code&gt;
-in Zeile 4 wird sichergestellt dass die Seite vollständig geladen wird
-bevor die Javascript-Anweisungen ausgeführt werden. Anhand des Befehls
-&lt;code&gt;var popcorn = Popcorn("#video");&lt;/code&gt; in Zeile 6 wird eine neue
-Popcorn-Instanz bezüglich der Video-Tag id video erstellt. Das Plugin
-footnote macht es möglich dass Text (Fussnoten) zu einem Element auf der
-Website hinzugefügt wird und kommt in Zeile 8 und 14 zum Einsatz. Von
-Sekunde 0 bis 3 wird der Text "Hallo Welt" im div-Container mit der id
-footnote angezeigt. Von Sekunden 3 bis 6 wird der Text "popcorn.js"
-ebenso im div-Container mit der id footnote angezeigt. Durch den Befehl
-&lt;code&gt;popcorn.play();&lt;/code&gt; in Zeile 21 wird das Video abgespielt.
-&lt;code&gt;popcorn.volume(0);&lt;/code&gt; in Zeile 22 setzt die Lautstärke auf 0.&lt;/p&gt;</summary><category term="HTML5"></category><category term="Javascript"></category><category term="popcorn.js"></category><category term="Programmierung"></category><category term="video"></category><category term="Videobearbeitung"></category></entry><entry><title>simplemax Zeitanzeige</title><link href="https://www.datenpaul.de/simplemax-zeitanzeige.html" rel="alternate"></link><published>2010-11-05T18:06:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2010-11-05:simplemax-zeitanzeige.html</id><summary type="html">&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
+Projekt popcorn. Für das Framework gibt es die Seite &lt;a href="http://popcornjs.org/" title="popcorn.js"&gt;popcornjs …&lt;/a&gt;&lt;/p&gt;</summary><category term="HTML5"></category><category term="Javascript"></category><category term="popcorn.js"></category><category term="Programmierung"></category><category term="video"></category><category term="Videobearbeitung"></category></entry><entry><title>simplemax Zeitanzeige</title><link href="https://www.datenpaul.de/simplemax-zeitanzeige.html" rel="alternate"></link><published>2010-11-05T18:06:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2010-11-05:/simplemax-zeitanzeige.html/</id><summary type="html">&lt;p&gt;Die Zeit wird per Javascript-Quellcode in verschiedenen Formaten
 angezeigt. (binär, oktal, dezimal, hexadezimal)&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.datenpaul.de/archive/simplemax_zeitanzeige.html"&gt;simplemax Zeitanzeige&lt;/a&gt;&lt;/p&gt;</summary><category term="Javascript"></category><category term="Programmierung"></category><category term="Zeitanzeige"></category></entry></feed>

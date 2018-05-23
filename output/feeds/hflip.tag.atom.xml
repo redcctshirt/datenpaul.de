@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/hflip.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2011-12-02T16:23:00+01:00</updated><entry><title>Videobilder spiegeln</title><link href="https://www.datenpaul.de/videobilder-spiegeln.html" rel="alternate"></link><published>2011-12-02T16:23:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2011-12-02:videobilder-spiegeln.html</id><summary type="html">&lt;p&gt;Das Tool &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="ffmpeg"&gt;ffmpeg&lt;/a&gt; macht es möglich. Der Videofilter hflip spiegelt die
-Videobilder&lt;br /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - hflip</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/hflip.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2011-12-02T16:23:00+01:00</updated><entry><title>Videobilder spiegeln</title><link href="https://www.datenpaul.de/videobilder-spiegeln.html" rel="alternate"></link><published>2011-12-02T16:23:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2011-12-02:/videobilder-spiegeln.html/</id><summary type="html">&lt;p&gt;Das Tool &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="ffmpeg"&gt;ffmpeg&lt;/a&gt; macht es möglich. Der Videofilter hflip spiegelt die
+Videobilder&lt;br&gt;
 horizontal und der Videofilter vflip spiegelt sie vertikal. Unnötige
-Optionen&lt;br /&gt;
+Optionen&lt;br&gt;
 und Paramenter lasse ich bei diesen Beispielen weg.&lt;/p&gt;
 &lt;p&gt;Beispiele:  &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "vflip" b.webm # Den Videoinput a.ogv vertikal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "hflip" b.webm&lt;br /&gt;
-# Den Videoinput a.ogv horizontal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;</summary><category term="ffmpeg"></category><category term="hflip"></category><category term="Linux"></category><category term="vflip"></category><category term="Videobearbeitung"></category><category term="Videofilter"></category></entry></feed>
+&lt;p&gt;ffmpeg -i …&lt;/p&gt;</summary><category term="ffmpeg"></category><category term="hflip"></category><category term="Linux"></category><category term="vflip"></category><category term="Videobearbeitung"></category><category term="Videofilter"></category></entry></feed>

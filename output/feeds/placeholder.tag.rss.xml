@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/placeholder.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 03 Sep 2011 20:52:00 +0200</lastBuildDate><item><title>Gnome3 - den Dash-Placeholder ändern</title><link>https://www.datenpaul.de/gnome3-den-dash-placeholder-andern.html</link><description>&lt;p&gt;In der Favoritenliste (Dash) wird der Dash-Placeholder dann angezeigt
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Placeholder</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/placeholder.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 03 Sep 2011 20:52:00 +0200</lastBuildDate><item><title>Gnome3 - den Dash-Placeholder ändern</title><link>https://www.datenpaul.de/gnome3-den-dash-placeholder-andern.html</link><description>&lt;p&gt;In der Favoritenliste (Dash) wird der Dash-Placeholder dann angezeigt
 wenn ein Icon an einen anderen Platz gezogen wird. Die Grafikdatei
 /usr/share/gnome-shell/theme/dash-placeholder.svg wird unter dem Icon
 angezeigt. (ein kleiner weißer Strich mit einem weißen Punkt in der
-Mitte) Vom Prinzip her ist es genau das Gleiche wie beim
-&lt;a href="http://www.datenpaul.de/archives/111" title="Gnome - den Running-Indicator aendern"&gt;Running-Indicator&lt;/a&gt;. Es existieren die gleichen Möglichkeiten um den
-Dash-Placeholder zu ändern.&lt;/p&gt;
-&lt;p&gt;​1. Möglichkeit – mit einem &lt;a href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" title="WP:SVG"&gt;SVG-Editor&lt;/a&gt; die Datei
-dash-placeholder.svg ändern&lt;/p&gt;
-&lt;p&gt;​2. Möglichkeit – den Dash-Placeholder deaktivieren&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 /* background-image: url("dash-placeholder.svg") */ 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​3. Möglichkeit – eine andere Grafikdatei nutzen&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-image: url("name.svg") 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​4. Möglichkeit – eine Hintergrundfarbe benutzen&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-color: #D4E1F3; 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Um den neuen Dash-Placeholder im Dash sichtbar zu machen ist ein
-Gnome-Theme-Neustart erforderlich. Hierzu drückt man gleichzeitig die
-Tasten Alt und F2 und tippt rt ein.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 03 Sep 2011 20:52:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-09-03:gnome3-den-dash-placeholder-andern.html</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Placeholder</category></item></channel></rss>
+Mitte) Vom Prinzip her ist es genau das Gleiche …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 03 Sep 2011 20:52:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-09-03:/gnome3-den-dash-placeholder-andern.html/</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Placeholder</category></item></channel></rss>

@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/theme.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 30 Jul 2011 22:53:00 +0200</lastBuildDate><item><title>Fedora - Gnome3 - Theme wechseln</title><link>https://www.datenpaul.de/fedora-gnome3-theme-wechseln.html</link><description>&lt;p&gt;Hier möchte ich kurz und knapp erklären wie man &lt;a href="http://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; ein neues
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Theme</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/theme.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 30 Jul 2011 22:53:00 +0200</lastBuildDate><item><title>Fedora - Gnome3 - Theme wechseln</title><link>https://www.datenpaul.de/fedora-gnome3-theme-wechseln.html</link><description>&lt;p&gt;Hier möchte ich kurz und knapp erklären wie man &lt;a href="http://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; ein neues
 Erscheinungsbild spendieren kann, sprich wie man das Design ändert. Hat
 man erst mal den Installationsbefehl
 &lt;code&gt;su -c "yum install gnome-shell-extension-theme-selector"&lt;/code&gt; ausgeführt,
 ist die Hälfte der Arbeit schon getan. Die beiden Pakete
 gnome-shell-extensions-common und gnome-shell-extensions-user-theme
-werden ebenso installiert. Die Installation ist übrigens ebenfalls
-mittels gpk-application machbar. Ein Gnome-Shell-Neustart per Alt+F2 r
-aktiviert die 3 neuen Erweiterungen und macht sie im
-&lt;a href="https://live.gnome.org/GnomeTweakTool" title="gnome-tweak-tool"&gt;gnome-tweak-tool&lt;/a&gt; sichtbar. Falls gnome-tweak-tool noch nicht im
-System verfügbar ist, wird die Nachinstallation durch
-&lt;code&gt;su -c "yum install gnome-tweak-tool"&lt;/code&gt; gestartet.&lt;/p&gt;
-&lt;p&gt;Nun sucht man sich ein Theme im Internet und lädt es herunter. (Quellen:
-&lt;a href="http://gnome-shell.deviantart.com/gallery/28081982"&gt;http://gnome-shell.deviantart.com/gallery/28081982&lt;/a&gt;,
-&lt;a href="http://gnome-look.org/"&gt;http://gnome-look.org/&lt;/a&gt;) Im gnome-tweak-tool unter Shell installiert
-man das Theme jetzt. Man klickt auf den Button (keine), wählt das
-heruntergeladene Theme-Paket, klickt auf den Button Öffnen, und das
-Theme ist installiert. Abschließend ist nochmal ein Gnome-Shell-Neustart
-per Alt+F2 r erforderlich. Die Themes findet man im übrigen im
-Persönlichen Ordner, im versteckten Verzeichnis .themes wieder.&lt;/p&gt;
-&lt;p&gt;Anhand des gnome-tweak-tools, unter Shell, neben den schon benutzten
-Button (keine), ist man nunmehr im Stande das Theme zu wechseln.
-Andernfalls geht man auf Aktivitäten, klickt auf Themes, neben Fenster
-und Anwendungen, und ist in der Lage ein neues Erscheinungsbild (Theme)
-zu bestimmen.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 30 Jul 2011 22:53:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-30:fedora-gnome3-theme-wechseln.html</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Linux</category><category>Theme</category></item><item><title>Wordpress Theme littleblue</title><link>https://www.datenpaul.de/wordpress-theme-littleblue.html</link><description>&lt;p&gt;Wordpress Theme littleblue&lt;br /&gt;
-Version: 1.0 (19.04.2010)&lt;br /&gt;
-License: GPL&lt;br /&gt;
-&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br /&gt;
-&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 19 Apr 2010 17:02:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-04-19:wordpress-theme-littleblue.html</guid><category>littleblue</category><category>Theme</category><category>Wordpress</category></item></channel></rss>
+werden ebenso installiert. Die …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 30 Jul 2011 22:53:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-07-30:/fedora-gnome3-theme-wechseln.html/</guid><category>Fedora</category><category>Gnome</category><category>gnome-tweak-tool</category><category>Gnome3</category><category>Linux</category><category>Theme</category></item><item><title>Wordpress Theme littleblue</title><link>https://www.datenpaul.de/wordpress-theme-littleblue.html</link><description>&lt;p&gt;Wordpress Theme littleblue&lt;br&gt;
+Version: 1.0 (19.04.2010)&lt;br&gt;
+License: GPL&lt;br&gt;
+&lt;a href="http://www.datenpaul.de/archive/littleblue.zip"&gt;Download&lt;/a&gt;&lt;br&gt;
+&lt;img alt="Screenshot" src="http://www.datenpaul.de/archive/screenshot.png"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Mon, 19 Apr 2010 17:02:00 +0200</pubDate><guid>tag:www.datenpaul.de,2010-04-19:/wordpress-theme-littleblue.html/</guid><category>littleblue</category><category>Theme</category><category>Wordpress</category></item></channel></rss>

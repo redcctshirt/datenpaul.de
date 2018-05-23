@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/nautilus.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-02-19T21:12:00+01:00</updated><entry><title>Tipp: Gnome 3.6 - neues leeres Dokument mittels Tastenkombination erstellen</title><link href="https://www.datenpaul.de/tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html" rel="alternate"></link><published>2013-02-19T21:12:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-19:tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html</id><summary type="html">&lt;p&gt;Bei Gnome 3.6 ist der Eintrag "Neues Leeres Dokument" im Kontextmenü des
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - nautilus</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/nautilus.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-02-19T21:12:00+01:00</updated><entry><title>Tipp: Gnome 3.6 - neues leeres Dokument mittels Tastenkombination erstellen</title><link href="https://www.datenpaul.de/tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html" rel="alternate"></link><published>2013-02-19T21:12:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-19:/tipp-gnome-3-6-neues-leeres-dokument-mittels-tastenkombination-erstellen.html/</id><summary type="html">&lt;p&gt;Bei Gnome 3.6 ist der Eintrag "Neues Leeres Dokument" im Kontextmenü des
 Dateimanagers nicht mehr vorhanden. Lediglich die Funktion "Neuer
 Ordner" existiert noch. Es ist auch leicht möglich mit dem jeweiligen
 Programm oder per Befehl touch eine neue Datei zu erstellen. Wer
-dennoch, wenigsten mit Hilfe einer Tastenkombination, ein neues leeres
-Dokument erzeugen will kann die Datei &lt;code&gt;~/.config/nautilus/accels&lt;/code&gt;
-mittels eines Texteditor abändern. Zum Beispiel durch den Befehl
-&lt;code&gt;nano ~/.config/nautilus/accels&lt;/code&gt;. Man editiert folgende Zeile:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;; (gtk_accel_path "&amp;lt;Actions&amp;gt;/DirViewActions/New Empty Document" "")&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Das Semikolon wird ganz am Anfang entfernt und zwischen den beiden
-Anführungszeichen "" gibt man eine Tastenkombination seiner Wahl an. So
-könnte die modifizierte Zeile so aussehen:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;(gtk_accel_path "&amp;lt;Actions&amp;gt;/DirViewActions/New Empty Document" "&amp;lt;Alt&amp;gt;n")&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mit Strg+O und anschliessend Strg+X werden die Veränderungen gesichert
-und nano wird beendet. Ab sofort wird per Tastenkombination Alt+n im
-Dateimanager eine neue leere Datei angelegt. (Hinweis:
-Dateimanagerfenster schliessen und neu öffnen um Änderungen wirksam zu
-machen) Ausserdem gibt es die Möglichkeit den Kontextmenüeintrag "Neues
-Leeres Dokument" zurückzuholen. Unter Zuhilfenahme des Kommandos
-&lt;code&gt;touch ~/Vorlagen/neu&lt;/code&gt; erzeugt man ein neues Dokument im Ordner Vorlagen
-(engl. Templates). Nach dem Neustart des Dateimanagers ist die Funktion
-wieder verfügbar. Den Vorlagen-Ordner kann man übrigens in der Datei
-&lt;code&gt;~/.config/user-dirs.dirs&lt;/code&gt; bestimmen.
-(&lt;code&gt;XDG_TEMPLATES_DIR="$HOME/Vorlagen"&lt;/code&gt;)&lt;/p&gt;</summary><category term="accels"></category><category term="Dateimanager"></category><category term="Fedora"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="Linux"></category><category term="nautilus"></category><category term="touch"></category></entry><entry><title>Gnome3 - Ordner vor Dateien anzeigen</title><link href="https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html" rel="alternate"></link><published>2013-02-15T18:39:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-15:gnome3-ordner-vor-dateien-anzeigen.html</id><summary type="html">&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
+dennoch, wenigsten mit Hilfe einer Tastenkombination, ein …&lt;/p&gt;</summary><category term="accels"></category><category term="Dateimanager"></category><category term="Fedora"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="Linux"></category><category term="nautilus"></category><category term="touch"></category></entry><entry><title>Gnome3 - Ordner vor Dateien anzeigen</title><link href="https://www.datenpaul.de/gnome3-ordner-vor-dateien-anzeigen.html" rel="alternate"></link><published>2013-02-15T18:39:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-02-15:/gnome3-ordner-vor-dateien-anzeigen.html/</id><summary type="html">&lt;p&gt;Die Dateien können im Dateimanager nach Name, Größe, Typ und
 Änderungsdatum sortiert werden. Dabei kann es vorkommen, dass Ordner
-ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br /&gt;
-&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png" /&gt;&lt;br /&gt;
+ganz unten im Fenster landen und nicht oben angezeigt werden.&lt;br&gt;
+&lt;img alt="nautilus - Dateien sortieren" src="http://www.datenpaul.de/archive/sortdirfirst0.png"&gt;&lt;br&gt;
 Um die Ordner vor den Dateien zu sortieren klickt man auf Dateien, geht
-zu den Einstellungen und setzt ein Häkchen bei "Ordner vor Dateien
-anzeigen".&lt;br /&gt;
-&lt;img alt="nautilus - Einstellungen" src="http://www.datenpaul.de/archive/sortdirfirst2.png" /&gt;&lt;br /&gt;
-Im &lt;code&gt;dconf-editor&lt;/code&gt; findet man diese Einstellung unter
-org.gnome.nautilus.preferences sort-directories-first.&lt;br /&gt;
-&lt;img alt="dconf-editor-Einstellung" src="http://www.datenpaul.de/archive/sortdirfirst1.png" /&gt;&lt;br /&gt;
-Per Befehl
-&lt;code&gt;gsettings get org.gnome.nautilus.preferences sort-directories-first&lt;/code&gt;
-kann man den Einstellungszustand abfragen. Mittels set kann man die
-Einstellung ändern, true für das Häkchen und false für kein Häkchen.
-(&lt;code&gt;gsettings set org.gnome.nautilus.preferences sort-directories-first true|false&lt;/code&gt;)&lt;/p&gt;</summary><category term="donf-editor"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="gsettings"></category><category term="Linux"></category><category term="nautilus"></category><category term="sort-directories-first"></category></entry></feed>
+zu den Einstellungen und setzt ein Häkchen bei …&lt;/p&gt;</summary><category term="donf-editor"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="gsettings"></category><category term="Linux"></category><category term="nautilus"></category><category term="sort-directories-first"></category></entry></feed>

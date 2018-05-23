@@ -63,27 +63,27 @@ farbige Vierecke im Video anzeigen lassen  </title>
 möglich farbige Vierecke ins Video zu zaubern. Der <a href="http://www.datenpaul.de/archives/121" title="Link zu overlay-Artikel">Videofilter
 overlay</a> sollte inzwischen bekannt sein. Auch bei diesem Beispiel
 lasse ich alle unnötigen Optionen einfach weg.</p>
-<p>Hilfreiche Daten für das Beispiel:<br />
-Input-Videodatei: a.ogv<br />
-Output-Videodatei: b.webm<br />
+<p>Hilfreiche Daten für das Beispiel:<br>
+Input-Videodatei: a.ogv<br>
+Output-Videodatei: b.webm<br>
 Videogröße: 1280×720 (Breite: 1280 Pixel, Höhe: 720 Pixel)</p>
-<p>Mit folgendem Muster erstellt man eine Farbquelle:<br />
+<p>Mit folgendem Muster erstellt man eine Farbquelle:<br>
 "color=Farbe:Framegröße:Framerate" (Farbe: 0xRRGGBB[AA] oder def.
-Farbe,<br />
+Farbe,<br>
 z.B. "color=red@1.0:100x200:25")</p>
 <p>Beispiele:</p>
 <p><code>ffmpeg -i a.ogv -vf "color=red@0.3:100x200:25 [color]; [in][color] overlay [out]" b.webm # durchsichtiges rotes Viereck (Breite: 100 Pixel, Höhe: 200 Pixel) an der Stelle 0:0 im Video</code></p>
 <p>ffmpeg -i a.ogv -vf "color=blue@1.0:200x100:25 [color]; [in][color]
-overlay=100:100 [out]" b.webm<br />
+overlay=100:100 [out]" b.webm<br>
 # blaues Viereck (Breite: 200 Pixel, Höhe: 100 Pixel) an der Stelle
 100:100 im Video</p>
 <p>ffmpeg -i a.ogv -vf "color=blue@1.0:200x100:25 [color1];
 color=red@0.2:100x100:25 [color2] [in][color1] overlay=100:100
-[in+color1]; [in+color1][color2] overlay=500:100 [out]" b.webm<br />
+[in+color1]; [in+color1][color2] overlay=500:100 [out]" b.webm<br>
 # 2 Vierecke</p>
 <p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; color=red@0.2:100x100:25
 [color]; [in][color] overlay=10:10 [in+color]; [in+color][logo]
-overlay=10:10 [out]" b.webm<br />
+overlay=10:10 [out]" b.webm<br>
 # Logo + Viereck</code></p>
   </div>
   <div class="article_meta">

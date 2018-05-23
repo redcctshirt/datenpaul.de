@@ -1,56 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/dash.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 03 Sep 2011 20:52:00 +0200</lastBuildDate><item><title>Gnome3 - den Dash-Placeholder ändern</title><link>https://www.datenpaul.de/gnome3-den-dash-placeholder-andern.html</link><description>&lt;p&gt;In der Favoritenliste (Dash) wird der Dash-Placeholder dann angezeigt
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - Dash</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/dash.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 03 Sep 2011 20:52:00 +0200</lastBuildDate><item><title>Gnome3 - den Dash-Placeholder ändern</title><link>https://www.datenpaul.de/gnome3-den-dash-placeholder-andern.html</link><description>&lt;p&gt;In der Favoritenliste (Dash) wird der Dash-Placeholder dann angezeigt
 wenn ein Icon an einen anderen Platz gezogen wird. Die Grafikdatei
 /usr/share/gnome-shell/theme/dash-placeholder.svg wird unter dem Icon
 angezeigt. (ein kleiner weißer Strich mit einem weißen Punkt in der
-Mitte) Vom Prinzip her ist es genau das Gleiche wie beim
-&lt;a href="http://www.datenpaul.de/archives/111" title="Gnome - den Running-Indicator aendern"&gt;Running-Indicator&lt;/a&gt;. Es existieren die gleichen Möglichkeiten um den
-Dash-Placeholder zu ändern.&lt;/p&gt;
-&lt;p&gt;​1. Möglichkeit – mit einem &lt;a href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" title="WP:SVG"&gt;SVG-Editor&lt;/a&gt; die Datei
-dash-placeholder.svg ändern&lt;/p&gt;
-&lt;p&gt;​2. Möglichkeit – den Dash-Placeholder deaktivieren&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 /* background-image: url("dash-placeholder.svg") */ 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​3. Möglichkeit – eine andere Grafikdatei nutzen&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-image: url("name.svg") 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​4. Möglichkeit – eine Hintergrundfarbe benutzen&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;su -c “nano /usr/share/gnome-shell/theme/gnome-shell.css” 434 .dash-placeholder { 435 background-color: #D4E1F3; 436 height: 27px; 437 width: 48px; 438 } [ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Um den neuen Dash-Placeholder im Dash sichtbar zu machen ist ein
-Gnome-Theme-Neustart erforderlich. Hierzu drückt man gleichzeitig die
-Tasten Alt und F2 und tippt rt ein.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 03 Sep 2011 20:52:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-09-03:gnome3-den-dash-placeholder-andern.html</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Placeholder</category></item><item><title>Gnome3 - den Running-Indicator ändern</title><link>https://www.datenpaul.de/gnome3-den-running-indicator-andern.html</link><description>&lt;p&gt;Sobald ein Programm läuft wird das Programm in der Favoritenliste, auch
+Mitte) Vom Prinzip her ist es genau das Gleiche …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sat, 03 Sep 2011 20:52:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-09-03:/gnome3-den-dash-placeholder-andern.html/</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>Placeholder</category></item><item><title>Gnome3 - den Running-Indicator ändern</title><link>https://www.datenpaul.de/gnome3-den-running-indicator-andern.html</link><description>&lt;p&gt;Sobald ein Programm läuft wird das Programm in der Favoritenliste, auch
 Dash genannt, besonders gekennzeichnet. Zu der Favoritenliste kommt man
 über Aktivitäten. (links oben) Wenn man z.B. den Dateimanager startet
 wird prompt im Hintergrund des Icons ein kleiner weißer Schatten
 angezeigt. Das ist der Running-Indicator.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Die Grafik dazu findet man im Verzeichnis /usr/share/gnome-shell/theme.
-Die Datei heißt running-indicator.svg.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="running-indicator2" src="http://www.datenpaul.de/archive/running-indicator2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Nun gibt es mehrere Möglichkeiten um den Running-Indicator zu ändern.&lt;/p&gt;
-&lt;p&gt;​1. Möglichkeit - mit Inkscape (oder einem anderen SVG-Editor) die Datei
-running-indicator.svg ändern&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;su -c "yum install inkscape"&lt;/strong&gt; (Paket installieren, falls noch nicht
-vorhanden)&lt;br /&gt;
-&lt;strong&gt;su -c "inkscape /usr/share/gnome-shell/theme/running-indicator.svg"&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​2. Möglichkeit - den Running-Indicator deaktivieren&lt;br /&gt;
-Um jenes zu erreichen editiert man die Datei
-/usr/share/gnome-shell/theme/gnome-shell.css und kommentiert die Zeile
-background-image: url("running-indicator.svg") aus.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 /* background-image: url("running-indicator.svg") */ 647 }&lt;/code&gt;&lt;br /&gt;
-&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="running-indicator3" src="http://www.datenpaul.de/archive/running-indicator3.png" /&gt;&lt;/p&gt;
-&lt;p&gt;​3. Möglichkeit - eine andere Grafikdatei nutzen&lt;br /&gt;
-(Grafikdatei name.svg vorher ins Verzeichnis kopieren, mittels su -c
-"cp name.svg /usr/share/gnome-shell/theme/")&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-image: url("name.svg") 647 }&lt;/code&gt;&lt;br /&gt;
-&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="running-indicator4" src="http://www.datenpaul.de/archive/running-indicator4.png" /&gt;&lt;/p&gt;
-&lt;p&gt;​4. Möglichkeit - eine Hintergrundfarbe benutzen&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;644 .app-well-app.running &amp;gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-color: #D2B48C; 647 }&lt;/code&gt;&lt;br /&gt;
-&lt;em&gt;[ Speichern - Strg+O, Programm beenden - Strg+X]&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="running-indicator5" src="http://www.datenpaul.de/archive/running-indicator5.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Um die Änderung sichtbar zu machen ist am Ende ein Gnome-Theme-Neustart
-erforderlich. Hierzu benutzt man die Tastenkombination Alt+F2 und gibt
-rt ein.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 21 Aug 2011 22:50:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-08-21:gnome3-den-running-indicator-andern.html</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>running-indicator</category></item></channel></rss>
+&lt;p&gt;&lt;img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Die Grafik dazu findet …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Sun, 21 Aug 2011 22:50:00 +0200</pubDate><guid>tag:www.datenpaul.de,2011-08-21:/gnome3-den-running-indicator-andern.html/</guid><category>Dash</category><category>Fedora</category><category>Gnome</category><category>Gnome3</category><category>Linux</category><category>running-indicator</category></item></channel></rss>

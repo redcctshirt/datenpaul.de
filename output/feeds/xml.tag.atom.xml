@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/xml.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-04-13T00:04:00+02:00</updated><entry><title>Informationen über ein vimeo-Video ermitteln</title><link href="https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html" rel="alternate"></link><published>2013-04-13T00:04:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-04-13:informationen-uber-ein-vimeo-video-ermitteln.html</id><summary type="html">&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - xml</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/xml.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2013-04-13T00:04:00+02:00</updated><entry><title>Informationen über ein vimeo-Video ermitteln</title><link href="https://www.datenpaul.de/informationen-uber-ein-vimeo-video-ermitteln.html" rel="alternate"></link><published>2013-04-13T00:04:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2013-04-13:/informationen-uber-ein-vimeo-video-ermitteln.html/</id><summary type="html">&lt;p&gt;Um Meta-Daten (wie z.B. Titel, Dauer usw.) über ein bestimmtes Video vom
 vimeo-Video-Portal zu beziehen wird die vimeo data API angeboten. Die
 Funktionsweise ist die gleiche wie beim &lt;a href="http://www.cc-juno.de/archives/364" title="Informationen über ein Youtube-Video auslesen"&gt;Auslesen von Informationen über
 ein Youtube-Video&lt;/a&gt;. Eine sehr sorgfältige und leicht verständliche
 Dokumentation mit Beispielen entdeckt man auf der Website
-&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http://developer.vimeo.com/apis/simple&lt;/a&gt; Tippt man folgendes in den
-Browser ein, werden die Metadaten vom jeweiligen Video geliefert. (Das
-Video wird mittels ID bestimmt. Die Video-ID steht in der URL eines
-Video-Aufrufs nach dem / https://vimeo.com/\&amp;lt;ID&gt;)&lt;/p&gt;
-&lt;p&gt;Browser-Eingabe: &lt;code&gt;http://vimeo.com/api/v2/video/&amp;lt;ID&amp;gt;.&amp;lt;Format&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mögliche Formate: &lt;code&gt;json, php, xml&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Beispiel: &lt;code&gt;http://vimeo.com/api/v2/video/52387087.json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Mittels Skript können gewünschte Daten nun mühelos ermittelt werden. In
-PHP könnte dies so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;json_decode&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;file_get_contents&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;url&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-
-&lt;span class="nt"&gt;foreach&lt;/span&gt;&lt;span class="o"&gt;($&lt;/span&gt;&lt;span class="nt"&gt;j&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="nt"&gt;as&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-   &lt;span class="err"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;$key&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;:&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;$value&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;&amp;quot;n&amp;lt;br&lt;/span&gt; &lt;span class="err"&gt;/&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In Python könnte ein Skript so aussehen:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
-
-&lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;52387087&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://vimeo.com/api/v2/video/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;videoid&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;handle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;handle&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;{0}: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="API"></category><category term="json"></category><category term="Meta"></category><category term="PHP"></category><category term="Programmierung"></category><category term="Python"></category><category term="video"></category><category term="vimeo"></category><category term="xml"></category></entry></feed>
+&lt;a href="http://developer.vimeo.com/apis/simple"&gt;http …&lt;/a&gt;&lt;/p&gt;</summary><category term="API"></category><category term="json"></category><category term="Meta"></category><category term="PHP"></category><category term="Programmierung"></category><category term="Python"></category><category term="video"></category><category term="vimeo"></category><category term="xml"></category></entry></feed>

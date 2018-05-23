@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/css.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-10-05T17:35:00+02:00</updated><entry><title>Gnome3 - ein eigenes user-Theme</title><link href="https://www.datenpaul.de/gnome3-ein-eigenes-user-theme.html" rel="alternate"></link><published>2012-10-05T17:35:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-10-05:gnome3-ein-eigenes-user-theme.html</id><summary type="html">&lt;p&gt;In vielen Artikeln der Reihe &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; wurde schon oftmals darauf
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - CSS</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/css.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-10-05T17:35:00+02:00</updated><entry><title>Gnome3 - ein eigenes user-Theme</title><link href="https://www.datenpaul.de/gnome3-ein-eigenes-user-theme.html" rel="alternate"></link><published>2012-10-05T17:35:00+02:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-10-05:/gnome3-ein-eigenes-user-theme.html/</id><summary type="html">&lt;p&gt;In vielen Artikeln der Reihe &lt;a href="https://de.wikipedia.org/wiki/Gnome" title="WP:Gnome"&gt;Gnome3&lt;/a&gt; wurde schon oftmals darauf
 hingewiesen, dass Erscheinungsbildveränderungen erreicht werden indem
 man mit &lt;a href="https://de.wikipedia.org/wiki/Root-Konto" title="WP:Root"&gt;Root&lt;/a&gt;rechten die Werte in der Datei gnome-shell.css im
 Verzeichnis /usr/share/gnome-shell/theme/ abändert. Es wurde beschrieben
 wie man die Hintergrundfarbe vom Dash und die Schrift im Run-Dialog nach
-seinem Geschmack verändern kann. In diesem Beitrag möchte ich nun
-erläutern wie diese gerade erwähnte Datei unangetastet bleibt und
-Aussehensabwandlungen dennoch durch die Erstellung eines eigenen
-user-Theme realisierbar sind. Vorraussetzung dafür ist die Installation
-des Pakets gnome-shell-extension-user-theme und die Aktivierung der
-Erweiterung, z.B. per gnome-tweak-tool unter Shell-Erweiterungen.
-Anschliessend erstellt man den versteckten Ordner .themes im
-Home-Verzeichnis, gibt seinem Theme einen Namen, erstellt im Verzeichnis
-\~/.themes dazu einen Ordner und legt den Ordner gnome-shell in diesem
-Ordner an. In dem Ordner gnome-shell wird die Datei gnome-shell.css
-angelegt, so dass folgende Struktur entsteht:
-\~/.themes/\&amp;lt;name&gt;/gnome-shell/gnome-shell.css. Durch diese
-&lt;a href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets" title="WP:CSS"&gt;css&lt;/a&gt;-Datei werden nun mittels Importierung alle globalen Werte
-übernommen und können einzeln editiert werden. Jenes neue user-Theme
-kann anhand des gnome-tweak-tools unter Thema ausgewählt werden.
-Werte-Änderungen werden erst nach einem Theme-Neustart (Alt+F2 drücken
-und rt eingeben) sichtbar. Beispiel um die Dash-Hintergrundfarbe zu
-ändern:&lt;/p&gt;
-&lt;p&gt;Installation der beiden erwähnten Pakete bei Fedora:
-&lt;code&gt;su -c "yum install gnome-shell-extension-user-theme gnome-tweak-tool"&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;\~/.themes/james/gnome-shell/gnome-shell.css&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nd"&gt;@import&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/share/gnome-shell/theme/gnome-shell.css&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-
-&lt;span class="c1"&gt;#dash {&lt;/span&gt;
-    &lt;span class="n"&gt;background&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="CSS"></category><category term="Fedora"></category><category term="Gnome"></category><category term="gnome-tweak-tool"></category><category term="Gnome3"></category><category term="Linux"></category><category term="user-Theme"></category></entry></feed>
+seinem …&lt;/p&gt;</summary><category term="CSS"></category><category term="Fedora"></category><category term="Gnome"></category><category term="gnome-tweak-tool"></category><category term="Gnome3"></category><category term="Linux"></category><category term="user-Theme"></category></entry></feed>

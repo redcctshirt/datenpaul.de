@@ -63,41 +63,41 @@ Ein Logo im Video anzeigen lassen  </title>
 ins Video zu zaubern. Um Übersichtlichkeit zu gewährleisten lasse ich
 hier bei diesem Beispiel mit ffmpeg alle anderen Optionen die man sonst
 so benutzt wie z.B. -b für die <a href="http://de.wikipedia.org/wiki/Bitrate" title="WP:Bitrate">Bitrate</a> einfach weg.</p>
-<p>Hilfreiche Daten für das Beispiel:<br />
-Input-Videodatei: a.ogv<br />
-Output-Videodatei: b.webm<br />
-Videogröße: 1280x720 (Breite: 1280 Pixel, Höhe: 720 Pixel)<br />
-Bilddatei: logo.png<br />
+<p>Hilfreiche Daten für das Beispiel:<br>
+Input-Videodatei: a.ogv<br>
+Output-Videodatei: b.webm<br>
+Videogröße: 1280x720 (Breite: 1280 Pixel, Höhe: 720 Pixel)<br>
+Bilddatei: logo.png<br>
 Bildgröße: 50x50 (Breite: 50 Pixel, Höhe: 50 Pixel)</p>
-<p>Mit folgendem Muster setzt man den Videofilter overlay ein:<br />
+<p>Mit folgendem Muster setzt man den Videofilter overlay ein:<br>
 <code>-vf "movie=bilddatei.png [logo]; [in][logo] overlay=x:y [out]"</code></p>
 <p>Die Bilddatei mit dem Logo wird durch movie=bilddatei.png [logo]
 definiert. Durch overlay=x:y kann man die Stelle angeben wo das Logo
 dann erscheinen soll. (z.B. overlay=10:10 - das Logo wird nun oben links
 in der Ecke angezeigt)</p>
-<p>Einige hilfreiche Variablen die eingesetzt werden können:<br />
-main_w oder W - für die Breite des Videos (hier 1280)<br />
-main_h, H - für die Höhe des Videos (hier 720)<br />
-overlay_w, w - für die Breite des Logos (hier 50)<br />
+<p>Einige hilfreiche Variablen die eingesetzt werden können:<br>
+main_w oder W - für die Breite des Videos (hier 1280)<br>
+main_h, H - für die Höhe des Videos (hier 720)<br>
+overlay_w, w - für die Breite des Logos (hier 50)<br>
 overlay_h, h - für die Höhe des Logos (hier 50)</p>
 <p>Beispiele:</p>
 <p><code>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=10:10 [out]" b.webm # Logo oben links</code></p>
 <p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=main_w-overlay_w-10:10 [out]" b.webm<br />
+overlay=main_w-overlay_w-10:10 [out]" b.webm<br>
 # Logo oben rechts, mit Zahlen: overlay=1280-50-10:10 ->
 overlay=1220:10</p>
 <p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=10:main_h-overlay_h-10 [out]" b.webm<br />
+overlay=10:main_h-overlay_h-10 [out]" b.webm<br>
 # Logo unten links, mit Zahlen: overlay=10:720-50-10 ->
 overlay=10:660</p>
 <p>ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo]
-overlay=main_w-overlay_w-10:main_h-overlay_h-10 [out]" b.webm<br />
+overlay=main_w-overlay_w-10:main_h-overlay_h-10 [out]" b.webm<br>
 # Logo unten rechts, mit Zahlen: overlay=1280-50-10:720-50-10 ->
 overlay=1220:660</p>
 <p>ffmpeg -i a.ogv -vf "movie=logo.png [logo1]; movie=logo2.png [logo2];
 [in][logo1] overlay=main_w-overlay_w-10:main_h-overlay_h-10
-[in+logo1]; [in+logo1][logo2] overlay=10:10 [out]" b.webm<br />
-# 2 Logos<br />
+[in+logo1]; [in+logo1][logo2] overlay=10:10 [out]" b.webm<br>
+# 2 Logos<br>
 </code></p>
   </div>
   <div class="article_meta">

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>datenpaul</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/vflip.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 02 Dec 2011 16:23:00 +0100</lastBuildDate><item><title>Videobilder spiegeln</title><link>https://www.datenpaul.de/videobilder-spiegeln.html</link><description>&lt;p&gt;Das Tool &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="ffmpeg"&gt;ffmpeg&lt;/a&gt; macht es möglich. Der Videofilter hflip spiegelt die
-Videobilder&lt;br /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>datenpaul - vflip</title><link>https://www.datenpaul.de/</link><description></description><atom:link href="https://www.datenpaul.de/feeds/vflip.tag.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 02 Dec 2011 16:23:00 +0100</lastBuildDate><item><title>Videobilder spiegeln</title><link>https://www.datenpaul.de/videobilder-spiegeln.html</link><description>&lt;p&gt;Das Tool &lt;a href="http://de.wikipedia.org/wiki/Ffmpeg" title="ffmpeg"&gt;ffmpeg&lt;/a&gt; macht es möglich. Der Videofilter hflip spiegelt die
+Videobilder&lt;br&gt;
 horizontal und der Videofilter vflip spiegelt sie vertikal. Unnötige
-Optionen&lt;br /&gt;
+Optionen&lt;br&gt;
 und Paramenter lasse ich bei diesen Beispielen weg.&lt;/p&gt;
 &lt;p&gt;Beispiele:  &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ffmpeg -i a.ogv -vf "vflip" b.webm # Den Videoinput a.ogv vertikal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ffmpeg -i a.ogv -vf "hflip" b.webm&lt;br /&gt;
-# Den Videoinput a.ogv horizontal spiegeln, Ergebnis: b.webm&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 02 Dec 2011 16:23:00 +0100</pubDate><guid>tag:www.datenpaul.de,2011-12-02:videobilder-spiegeln.html</guid><category>ffmpeg</category><category>hflip</category><category>Linux</category><category>vflip</category><category>Videobearbeitung</category><category>Videofilter</category></item></channel></rss>
+&lt;p&gt;ffmpeg -i …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">heiko</dc:creator><pubDate>Fri, 02 Dec 2011 16:23:00 +0100</pubDate><guid>tag:www.datenpaul.de,2011-12-02:/videobilder-spiegeln.html/</guid><category>ffmpeg</category><category>hflip</category><category>Linux</category><category>vflip</category><category>Videobearbeitung</category><category>Videofilter</category></item></channel></rss>

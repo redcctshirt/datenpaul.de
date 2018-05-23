@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/looking-glass.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-03-21T22:23:00+01:00</updated><entry><title>Gnome3 - Looking Glass</title><link href="https://www.datenpaul.de/gnome-looking-glass.html" rel="alternate"></link><published>2012-03-21T22:23:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-03-21:gnome-looking-glass.html</id><summary type="html">&lt;p&gt;Looking Glass ist ein Inspektor-Tool von Gnome-Shell, bzw. eine
+<feed xmlns="http://www.w3.org/2005/Atom"><title>datenpaul - Looking Glass</title><link href="https://www.datenpaul.de/" rel="alternate"></link><link href="https://www.datenpaul.de/feeds/looking-glass.tag.atom.xml" rel="self"></link><id>https://www.datenpaul.de/</id><updated>2012-03-21T22:23:00+01:00</updated><entry><title>Gnome3 - Looking Glass</title><link href="https://www.datenpaul.de/gnome-looking-glass.html" rel="alternate"></link><published>2012-03-21T22:23:00+01:00</published><author><name>heiko</name></author><id>tag:www.datenpaul.de,2012-03-21:/gnome-looking-glass.html/</id><summary type="html">&lt;p&gt;Looking Glass ist ein Inspektor-Tool von Gnome-Shell, bzw. eine
 Javascript-Konsole für die Fehlersuche. Gestartet wird das Tool durch
 Alt+F2 und die Eingabe lg. Beendet wird die Konsole durch ESC. Es
 existieren 5 Areale. (Evaluator, Windows, Errors, Memory, Extensions)
 Der Evaluator ist ein interaktiver Javascript-Dialog. Einfache
-Rechenaufgaben können an dieser Stelle z.B. ausgeführt werden. Jedes
-Ergebnis wird gespeichert und kann wieder ausgegeben werden durch r(Nr).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;gt; 1+2 r(0) = 3 &amp;gt; 2+3 r(1) = 5 &amp;gt; r(0) r(2) = 3 &amp;gt; r(1) r(3) = 5 &amp;gt; r(0) + r(1) r(4) = 8&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Eine History-Funktion besteht. Das bedeutet durch die Cursor-Tasten Hoch
-und Runter kann man zwischen den Eingaben, die man schon getätigt hat,
-hin- und herspringen. Gespeichert wird die History unter dem
-dconf-Eintrag /org/gnome/shell/looking-glass-history. Durch die Vergabe
-von False und True beim Eintrag /org/gnome/shell/development-tools kann
-Looking Glass deaktiviert und aktiviert werden.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dconf read /org/gnome/shell/looking-glass-history # Looking-Glass-History anzeigen lassen dconf read /org/gnome/shell/development-tools # Wert auslesen dconf write /org/gnome/shell/development-tools false # Looking Glass deaktivieren dconf write /org/gnome/shell/development-tools true # Looking Glass aktivieren&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Die Fenster werden unter Windows aufgelistet. Unter Errors findet man
-eine Ansicht für die Shell-Log-Nachrichten. Eine eigene Meldung kann
-durch die Eingabe global.log("Meldung") hinzugefügt werden.
-Speicherinformationen enthält der Bereich Memory. Unter Extensions
-werden die Erweiterungen angezeigt. Die definierten Funktionen von
-Looking Glass findet man in der Datei
-/usr/share/gnome-shell/js/ui/LookingGlass.js. Das Aussehen von Looking
-Glass kann man verändern in der Datei
-/usr/share/gnome-shell/theme/gnome-shell.css im Abschnitt /* Looking
-Glass */.&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="Linux"></category><category term="Looking Glass"></category></entry></feed>
+Rechenaufgaben können an dieser …&lt;/p&gt;</summary><category term="Fedora"></category><category term="Gnome"></category><category term="Gnome3"></category><category term="Linux"></category><category term="Looking Glass"></category></entry></feed>

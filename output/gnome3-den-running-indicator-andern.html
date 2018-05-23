@@ -64,36 +64,36 @@ Dash genannt, besonders gekennzeichnet. Zu der Favoritenliste kommt man
 über Aktivitäten. (links oben) Wenn man z.B. den Dateimanager startet
 wird prompt im Hintergrund des Icons ein kleiner weißer Schatten
 angezeigt. Das ist der Running-Indicator.</p>
-<p><img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png" /></p>
+<p><img alt="running-indicator1" src="http://www.datenpaul.de/archive/running-indicator1.png"></p>
 <p>Die Grafik dazu findet man im Verzeichnis /usr/share/gnome-shell/theme.
 Die Datei heißt running-indicator.svg.</p>
-<p><img alt="running-indicator2" src="http://www.datenpaul.de/archive/running-indicator2.png" /></p>
+<p><img alt="running-indicator2" src="http://www.datenpaul.de/archive/running-indicator2.png"></p>
 <p>Nun gibt es mehrere Möglichkeiten um den Running-Indicator zu ändern.</p>
 <p>​1. Möglichkeit - mit Inkscape (oder einem anderen SVG-Editor) die Datei
 running-indicator.svg ändern</p>
 <p><strong>su -c "yum install inkscape"</strong> (Paket installieren, falls noch nicht
-vorhanden)<br />
+vorhanden)<br>
 <strong>su -c "inkscape /usr/share/gnome-shell/theme/running-indicator.svg"</strong></p>
-<p>​2. Möglichkeit - den Running-Indicator deaktivieren<br />
+<p>​2. Möglichkeit - den Running-Indicator deaktivieren<br>
 Um jenes zu erreichen editiert man die Datei
 /usr/share/gnome-shell/theme/gnome-shell.css und kommentiert die Zeile
 background-image: url("running-indicator.svg") aus.</p>
 <p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
-<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 /* background-image: url("running-indicator.svg") */ 647 }</code><br />
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 /* background-image: url("running-indicator.svg") */ 647 }</code><br>
 <em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
-<p><img alt="running-indicator3" src="http://www.datenpaul.de/archive/running-indicator3.png" /></p>
-<p>​3. Möglichkeit - eine andere Grafikdatei nutzen<br />
+<p><img alt="running-indicator3" src="http://www.datenpaul.de/archive/running-indicator3.png"></p>
+<p>​3. Möglichkeit - eine andere Grafikdatei nutzen<br>
 (Grafikdatei name.svg vorher ins Verzeichnis kopieren, mittels su -c
 "cp name.svg /usr/share/gnome-shell/theme/")</p>
 <p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
-<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-image: url("name.svg") 647 }</code><br />
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-image: url("name.svg") 647 }</code><br>
 <em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
-<p><img alt="running-indicator4" src="http://www.datenpaul.de/archive/running-indicator4.png" /></p>
+<p><img alt="running-indicator4" src="http://www.datenpaul.de/archive/running-indicator4.png"></p>
 <p>​4. Möglichkeit - eine Hintergrundfarbe benutzen</p>
 <p><strong>su -c "nano /usr/share/gnome-shell/theme/gnome-shell.css"</strong>  </p>
-<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-color: #D2B48C; 647 }</code><br />
+<p><code>644 .app-well-app.running &gt; .overview-icon { 645 text-shadow: black 0px 2px 2px; 646 background-color: #D2B48C; 647 }</code><br>
 <em>[ Speichern - Strg+O, Programm beenden - Strg+X]</em></p>
-<p><img alt="running-indicator5" src="http://www.datenpaul.de/archive/running-indicator5.png" /></p>
+<p><img alt="running-indicator5" src="http://www.datenpaul.de/archive/running-indicator5.png"></p>
 <p>Um die Änderung sichtbar zu machen ist am Ende ein Gnome-Theme-Neustart
 erforderlich. Hierzu benutzt man die Tastenkombination Alt+F2 und gibt
 rt ein.</p>

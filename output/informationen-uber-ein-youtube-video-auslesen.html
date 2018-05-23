@@ -75,7 +75,7 @@ String (Zeichenkette) der dekodiert werden muss. In PHP könnte dies so
 aussehen:</p>
 <div class="highlight"><pre><span></span><span class="o">//</span> <span class="o">&lt;</span><span class="nt">ID</span><span class="o">&gt;</span> <span class="nt">wird</span> <span class="nt">durch</span> <span class="nt">die</span> <span class="nt">Youtube-Video-ID</span> <span class="nt">ersetzt</span>
 <span class="o">$</span><span class="nt">j</span> <span class="o">=</span> <span class="nt">json_decode</span><span class="o">(</span><span class="nt">file_get_contents</span><span class="o">(</span><span class="s2">&quot;http://gdata.youtube.com/feeds/api/videos/&lt;ID&gt;?v=2&amp;alt=jsonc&quot;</span><span class="o">));</span>
-<span class="o">//</span> <span class="nt">Einzelne</span> <span class="nt">Angaben</span> <span class="nt">k</span><span class="err">ö</span><span class="nt">nnen</span> <span class="nt">nun</span> <span class="nt">mit</span> <span class="nt">diesem</span> <span class="nt">Muster</span> <span class="nt">ausgegeben</span> <span class="nt">werden</span>
+<span class="o">//</span> <span class="nt">Einzelne</span> <span class="nt">Angaben</span> <span class="nt">können</span> <span class="nt">nun</span> <span class="nt">mit</span> <span class="nt">diesem</span> <span class="nt">Muster</span> <span class="nt">ausgegeben</span> <span class="nt">werden</span>
 <span class="nt">echo</span> <span class="s2">&quot;Video-Title: &quot;</span> <span class="o">.</span> <span class="o">$</span><span class="nt">j-</span><span class="o">&gt;</span><span class="nt">data-</span><span class="o">&gt;</span><span class="nt">title</span><span class="o">;</span>
 </pre></div>
 
